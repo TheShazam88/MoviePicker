@@ -1,0 +1,75 @@
+{
+  "_about": "Movie Night catalog pack. Import under Settings -> Catalog. Only the 'titles' array is read; underscore keys are documentation.",
+  "_bands": "a=all ages, k=6+, t=9+, x=12+, r=adults",
+  "titles": [
+    {
+      "id": "example-family-2026",
+      "t": "An Example Family Movie",
+      "y": 2026,
+      "b": "a",
+      "g": [
+        "comedy",
+        "adventure",
+        "animation"
+      ],
+      "tg": [
+        "animals",
+        "family"
+      ],
+      "p": 8
+    },
+    {
+      "id": "example-sequel-2026",
+      "t": "An Example Movie 2",
+      "y": 2026,
+      "b": "k",
+      "g": [
+        "adventure",
+        "fantasy",
+        "animation"
+      ],
+      "tg": [
+        "dragons"
+      ],
+      "p": 7,
+      "q": "example-family-2026"
+    },
+    {
+      "id": "example-epic-2026",
+      "t": "An Example Blockbuster",
+      "y": 2026,
+      "b": "x",
+      "g": [
+        "action",
+        "scifi"
+      ],
+      "tg": [
+        "space",
+        "aliens"
+      ],
+      "p": 9,
+      "jp": [
+        "disneyplus"
+      ]
+    },
+    {
+      "id": "example-series-2026",
+      "t": "An Example Drama Series",
+      "y": 2026,
+      "b": "r",
+      "g": [
+        "drama",
+        "thriller",
+        "mystery"
+      ],
+      "tg": [
+        "detective"
+      ],
+      "p": 8,
+      "k": "s",
+      "jp": [
+        "netflix"
+      ]
+    }
+  ]
+}

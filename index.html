@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Movie Night</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0B0B0C" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Movie Night" />
+  <meta name="description" content="A quiet, private picker that learns what your household actually likes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body, #root { min-height: 100%; margin: 0; background: #FFFFFF; }
+    @media (prefers-color-scheme: dark) { html, body, #root { background: #0B0B0C; } }
+    #boot { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+    #boot.gone { display: none; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <div id="boot">
+    <svg width="44" height="44" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <rect x="1" y="1" width="30" height="30" rx="8" fill="#0D0D0D" />
+      <path d="M13 10.9 L21.8 16 L13 21.1 Z" fill="#FFFFFF" />
+      <circle cx="11.2" cy="24.6" r="1.7" fill="#1B6B4A" />
+      <circle cx="20.8" cy="24.6" r="1.7" fill="#9A2E2E" />
+    </svg>
+  </div>
+  <script>
+    // Drop-in replacement for the Claude artifact storage API, backed by this
+    // device's localStorage. Everything the app saves - profiles, PINs, ratings,
+    // watchlists, watch history, imported titles, settings - stays on the phone.
+    // Nothing is uploaded, and app updates never touch it.
+    window.storage = {
+      async get(key) {
+        const v = localStorage.getItem("mnp:" + key);
+        if (v === null) throw new Error("key not found: " + key);
+        return { key: key, value: v, shared: false };
+      },
+      async set(key, value) {
+        localStorage.setItem("mnp:" + key, value);
+        return { key: key, value: value, shared: false };
+      },
+      async delete(key) {
+        localStorage.removeItem("mnp:" + key);
+        return { key: key, deleted: true, shared: false };
+      },
+      async list(prefix) {
+        const keys = [];
+        for (let i = 0; i < localStorage.length; i++) {
+          const k = localStorage.key(i);
+          if (k && k.indexOf("mnp:" + (prefix || "")) === 0) keys.push(k.slice(4));
+        }
+        return { keys: keys, shared: false };
+      }
+    };
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("./sw.js").catch(function () {});
+      });
+    }
+  </script>
+  <script src="app.js"></script>
+  <script>
+    ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App));
+    requestAnimationFrame(function () {
+      var b = document.getElementById("boot");
+      if (b) b.className = "gone";
+    });
+  </script>
+</body>
+</html>
