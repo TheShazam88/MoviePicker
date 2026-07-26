@@ -24,10 +24,31 @@
     @media (prefers-color-scheme: dark) { html, body, #root { background: #0B0B0C; } }
     #boot { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
     #boot.gone { display: none; }
+    #update-bar { display: none; }
+    #update-bar.show {
+      display: flex; align-items: center; gap: 12px; justify-content: center;
+      position: fixed; left: 12px; right: 12px; bottom: 84px; z-index: 60;
+      padding: 10px 12px 10px 16px; border-radius: 999px;
+      background: #0D0D0D; color: #FFFFFF;
+      font: 500 14px/1.2 'Inter', -apple-system, system-ui, sans-serif;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    }
+    #update-bar button {
+      border: 0; border-radius: 999px; padding: 6px 14px; cursor: pointer;
+      background: #FFFFFF; color: #0D0D0D; font: 600 14px 'Inter', system-ui, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      #update-bar.show { background: #F2F2F3; color: #0B0B0C; }
+      #update-bar button { background: #0B0B0C; color: #F2F2F3; }
+    }
   </style>
 </head>
 <body>
   <div id="root"></div>
+  <div id="update-bar">
+    <span>A new version is ready.</span>
+    <button onclick="location.reload()">Reload</button>
+  </div>
   <div id="boot">
     <svg width="44" height="44" viewBox="0 0 32 32" fill="none" aria-hidden="true">
       <rect x="1" y="1" width="30" height="30" rx="8" fill="#0D0D0D" />
@@ -64,9 +85,27 @@
         return { keys: keys, shared: false };
       }
     };
+    // Update handling. The service worker fetches network-first, so a new
+    // deploy is picked up on the next launch while online. If a new version
+    // installs while the app is open, say so rather than silently swapping.
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", function () {
-        navigator.serviceWorker.register("./sw.js").catch(function () {});
+        navigator.serviceWorker.register("./sw.js").then(function (reg) {
+          reg.addEventListener("updatefound", function () {
+            var sw = reg.installing;
+            if (!sw) return;
+            sw.addEventListener("statechange", function () {
+              if (sw.state === "installed" && navigator.serviceWorker.controller) {
+                var bar = document.getElementById("update-bar");
+                if (bar) bar.className = "show";
+              }
+            });
+          });
+          // Check for a new deploy each time the app is brought to the front.
+          document.addEventListener("visibilitychange", function () {
+            if (!document.hidden) reg.update().catch(function () {});
+          });
+        }).catch(function () {});
       });
     }
   </script>

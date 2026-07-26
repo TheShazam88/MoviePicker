@@ -57,6 +57,7 @@ const THEMES = {
     overlay: "rgba(0,0,0,0.6)"
   }
 };
+const APP_VERSION = "12";
 const FONT_UI = "'Inter', -apple-system, system-ui, sans-serif";
 const FONT_NUM = "'IBM Plex Mono', ui-monospace, 'SF Mono', monospace";
 
@@ -5384,6 +5385,111 @@ function downloadText(filename, text, mime) {
   }
 }
 
+// ---------- Critic scores ----------
+// Rotten Tomatoes has no free public API (enterprise only, via Fandango) and
+// blocks browser scraping. OMDb is the practical source: one free key, and each
+// lookup returns IMDb, Rotten Tomatoes and Metacritic together. TMDB's own user
+// score arrives free with a catalog sync and needs no extra key.
+const OMDB_BASE = "https://www.omdbapi.com/";
+function cleanTitleForLookup(t) {
+  return String(t || "").replace(/\s*\(live action\)\s*/i, "").trim();
+}
+function parseOmdb(j) {
+  if (!j || j.Response === "False") return null;
+  const out = {};
+  const imdb = parseFloat(j.imdbRating);
+  if (isFinite(imdb) && imdb > 0) out.imdb = Math.round(imdb * 10) / 10;
+  const mc = parseInt(j.Metascore, 10);
+  if (isFinite(mc) && mc > 0) out.mc = mc;
+  if (Array.isArray(j.Ratings)) {
+    j.Ratings.forEach(r => {
+      if (!r || !r.Source) return;
+      if (r.Source.indexOf("Rotten") >= 0) {
+        const v = parseInt(String(r.Value), 10);
+        if (isFinite(v)) out.rt = v;
+      } else if (r.Source.indexOf("Metacritic") >= 0 && out.mc === undefined) {
+        const v = parseInt(String(r.Value), 10);
+        if (isFinite(v)) out.mc = v;
+      }
+    });
+  }
+  const votes = parseInt(String(j.imdbVotes || "").replace(/,/g, ""), 10);
+  if (isFinite(votes)) out.votes = votes;
+  if (out.imdb === undefined && out.rt === undefined && out.mc === undefined) return null;
+  out.at = Date.now();
+  return out;
+}
+async function fetchScore(key, m) {
+  const url = OMDB_BASE + "?apikey=" + encodeURIComponent(key) + "&t=" + encodeURIComponent(cleanTitleForLookup(m.t)) + "&y=" + encodeURIComponent(m.y) + "&type=" + (m.k === "s" ? "series" : "movie");
+  const res = await fetch(url);
+  if (res.status === 401) return {
+    auth: false
+  };
+  const j = await res.json();
+  if (j && j.Response === "False" && /invalid api key/i.test(j.Error || "")) return {
+    auth: false
+  };
+  return {
+    score: parseOmdb(j)
+  };
+}
+function sanitizeScores(raw) {
+  const out = {};
+  if (!raw || typeof raw !== "object") return out;
+  Object.keys(raw).forEach(id => {
+    const e = raw[id];
+    if (!e || typeof e !== "object") return;
+    const o = {};
+    const n = (v, lo, hi) => {
+      const x = Number(v);
+      return isFinite(x) && x >= lo && x <= hi ? x : undefined;
+    };
+    if (n(e.imdb, 0, 10) !== undefined) o.imdb = n(e.imdb, 0, 10);
+    if (n(e.rt, 0, 100) !== undefined) o.rt = n(e.rt, 0, 100);
+    if (n(e.mc, 0, 100) !== undefined) o.mc = n(e.mc, 0, 100);
+    if (n(e.tmdb, 0, 10) !== undefined) o.tmdb = n(e.tmdb, 0, 10);
+    if (n(e.votes, 0, 1e9) !== undefined) o.votes = n(e.votes, 0, 1e9);
+    if (e.miss) o.miss = 1;
+    o.at = Number(e.at) || 0;
+    if (o.imdb === undefined && o.rt === undefined && o.mc === undefined && o.tmdb === undefined && !o.miss) return;
+    out[id] = o;
+  });
+  return out;
+}
+
+// A single 0..1 critic figure. Rotten Tomatoes and IMDb lead; Metacritic and
+// the TMDB crowd score fill in when the others are missing.
+function criticNorm(e) {
+  if (!e) return null;
+  const parts = [],
+    w = [];
+  if (e.rt !== undefined) {
+    parts.push(e.rt / 100);
+    w.push(1.0);
+  }
+  if (e.imdb !== undefined) {
+    parts.push(e.imdb / 10);
+    w.push(1.0);
+  }
+  if (e.mc !== undefined) {
+    parts.push(e.mc / 100);
+    w.push(0.7);
+  }
+  if (e.tmdb !== undefined) {
+    parts.push(e.tmdb / 10);
+    w.push(0.5);
+  }
+  if (!parts.length) return null;
+  let s = 0,
+    tw = 0;
+  for (let i = 0; i < parts.length; i++) {
+    s += parts[i] * w[i];
+    tw += w[i];
+  }
+  return tw > 0 ? Math.min(1, Math.max(0, s / tw)) : null;
+}
+const hasScore = e => criticNorm(e) !== null;
+
 // ---------- Recommendation engine (v11 — hardened) ----------
 const BATCH_SIZE = 8;
 const SIM_POOL_CAP = 60; // bounds scoring cost on very large histories
@@ -5508,7 +5614,57 @@ function recentGenreSet(watchlog) {
   });
   return out;
 }
-function buildModel(rated, order, watchlog) {
+
+// How closely does this person actually agree with critics? Compare the critic
+// score of what they liked against the critic score of everything they rated.
+// Positive means their loves are the better-reviewed ones; negative means they
+// reliably enjoy things critics did not. Shrinks toward a mild positive prior
+// until there is enough evidence to trust the signal.
+function criticAlignment(rated, scores) {
+  if (!scores) return {
+    a: 0,
+    n: 0,
+    meanPos: null,
+    meanAll: null
+  };
+  let posSum = 0,
+    posN = 0,
+    allSum = 0,
+    allN = 0;
+  Object.keys(rated || {}).forEach(id => {
+    const cn = criticNorm(scores[id]);
+    if (cn === null) return;
+    allSum += cn;
+    allN++;
+    if (rated[id] > 0) {
+      posSum += cn;
+      posN++;
+    }
+  });
+  if (allN === 0) return {
+    a: 0,
+    n: 0,
+    meanPos: null,
+    meanAll: null
+  };
+  const meanAll = allSum / allN;
+  const meanPos = posN ? posSum / posN : null;
+  if (posN === 0) return {
+    a: 0,
+    n: allN,
+    meanPos: null,
+    meanAll
+  };
+  const scaled = Math.max(-1, Math.min(1, (meanPos - meanAll) * 5));
+  const conf = allN / (allN + 8);
+  return {
+    a: scaled * conf + 0.3 * (1 - conf),
+    n: allN,
+    meanPos,
+    meanAll
+  };
+}
+function buildModel(rated, order, watchlog, scores) {
   const list = decayedList(rated, order);
   const gA = facetAffinity(list, genresOf);
   const tA = facetAffinity(list, themesOf);
@@ -5545,7 +5701,8 @@ function buildModel(rated, order, watchlog) {
     negPool,
     lovedYears: positives.filter(p => p.r === 2).map(p => p.m.y),
     posYears: positives.map(p => p.m.y),
-    recentGenres: recentGenreSet(watchlog)
+    recentGenres: recentGenreSet(watchlog),
+    critic: criticAlignment(rated, scores)
   };
 }
 
@@ -5606,7 +5763,21 @@ function blendModels(models) {
     lovedYears,
     posYears,
     recentGenres,
-    blended: ms.length
+    blended: ms.length,
+    critic: function () {
+      let a = 0,
+        n = 0;
+      ms.forEach(mo => {
+        a += num(mo.critic && mo.critic.a, 0);
+        n += num(mo.critic && mo.critic.n, 0);
+      });
+      return {
+        a: a / ms.length,
+        n,
+        meanPos: null,
+        meanAll: null
+      };
+    }()
   };
 }
 function eraBonus(m, lovedYears, posYears) {
@@ -5686,6 +5857,17 @@ function scoreTitle(m, model, ctx) {
       comfort = Math.max(comfort, num(model.genre[k], 0));
     });
     score += comfort * (1 - explore) * 0.5;
+  }
+
+  // Critic scores, only when this member asked for them. Applied in the main
+  // ranking rather than shoved into the wildcard slot, and scaled by how much
+  // this person has historically agreed with critics.
+  if (ctx.useCritics && ctx.scores) {
+    const cn = criticNorm(ctx.scores[m.id]);
+    if (cn !== null) {
+      const align = num(model.critic && model.critic.a, 0.3);
+      score += (cn - 0.5) * 2 * align * 0.6;
+    }
   }
   if (model.recentGenres) {
     let repeat = false;
@@ -5834,8 +6016,8 @@ const NOMINAL_MIN = {
   movie: 112,
   series: 380
 };
-function computeInsights(rated, order, hidden, watchlog) {
-  const model = buildModel(rated, order, watchlog);
+function computeInsights(rated, order, hidden, watchlog, scores) {
+  const model = buildModel(rated, order, watchlog, scores);
   const ids = Object.keys(rated || {});
   const counts = {
     love: 0,
@@ -5890,6 +6072,32 @@ function computeInsights(rated, order, hidden, watchlog) {
     const m = MOVIE_BY_ID[h && h.id];
     if (m) estMin += m.k === "s" ? NOMINAL_MIN.series : NOMINAL_MIN.movie;
   });
+
+  // Critic aggregates across everything rated that has a score.
+  let imdbSum = 0,
+    imdbN = 0,
+    rtSum = 0,
+    rtN = 0,
+    mcSum = 0,
+    mcN = 0,
+    scored = 0;
+  ids.forEach(id => {
+    const e = scores && scores[id];
+    if (!e) return;
+    if (criticNorm(e) !== null) scored++;
+    if (e.imdb !== undefined) {
+      imdbSum += e.imdb;
+      imdbN++;
+    }
+    if (e.rt !== undefined) {
+      rtSum += e.rt;
+      rtN++;
+    }
+    if (e.mc !== undefined) {
+      mcSum += e.mc;
+      mcN++;
+    }
+  });
   return {
     model,
     counts,
@@ -5904,6 +6112,11 @@ function computeInsights(rated, order, hidden, watchlog) {
     entropy,
     gaps,
     affRows,
+    critic: model.critic,
+    scoredCount: scored,
+    avgImdb: imdbN ? Math.round(imdbSum / imdbN * 10) / 10 : null,
+    avgRt: rtN ? Math.round(rtSum / rtN) : null,
+    avgMc: mcN ? Math.round(mcSum / mcN) : null,
     logCount: logs.length,
     logMonth: logs.filter(h => h && h.ts >= monthAgo).length,
     estHours: Math.round(estMin / 60)
@@ -5915,6 +6128,8 @@ const KEY_APP = "mnp:v10:app"; // { theme, activeProfile, lastTab }
 const KEY_PROFILES = "mnp:v10:profiles"; // { order:[id], byId:{ id: profile } }
 const KEY_LIB = "mnp:v10:library"; // { packs, custom }
 const KEY_TMDB = "mnp:v10:tmdb"; // api key (never exported)
+const KEY_OMDB = "mnp:v10:omdb"; // critic-score api key (never exported)
+const KEY_SCORES = "mnp:v10:scores"; // { titleId: { imdb, rt, mc, tmdb, votes, at } }
 const WATCHLOG_CAP = 300;
 const AVATAR_GLYPHS = ["◆", "●", "▲", "■", "★", "✦", "◐", "❋"];
 function newMember(name, band, glyph) {
@@ -5924,6 +6139,7 @@ function newMember(name, band, glyph) {
     band: BAND_RANK[band] !== undefined ? band : "r",
     glyph: AVATAR_GLYPHS.indexOf(glyph) >= 0 ? glyph : AVATAR_GLYPHS[0],
     series: band === "r",
+    useCritics: false,
     rated: {},
     ratedOrder: [],
     hidden: [],
@@ -5981,6 +6197,7 @@ function sanitizeMember(p, fallbackName) {
     band: BAND_RANK[p.band] !== undefined ? p.band : "r",
     glyph: AVATAR_GLYPHS.indexOf(p.glyph) >= 0 ? p.glyph : AVATAR_GLYPHS[0],
     series: !!p.series,
+    useCritics: !!p.useCritics,
     rated,
     ratedOrder: order,
     hidden: Array.isArray(p.hidden) ? p.hidden.filter(x => typeof x === "string") : [],
@@ -6061,6 +6278,7 @@ function memberView(profile) {
       rated: m.rated,
       band: m.band,
       series: m.series,
+      useCritics: !!m.useCritics,
       hidden: m.hidden,
       watchlist: m.watchlist,
       watchlog: m.watchlog,
@@ -6074,7 +6292,8 @@ function memberView(profile) {
     watchlog = [];
   let band = "r",
     series = true,
-    tonight = null;
+    tonight = null,
+    useCritics = false;
   list.forEach(m => {
     Object.keys(m.rated).forEach(id => {
       const v = m.rated[id];
@@ -6089,6 +6308,7 @@ function memberView(profile) {
     m.watchlog.forEach(h => watchlog.push(h));
     if (BAND_RANK[m.band] < BAND_RANK[band]) band = m.band;
     if (!m.series) series = false;
+    if (m.useCritics) useCritics = true;
     if (m.tonight) tonight = m.tonight;
   });
   watchlog.sort((a, b) => (a.ts || 0) - (b.ts || 0));
@@ -6098,6 +6318,7 @@ function memberView(profile) {
     rated,
     band,
     series,
+    useCritics,
     hidden,
     watchlist,
     watchlog: watchlog.slice(-WATCHLOG_CAP),
@@ -6395,6 +6616,46 @@ function Toast({
       color: C.ink
     }
   }, "Undo") : null));
+}
+
+// Critic score chips. Colour is reserved for like/dislike everywhere else in
+// this app, so these stay monochrome and lean on the mono face for the figures.
+function ScoreChips({
+  e,
+  C,
+  compact
+}) {
+  if (!e) return null;
+  const items = [];
+  if (e.rt !== undefined) items.push(["RT", e.rt + "%"]);
+  if (e.imdb !== undefined) items.push(["IMDb", e.imdb.toFixed(1)]);
+  if (e.mc !== undefined && !compact) items.push(["MC", String(e.mc)]);
+  if (!items.length && e.tmdb !== undefined) items.push(["TMDB", e.tmdb.toFixed(1)]);
+  if (!items.length) return null;
+  return /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-wrap gap-1.5"
+  }, items.map(it => /*#__PURE__*/React.createElement("span", {
+    key: it[0],
+    className: "inline-flex items-baseline gap-1 px-1.5 py-0.5 rounded",
+    style: {
+      background: C.field,
+      border: "1px solid " + C.line
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "text-xs",
+    style: {
+      color: C.mut,
+      fontSize: 10,
+      letterSpacing: "0.03em"
+    }
+  }, it[0]), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: FONT_NUM,
+      fontSize: 11,
+      fontWeight: 600,
+      color: C.ink
+    }
+  }, it[1]))));
 }
 
 // ---------- Brand mark ----------
@@ -6908,7 +7169,7 @@ function BottomNav({
   onTab,
   C
 }) {
-  const items = [["discover", "Discover", "M4 6h16M4 12h16M4 18h10"], ["rate", "Rate", "M5 5h14v14H5z M9 9h6v6H9z"], ["insights", "Insights", "M4 20V10 M10 20V4 M16 20v-7 M22 20v-3"], ["profile", "You", "M12 12a4 4 0 100-8 4 4 0 000 8z M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6"]];
+  const items = [["discover", "Discover", "M4 6h16M4 12h16M4 18h10"], ["rate", "Rate", "M5 5h14v14H5z M9 9h6v6H9z"], ["watched", "Watched", "M12 5c-5 0-8.5 4.2-9.5 7 1 2.8 4.5 7 9.5 7s8.5-4.2 9.5-7c-1-2.8-4.5-7-9.5-7z M12 15a3 3 0 100-6 3 3 0 000 6z"], ["insights", "Insights", "M4 20V10 M10 20V4 M16 20v-7 M22 20v-3"], ["profile", "You", "M12 12a4 4 0 100-8 4 4 0 000 8z M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6"]];
   return /*#__PURE__*/React.createElement("nav", {
     className: "fixed bottom-0 left-0 right-0 z-30",
     style: {
@@ -6940,8 +7201,9 @@ function BottomNav({
     }, /*#__PURE__*/React.createElement("path", {
       d: d
     })), /*#__PURE__*/React.createElement("span", {
-      className: "text-xs font-medium",
+      className: "font-medium",
       style: {
+        fontSize: 10,
         color: on ? C.ink : C.faint
       }
     }, label));
@@ -7353,6 +7615,221 @@ function RateTab({
   }))));
 }
 
+// ---------- Watched ----------
+// Everything this person (or group) has rated, with critic scores alongside
+// their own verdict — the one place the two sit side by side.
+function WatchedTab({
+  C,
+  view,
+  ins,
+  scores,
+  sort,
+  setSort,
+  onFetchScores,
+  fetching,
+  fetchMsg,
+  missing,
+  hasKey,
+  onOpenScores
+}) {
+  const rows = useMemo(() => {
+    const seenAt = {};
+    (view.watchlog || []).forEach(h => {
+      if (h && h.id) seenAt[h.id] = Math.max(seenAt[h.id] || 0, h.ts || 0);
+    });
+    const list = Object.keys(view.rated).map(id => ({
+      id,
+      m: MOVIE_BY_ID[id],
+      r: view.rated[id],
+      e: scores[id],
+      ts: seenAt[id] || 0
+    })).filter(x => x.m);
+    const cn = x => {
+      const v = criticNorm(x.e);
+      return v === null ? -1 : v;
+    };
+    if (sort === "critic") list.sort((a, b) => cn(b) - cn(a) || a.m.t.localeCompare(b.m.t));else if (sort === "mine") list.sort((a, b) => b.r - a.r || cn(b) - cn(a));else if (sort === "title") list.sort((a, b) => a.m.t.localeCompare(b.m.t));else list.sort((a, b) => b.ts - a.ts || a.m.t.localeCompare(b.m.t));
+    return list;
+  }, [view.rated, view.watchlog, scores, sort]);
+  if (rows.length === 0) {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "pb-24 px-4 pt-4"
+    }, /*#__PURE__*/React.createElement("h2", {
+      className: "text-lg font-semibold tracking-tight mb-1",
+      style: {
+        color: C.ink
+      }
+    }, "Watched"), /*#__PURE__*/React.createElement("div", {
+      className: "text-center py-16 px-6"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-sm font-medium",
+      style: {
+        color: C.ink
+      }
+    }, "Nothing rated yet"), /*#__PURE__*/React.createElement("p", {
+      className: "text-xs mt-1",
+      style: {
+        color: C.mut
+      }
+    }, "Everything you rate shows up here with its IMDb, Rotten Tomatoes and Metacritic scores.")));
+  }
+  const align = ins.critic || {
+    a: 0,
+    n: 0
+  };
+  const alignText = align.n < 5 ? "Rate a few more scored titles to see how your taste lines up with critics." : align.a > 0.25 ? "You tend to agree with critics." : align.a < -0.1 ? "You often like what critics do not." : "Your taste runs largely independent of the critics.";
+  return /*#__PURE__*/React.createElement("div", {
+    className: "pb-24 px-4 pt-4"
+  }, /*#__PURE__*/React.createElement("h2", {
+    className: "text-lg font-semibold tracking-tight mb-3",
+    style: {
+      color: C.ink
+    }
+  }, "Watched by ", view.label), /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-3 gap-2 mb-3"
+  }, /*#__PURE__*/React.createElement(StatCard, {
+    label: "Titles",
+    value: rows.length,
+    C: C
+  }), /*#__PURE__*/React.createElement(StatCard, {
+    label: "Avg IMDb",
+    value: ins.avgImdb === null ? "—" : ins.avgImdb.toFixed(1),
+    C: C
+  }), /*#__PURE__*/React.createElement(StatCard, {
+    label: "Avg RT",
+    value: ins.avgRt === null ? "—" : ins.avgRt + "%",
+    C: C
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "rounded-xl px-3.5 py-3 mb-4",
+    style: {
+      background: C.card,
+      border: "1px solid " + C.line
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-xs font-medium mb-1",
+    style: {
+      color: C.mut
+    }
+  }, "Critic alignment"), /*#__PURE__*/React.createElement("div", {
+    className: "text-sm",
+    style: {
+      color: C.ink
+    }
+  }, alignText), align.n >= 5 ? /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-3 mt-2"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex-1"
+  }, /*#__PURE__*/React.createElement(SignedBar, {
+    value: Math.max(-1, Math.min(1, align.a)),
+    C: C
+  })), /*#__PURE__*/React.createElement("span", {
+    className: "text-xs shrink-0",
+    style: {
+      fontFamily: FONT_NUM,
+      color: align.a >= 0 ? C.like : C.dislike
+    }
+  }, align.a >= 0 ? "+" : "", Math.round(align.a * 100))) : null, view.useCritics ? /*#__PURE__*/React.createElement("div", {
+    className: "text-xs mt-2",
+    style: {
+      color: C.faint
+    }
+  }, "This is being used to rank your suggestions.") : /*#__PURE__*/React.createElement("div", {
+    className: "text-xs mt-2",
+    style: {
+      color: C.faint
+    }
+  }, "Turn on \"Use critic scores\" in your household settings to factor this into suggestions.")), missing > 0 ? /*#__PURE__*/React.createElement("div", {
+    className: "rounded-xl px-3.5 py-3 mb-4",
+    style: {
+      background: C.card,
+      border: "1px solid " + C.line
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-sm font-medium mb-0.5",
+    style: {
+      color: C.ink
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: FONT_NUM
+    }
+  }, missing), " watched ", missing === 1 ? "title has" : "titles have", " no scores yet"), /*#__PURE__*/React.createElement("p", {
+    className: "text-xs mb-2.5",
+    style: {
+      color: C.mut
+    }
+  }, hasKey ? "Fetch them from OMDb — free, and it covers IMDb, Rotten Tomatoes and Metacritic." : "Add a free OMDb key to pull IMDb, Rotten Tomatoes and Metacritic scores."), /*#__PURE__*/React.createElement("button", {
+    onClick: hasKey ? onFetchScores : onOpenScores,
+    disabled: fetching,
+    className: "w-full py-2.5 rounded-lg text-sm font-semibold focus:outline-none focus-visible:ring-2",
+    style: {
+      background: fetching ? C.field : C.ink,
+      color: fetching ? C.mut : C.bg
+    }
+  }, fetching ? "Fetching…" : hasKey ? "Get scores for these" : "Set up scores"), fetchMsg ? /*#__PURE__*/React.createElement("p", {
+    className: "text-xs mt-2 font-medium",
+    style: {
+      color: C.ink2
+    }
+  }, fetchMsg) : null) : null, /*#__PURE__*/React.createElement("div", {
+    className: "mb-3"
+  }, /*#__PURE__*/React.createElement(Segmented, {
+    C: C,
+    value: sort,
+    onChange: setSort,
+    options: [["recent", "Recent"], ["critic", "Top rated"], ["mine", "Your picks"], ["title", "A–Z"]]
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "space-y-2"
+  }, rows.map(x => {
+    const meta = RATING_META[String(x.r)];
+    const col = meta.tone === "like" ? C.like : meta.tone === "dislike" ? C.dislike : C.ink2;
+    return /*#__PURE__*/React.createElement("div", {
+      key: x.id,
+      className: "rounded-xl p-2.5 flex gap-2.5 items-center",
+      style: {
+        background: C.card,
+        border: "1px solid " + C.line
+      }
+    }, /*#__PURE__*/React.createElement(Poster, {
+      m: x.m,
+      C: C,
+      size: 40
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "flex-1 min-w-0"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-sm font-medium truncate",
+      style: {
+        color: C.ink
+      }
+    }, x.m.t), /*#__PURE__*/React.createElement("div", {
+      className: "text-xs mt-0.5 mb-1",
+      style: {
+        color: C.mut
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: FONT_NUM
+      }
+    }, x.m.y), x.ts ? " · " + fmtDate(x.ts) : ""), x.e ? /*#__PURE__*/React.createElement(ScoreChips, {
+      e: x.e,
+      C: C
+    }) : /*#__PURE__*/React.createElement("span", {
+      className: "text-xs",
+      style: {
+        color: C.faint
+      }
+    }, "No scores yet")), /*#__PURE__*/React.createElement("span", {
+      className: "shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm",
+      title: meta.label,
+      "aria-label": "Your rating: " + meta.label,
+      style: {
+        color: col,
+        background: C.field
+      }
+    }, meta.glyph));
+  })));
+}
+
 // ---------- Insights ----------
 function InsightsTab({
   C,
@@ -7661,7 +8138,8 @@ function Row({
 function Toggle({
   on,
   onClick,
-  C
+  C,
+  label
 }) {
   return /*#__PURE__*/React.createElement("button", {
     onClick: onClick,
@@ -7672,7 +8150,8 @@ function Toggle({
       background: on ? C.ink : C.line,
       padding: 3
     },
-    "aria-pressed": on
+    "aria-pressed": on,
+    "aria-label": label
   }, /*#__PURE__*/React.createElement("div", {
     className: "rounded-full transition-transform",
     style: {
@@ -7720,10 +8199,12 @@ function ProfileTab({
   onOpenPacks,
   onOpenBackup,
   onOpenAdd,
+  onOpenScores,
   onSignOut,
   onDeleteProfile,
   addedCount,
-  catalogTotal
+  catalogTotal,
+  scoredCount
 }) {
   const divStyle = {
     borderColor: C.line
@@ -7764,7 +8245,7 @@ function ProfileTab({
     C: C,
     onClick: () => onEditMember(m.id),
     label: m.glyph + "  " + m.name,
-    sub: bandLabel(m.band) + (m.series ? " · series on" : "") + " · " + Object.keys(m.rated).length + " rated"
+    sub: bandLabel(m.band) + (m.series ? " · series" : "") + (m.useCritics ? " · critics" : "") + " · " + Object.keys(m.rated).length + " rated"
   })))), /*#__PURE__*/React.createElement("div", {
     className: "-mt-3 mb-5"
   }, /*#__PURE__*/React.createElement("button", {
@@ -7791,7 +8272,8 @@ function ProfileTab({
     right: /*#__PURE__*/React.createElement(Toggle, {
       on: !!profile.pin,
       onClick: onTogglePin,
-      C: C
+      C: C,
+      label: "Lock with PIN"
     })
   })), /*#__PURE__*/React.createElement(Row, {
     label: "Dark mode",
@@ -7799,7 +8281,8 @@ function ProfileTab({
     right: /*#__PURE__*/React.createElement(Toggle, {
       on: theme === "dark",
       onClick: () => onTheme(theme === "dark" ? "light" : "dark"),
-      C: C
+      C: C,
+      label: "Dark mode"
     })
   })), /*#__PURE__*/React.createElement(Group, {
     title: "Catalog",
@@ -7818,10 +8301,17 @@ function ProfileTab({
     sub: "Add new releases from a .json file",
     onClick: onOpenPacks,
     C: C
-  })), /*#__PURE__*/React.createElement(Row, {
+  })), /*#__PURE__*/React.createElement("div", {
+    style: divStyle
+  }, /*#__PURE__*/React.createElement(Row, {
     label: "Add a title",
     sub: "Enter one film or series by hand",
     onClick: onOpenAdd,
+    C: C
+  })), /*#__PURE__*/React.createElement(Row, {
+    label: "Critic scores",
+    sub: scoredCount + " of " + catalogTotal + " titles scored",
+    onClick: onOpenScores,
     C: C
   })), /*#__PURE__*/React.createElement(Group, {
     title: "Data",
@@ -7856,7 +8346,7 @@ function ProfileTab({
     style: {
       color: C.faint
     }
-  }, "Movie Night · on-device · no account, no ads"));
+  }, "Movie Night · version ", APP_VERSION, " · on-device · no account, no ads"));
 }
 
 // ---------- Add / edit a household member ----------
@@ -7873,6 +8363,7 @@ function MemberSheet({
   const [band, setBand] = useState("a");
   const [glyph, setGlyph] = useState(AVATAR_GLYPHS[0]);
   const [series, setSeries] = useState(false);
+  const [useCritics, setUseCritics] = useState(false);
   const [confirmDel, setConfirmDel] = useState(false);
   const [loaded, setLoaded] = useState(null);
   const key = member ? member.id : "new";
@@ -7882,6 +8373,7 @@ function MemberSheet({
     setBand(member ? member.band : "a");
     setGlyph(member ? member.glyph : AVATAR_GLYPHS[0]);
     setSeries(member ? member.series : false);
+    setUseCritics(member ? !!member.useCritics : false);
     setConfirmDel(false);
   }
   const valid = name.trim().length > 0;
@@ -7965,14 +8457,35 @@ function MemberSheet({
   }, "Mix series into their recommendations")), /*#__PURE__*/React.createElement(Toggle, {
     on: series,
     onClick: () => setSeries(!series),
-    C: C
+    C: C,
+    label: "Include TV series"
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between py-2 mb-4"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "pr-3"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-sm font-medium",
+    style: {
+      color: C.ink
+    }
+  }, "Use critic scores"), /*#__PURE__*/React.createElement("div", {
+    className: "text-xs",
+    style: {
+      color: C.mut
+    }
+  }, "Factor IMDb, Rotten Tomatoes and Metacritic into their suggestions, weighted by how much they have historically agreed with critics")), /*#__PURE__*/React.createElement(Toggle, {
+    on: useCritics,
+    onClick: () => setUseCritics(!useCritics),
+    C: C,
+    label: "Use critic scores"
   })), /*#__PURE__*/React.createElement("button", {
     disabled: !valid,
     onClick: () => onSave({
       name,
       band,
       glyph,
-      series
+      series,
+      useCritics
     }),
     className: "w-full py-2.5 rounded-lg text-sm font-semibold focus:outline-none focus-visible:ring-2",
     style: {
@@ -8447,6 +8960,119 @@ function AddTitleSheet({
   }, "Add to library"));
 }
 
+// ---------- Critic scores sheet ----------
+function ScoresSheet({
+  open,
+  onClose,
+  C,
+  omdbKey,
+  setOmdbKey,
+  onFetchWatched,
+  onFetchAll,
+  busy,
+  msg,
+  progress,
+  scoredCount,
+  catalogTotal
+}) {
+  return /*#__PURE__*/React.createElement(Sheet, {
+    open: open,
+    onClose: onClose,
+    C: C,
+    title: "Critic scores"
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "text-sm mb-1",
+    style: {
+      color: C.mut
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: FONT_NUM,
+      color: C.ink
+    }
+  }, scoredCount), " of", " ", /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: FONT_NUM,
+      color: C.ink
+    }
+  }, catalogTotal), " titles have scores."), /*#__PURE__*/React.createElement("p", {
+    className: "text-sm mb-4",
+    style: {
+      color: C.mut
+    }
+  }, "Rotten Tomatoes has no free public API, so scores come from OMDb — one free key that returns IMDb, Rotten Tomatoes and Metacritic together."), /*#__PURE__*/React.createElement("label", {
+    className: "block text-xs font-medium mb-1.5",
+    style: {
+      color: C.mut
+    }
+  }, "OMDb API key"), /*#__PURE__*/React.createElement("input", {
+    value: omdbKey,
+    onChange: e => setOmdbKey(e.target.value),
+    placeholder: "Paste your key",
+    autoComplete: "off",
+    autoCapitalize: "none",
+    spellCheck: false,
+    className: "w-full px-3.5 py-2.5 rounded-lg text-sm mb-2 focus:outline-none focus-visible:ring-2",
+    style: {
+      background: C.field,
+      color: C.ink,
+      border: "1px solid " + C.line,
+      fontFamily: FONT_NUM
+    }
+  }), /*#__PURE__*/React.createElement("a", {
+    href: "https://www.omdbapi.com/apikey.aspx",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    className: "inline-block text-xs mb-4 font-medium focus:outline-none",
+    style: {
+      color: C.mut
+    }
+  }, "Get a free key ↗"), /*#__PURE__*/React.createElement("button", {
+    onClick: onFetchWatched,
+    disabled: busy,
+    className: "w-full py-2.5 rounded-lg text-sm font-semibold mb-2 focus:outline-none focus-visible:ring-2",
+    style: {
+      background: busy ? C.field : C.ink,
+      color: busy ? C.mut : C.bg
+    }
+  }, busy ? "Fetching…" : "Get scores for what you have watched"), /*#__PURE__*/React.createElement("button", {
+    onClick: onFetchAll,
+    disabled: busy,
+    className: "w-full py-2.5 rounded-lg text-sm font-medium focus:outline-none focus-visible:ring-2",
+    style: {
+      color: C.ink,
+      border: "1px solid " + C.line
+    }
+  }, "Fetch the whole catalog"), busy && progress ? /*#__PURE__*/React.createElement("div", {
+    className: "mt-3"
+  }, /*#__PURE__*/React.createElement(Bar, {
+    value: progress.done,
+    max: progress.total,
+    C: C
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "text-xs mt-1.5",
+    style: {
+      color: C.mut,
+      fontFamily: FONT_NUM
+    }
+  }, progress.done, " / ", progress.total)) : null, msg ? /*#__PURE__*/React.createElement("p", {
+    className: "text-xs mt-2 font-medium",
+    style: {
+      color: C.ink2
+    }
+  }, msg) : null, /*#__PURE__*/React.createElement("p", {
+    className: "text-xs mt-4",
+    style: {
+      color: C.faint
+    }
+  }, "The free tier allows 1,000 lookups a day, so a full catalog pass takes one sitting. Scores are stored on this device and reused; nothing is re-fetched unnecessarily. Coverage is imperfect — Rotten Tomatoes is often missing for older, anime and non-US titles."), /*#__PURE__*/React.createElement("p", {
+    className: "text-xs mt-2",
+    style: {
+      color: C.faint
+    }
+  }, "Turn scores on per person under Household, so a child's picks stay driven by their own taste if you prefer."));
+}
+
 // ============================================================
 //  Root
 // ============================================================
@@ -8483,7 +9109,13 @@ function App() {
   const [toast, setToast] = useState(null);
   const [pinSetup, setPinSetup] = useState(false);
   const [memberSheet, setMemberSheet] = useState(null); // null | "new" | memberId
-
+  const [scores, setScores] = useState({});
+  const [omdbKey, setOmdbKey] = useState("");
+  const [scoresOpen, setScoresOpen] = useState(false);
+  const [scoreBusy, setScoreBusy] = useState(false);
+  const [scoreMsg, setScoreMsg] = useState("");
+  const [scoreProgress, setScoreProgress] = useState(null);
+  const [watchedSort, setWatchedSort] = useState("recent");
   const packFileRef = useRef(null);
   const impRef = useRef({});
   const recentRef = useRef(new Set());
@@ -8539,12 +9171,22 @@ function App() {
         } catch (e) {}
       }
       const k = await sGet(KEY_TMDB);
+      const ok2 = await sGet(KEY_OMDB);
+      let sc = {};
+      const rawSc = await sGet(KEY_SCORES);
+      if (rawSc) {
+        try {
+          sc = sanitizeScores(JSON.parse(rawSc));
+        } catch (e) {}
+      }
       if (!alive) return;
       setLibrary(lib);
       setProfiles(ps);
       if (appS.theme === "dark" || appS.theme === "light") setTheme(appS.theme);
       if (typeof appS.explore === "number") setExplore(Math.min(1, Math.max(0, appS.explore)));
       if (k) setTmdbKey(k);
+      if (ok2) setOmdbKey(ok2);
+      setScores(sc);
       setScreen(ps.order.length === 0 ? "create" : "gate");
       setCatalogVersion(v => v + 1);
       setBooted(true);
@@ -8597,6 +9239,9 @@ function App() {
     if (booted) sSet(KEY_LIB, JSON.stringify(library));
   }, [library, booted]);
   useEffect(() => {
+    if (booted) sSet(KEY_SCORES, JSON.stringify(scores));
+  }, [scores, booted]);
+  useEffect(() => {
     if (toast) {
       const t = setTimeout(() => setToast(null), 4500);
       return () => clearTimeout(t);
@@ -8608,8 +9253,8 @@ function App() {
   const mv = useMemo(() => profile ? memberView(profile) : null, [profile, catalogVersion]);
   const model = useMemo(() => {
     if (!profile || !mv) return null;
-    return blendModels(mv.members.map(m => buildModel(m.rated, m.ratedOrder, m.watchlog)));
-  }, [mv, catalogVersion]);
+    return blendModels(mv.members.map(m => buildModel(m.rated, m.ratedOrder, m.watchlog, scores)));
+  }, [mv, scores, catalogVersion]);
   const pool = useMemo(() => {
     if (!mv) return [];
     const rank = BAND_RANK[mv.band];
@@ -8625,14 +9270,16 @@ function App() {
       recent: recentRef.current,
       imp: impRef.current,
       nonce,
-      rated: mv.rated
+      rated: mv.rated,
+      useCritics: mv.useCritics,
+      scores
     };
     const scored = pool.map(m => ({
       m,
       sc: scoreTitle(m, model, ctx)
     })).sort((a, b) => b.sc - a.sc);
     return assembleBatch(scored, model, ctx);
-  }, [pool, model, mood, explore, nonce]);
+  }, [pool, model, mood, explore, nonce, scores]);
 
   // Impressions and "recently shown" are recorded when the user explicitly asks
   // for different picks — not on every re-render. Otherwise rating one card
@@ -8652,8 +9299,8 @@ function App() {
     mv.members.forEach(m => m.ratedOrder.forEach(id => {
       if (order.indexOf(id) < 0) order.push(id);
     }));
-    return computeInsights(mv.rated, order, mv.hidden, mv.watchlog);
-  }, [mv, catalogVersion]);
+    return computeInsights(mv.rated, order, mv.hidden, mv.watchlog, scores);
+  }, [mv, scores, catalogVersion]);
   const results = useMemo(() => {
     if (!mv) return [];
     const q = query.trim().toLowerCase();
@@ -8825,11 +9472,13 @@ function App() {
           name: form.name.trim().slice(0, 24) || cur.name,
           band: form.band,
           glyph: form.glyph,
-          series: form.series
+          series: form.series,
+          useCritics: !!form.useCritics
         };
       } else {
         const nm = newMember(form.name, form.band, form.glyph);
         nm.series = form.series;
+        nm.useCritics = !!form.useCritics;
         byId[nm.id] = nm;
         order.push(nm.id);
       }
@@ -8922,6 +9571,7 @@ function App() {
     let auth = false,
       ok = 0;
     const items = [];
+    const tmdbVotes = [];
     await Promise.all(reqs.map(async r => {
       const path = r[0],
         page = r[1],
@@ -8937,7 +9587,13 @@ function App() {
         const j = await res.json();
         (j.results || []).forEach(it => {
           const mp = mapTmdbItem(it, isTv);
-          if (mp) items.push(mp);
+          if (!mp) return;
+          items.push(mp);
+          const va = Number(it.vote_average);
+          if (isFinite(va) && va > 0) tmdbVotes.push({
+            id: mp.id,
+            tmdb: Math.round(va * 10) / 10
+          });
         });
         ok++;
       } catch (e) {}
@@ -8952,6 +9608,24 @@ function App() {
       return;
     }
     const res = mergeEntries(items, "packs");
+    // TMDB's own audience score arrives free with the sync — keep it as a
+    // fallback for titles with no OMDb data.
+    if (tmdbVotes.length) {
+      setScores(prev => {
+        const next = {
+          ...prev
+        };
+        tmdbVotes.forEach(v => {
+          const cur = next[v.id];
+          next[v.id] = {
+            ...(cur && !cur.miss ? cur : {}),
+            tmdb: v.tmdb,
+            at: Date.now()
+          };
+        });
+        return next;
+      });
+    }
     sSet(KEY_TMDB, key);
     setSyncMsg(res.added ? "Added " + res.added + " new titles." + (res.skipped ? " " + res.skipped + " were already here." : "") : "Your catalog is already up to date.");
   };
@@ -9045,16 +9719,93 @@ function App() {
     return res.added > 0;
   };
 
+  // ---------- Critic scores ----------
+  const watchedIds = useMemo(() => mv ? Object.keys(mv.rated) : [], [mv]);
+  const missingScores = useMemo(() => watchedIds.filter(id => MOVIE_BY_ID[id] && !scores[id]).length, [watchedIds, scores]);
+  const scoredCount = useMemo(() => Object.keys(scores).filter(id => scores[id] && !scores[id].miss).length, [scores]);
+
+  // Fetch in small concurrent batches so we stay polite to a free-tier key and
+  // can report progress. Anything already known (including a recorded miss) is
+  // skipped, so re-running only picks up what is genuinely new.
+  const fetchScoresFor = async ids => {
+    const key = omdbKey.trim();
+    if (!key) {
+      setScoreMsg("Add your OMDb key first.");
+      setScoresOpen(true);
+      return;
+    }
+    const todo = ids.filter(id => MOVIE_BY_ID[id] && !scores[id]);
+    if (todo.length === 0) {
+      setScoreMsg("Everything here already has scores.");
+      return;
+    }
+    setScoreBusy(true);
+    setScoreMsg("");
+    setScoreProgress({
+      done: 0,
+      total: todo.length
+    });
+    const found = {};
+    let done = 0,
+      got = 0,
+      authFail = false,
+      netFail = 0;
+    const CHUNK = 5;
+    for (let i = 0; i < todo.length && !authFail; i += CHUNK) {
+      const slice = todo.slice(i, i + CHUNK);
+      await Promise.all(slice.map(async id => {
+        try {
+          const r = await fetchScore(key, MOVIE_BY_ID[id]);
+          if (r.auth === false) {
+            authFail = true;
+            return;
+          }
+          if (r.score) {
+            found[id] = r.score;
+            got++;
+          } else found[id] = {
+            miss: 1,
+            at: Date.now()
+          };
+        } catch (e) {
+          netFail++;
+        }
+        done++;
+      }));
+      setScoreProgress({
+        done,
+        total: todo.length
+      });
+      if (!authFail) await new Promise(r => setTimeout(r, 120));
+    }
+    setScoreBusy(false);
+    setScoreProgress(null);
+    if (authFail) {
+      setScoreMsg("That OMDb key was rejected. Check it and try again.");
+      return;
+    }
+    if (Object.keys(found).length) setScores(prev => ({
+      ...prev,
+      ...found
+    }));
+    sSet(KEY_OMDB, key);
+    const missCount = done - got;
+    setScoreMsg(got ? "Added scores for " + got + " title" + (got === 1 ? "" : "s") + "." + (missCount ? " " + missCount + " had none listed." : "") + (netFail ? " " + netFail + " could not be reached." : "") : "No scores found for those titles.");
+  };
+  const fetchWatchedScores = () => fetchScoresFor(watchedIds);
+  const fetchAllScores = () => fetchScoresFor(MOVIE_LIST.map(m => m.id));
+
   // ---------- Backup ----------
   const exportBackup = () => {
     const payload = {
-      v: 10,
+      v: 12,
       ts: Date.now(),
       profiles: {
         order: profiles.order,
         byId: profiles.byId
       },
-      library
+      library,
+      scores
     };
     const str = JSON.stringify(payload);
     let copied = false;
@@ -9082,6 +9833,7 @@ function App() {
     const lib = sanitizeLibrary(j.library);
     applyLibrary(lib);
     setLibrary(lib);
+    if (j.scores) setScores(sanitizeScores(j.scores));
     const byId = {},
       order = [];
     const src = j.profiles || {};
@@ -9235,7 +9987,7 @@ input[type=range]::-moz-range-thumb { width: 18px; height: 18px; border: 0; bord
     C: C,
     profile: profile,
     onSwitch: signOut,
-    title: tab === "insights" ? "Insights" : tab === "profile" ? "You" : "Movie Night"
+    title: tab === "insights" ? "Insights" : tab === "watched" ? "Watched" : tab === "profile" ? "You" : "Movie Night"
   }), tab === "discover" && /*#__PURE__*/React.createElement(DiscoverTab, {
     C: C,
     profile: profile,
@@ -9267,6 +10019,22 @@ input[type=range]::-moz-range-thumb { width: 18px; height: 18px; border: 0; bord
     view: rateView,
     setView: setRateView,
     watchlistTitles: watchlistTitles
+  }), tab === "watched" && /*#__PURE__*/React.createElement(WatchedTab, {
+    C: C,
+    view: mv,
+    ins: ins,
+    scores: scores,
+    sort: watchedSort,
+    setSort: setWatchedSort,
+    onFetchScores: fetchWatchedScores,
+    fetching: scoreBusy,
+    fetchMsg: scoreMsg,
+    missing: missingScores,
+    hasKey: !!omdbKey.trim(),
+    onOpenScores: () => {
+      setScoreMsg("");
+      setScoresOpen(true);
+    }
   }), tab === "insights" && /*#__PURE__*/React.createElement(InsightsTab, {
     C: C,
     view: mv,
@@ -9294,6 +10062,11 @@ input[type=range]::-moz-range-thumb { width: 18px; height: 18px; border: 0; bord
       setBackupOpen(true);
     },
     onOpenAdd: () => setAddOpen(true),
+    onOpenScores: () => {
+      setScoreMsg("");
+      setScoresOpen(true);
+    },
+    scoredCount: scoredCount,
     onSignOut: signOut,
     onDeleteProfile: () => deleteProfile(activeId),
     addedCount: addedList.length,
@@ -9344,6 +10117,19 @@ input[type=range]::-moz-range-thumb { width: 18px; height: 18px; border: 0; bord
     onClose: () => setAddOpen(false),
     C: C,
     onAdd: addTitle
+  }), /*#__PURE__*/React.createElement(ScoresSheet, {
+    open: scoresOpen,
+    onClose: () => setScoresOpen(false),
+    C: C,
+    omdbKey: omdbKey,
+    setOmdbKey: setOmdbKey,
+    onFetchWatched: fetchWatchedScores,
+    onFetchAll: fetchAllScores,
+    busy: scoreBusy,
+    msg: scoreMsg,
+    progress: scoreProgress,
+    scoredCount: scoredCount,
+    catalogTotal: MOVIE_LIST.length
   }), /*#__PURE__*/React.createElement(MemberSheet, {
     open: !!memberSheet,
     onClose: () => setMemberSheet(null),

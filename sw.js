@@ -2,7 +2,7 @@
 // Bump CACHE when you deploy a new version (v1 -> v2 -> ...).
 // Your data is NOT stored here — it lives in localStorage and
 // is never touched by cache updates.
-const CACHE = "mnp-v7";
+const CACHE = "mnp-v8";
 const ASSETS = [
   "./",
   "./index.html",
