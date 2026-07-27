@@ -57,7 +57,7 @@ const THEMES = {
     overlay: "rgba(0,0,0,0.6)"
   }
 };
-const APP_VERSION = "12";
+const APP_VERSION = "15";
 const FONT_UI = "'Inter', -apple-system, system-ui, sans-serif";
 const FONT_NUM = "'IBM Plex Mono', ui-monospace, 'SF Mono', monospace";
 
@@ -5134,7 +5134,6713 @@ const MOVIES = [
   g: ["drama"],
   tg: ["japan", "family"],
   p: 7
+},
+// ===== Belgium, 2011 onwards =====
+{
+  id: "the-artist-2011",
+  t: "The Artist",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "romance"],
+  tg: [],
+  p: 8
+}, {
+  id: "the-danish-girl-2015",
+  t: "The Danish Girl",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "blue-is-the-warmest-colour-2013",
+  t: "Blue Is the Warmest Colour",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 7
+}, {
+  id: "elle-2016",
+  t: "Elle",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["action", "crime", "drama"],
+  tg: ["detective"],
+  p: 7
+}, {
+  id: "filth-2013",
+  t: "Filth",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["action", "comedy", "crime"],
+  tg: ["detective"],
+  p: 7
+}, {
+  id: "i-daniel-blake-2016",
+  t: "I, Daniel Blake",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "rust-and-bone-2012",
+  t: "Rust and Bone",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 7
+}, {
+  id: "song-of-the-sea-2014",
+  t: "Song of the Sea",
+  y: 2014,
+  b: "t",
+  s: "live",
+  g: ["adventure", "animation", "drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "the-devil-s-double-2011",
+  t: "The Devil's Double",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 7
+}, {
+  id: "brimstone-2016",
+  t: "Brimstone",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller", "adventure"],
+  tg: [],
+  p: 6
+}, {
+  id: "bullhead-2011",
+  t: "Bullhead",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "close-2022",
+  t: "Close",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "ernest-celestine-2012",
+  t: "Ernest & Celestine",
+  y: 2012,
+  b: "t",
+  s: "live",
+  g: ["adventure", "animation", "comedy"],
+  tg: [],
+  p: 6
+}, {
+  id: "girl-2018",
+  t: "Girl",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "io-capitano-2023",
+  t: "Io Capitano",
+  y: 2023,
+  b: "x",
+  s: "live",
+  g: ["adventure", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "loveless-2017",
+  t: "Loveless",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "mrs-harris-goes-to-paris-2022",
+  t: "Mrs. Harris Goes to Paris",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "suite-fran-aise-2014",
+  t: "Suite Fran\u00e7aise",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 6
+}, {
+  id: "the-angels-share-2012",
+  t: "The Angels' Share",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["comedy", "crime", "drama"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "the-book-of-vision-2020",
+  t: "The Book of Vision",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["drama", "mystery"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "the-brand-new-testament-2015",
+  t: "The Brand New Testament",
+  y: 2015,
+  b: "x",
+  s: "live",
+  g: ["comedy", "drama", "fantasy"],
+  tg: [],
+  p: 6
+}, {
+  id: "the-broken-circle-breakdown-2012",
+  t: "The Broken Circle Breakdown",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical", "romance"],
+  tg: ["music"],
+  p: 6
+}, {
+  id: "the-eight-mountains-2022",
+  t: "The Eight Mountains",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "the-kid-with-a-bike-2011",
+  t: "The Kid with a Bike",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "the-missing-2014",
+  t: "The Missing",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 6,
+  k: "s"
+}, {
+  id: "the-red-turtle-2016",
+  t: "The Red Turtle",
+  y: 2016,
+  b: "k",
+  s: "live",
+  g: ["animation", "drama"],
+  tg: ["family"],
+  p: 6
+}, {
+  id: "two-days-one-night-2014",
+  t: "Two Days, One Night",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "what-s-in-a-name-2012",
+  t: "What's in a Name?",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "april-and-the-extraordinary-world-2015",
+  t: "April and the Extraordinary World",
+  y: 2015,
+  b: "t",
+  s: "live",
+  g: ["adventure", "animation", "comedy"],
+  tg: [],
+  p: 5
+}, {
+  id: "beating-hearts-2024",
+  t: "Beating Hearts",
+  y: 2024,
+  b: "r",
+  s: "live",
+  g: ["comedy", "crime", "drama"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "beyond-the-hills-2012",
+  t: "Beyond the Hills",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "by-the-grace-of-god-2018",
+  t: "By the Grace of God",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "chicken-with-plums-2011",
+  t: "Chicken with Plums",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "come-as-you-are-2011",
+  t: "Come As You Are",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "delicious-2021",
+  t: "Delicious",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "ennio-2021",
+  t: "Ennio",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "graduation-2016",
+  t: "Graduation",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "heavy-trip-2018",
+  t: "Heavy Trip",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["comedy", "musical"],
+  tg: ["music"],
+  p: 5
+}, {
+  id: "last-breath-2019",
+  t: "Last Breath",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "little-am-lie-or-the-character-of--2025",
+  t: "Little Am\u00e9lie or the Character of Rain",
+  y: 2025,
+  b: "k",
+  s: "live",
+  g: ["animation", "drama"],
+  tg: ["family"],
+  p: 5
+}, {
+  id: "minuscule-valley-of-the-lost-ants-2013",
+  t: "Minuscule: Valley of the Lost Ants",
+  y: 2013,
+  b: "t",
+  s: "live",
+  g: ["action", "adventure", "animation"],
+  tg: [],
+  p: 5
+}, {
+  id: "north-sea-texas-2011",
+  t: "North Sea Texas",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "r-m-n-2022",
+  t: "R.M.N.",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "riphagen-2016",
+  t: "Riphagen",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 5,
+  k: "s"
+}, {
+  id: "the-african-doctor-2016",
+  t: "The African Doctor",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama", "comedy"],
+  tg: [],
+  p: 5
+}, {
+  id: "the-blue-caftan-2022",
+  t: "The Blue Caftan",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "the-connection-2014",
+  t: "The Connection",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["action", "crime", "thriller"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "the-innocents-2016",
+  t: "The Innocents",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "the-night-of-the-12th-2022",
+  t: "The Night of the 12th",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "the-old-oak-2023",
+  t: "The Old Oak",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "the-stranger-2025",
+  t: "The Stranger",
+  y: 2025,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "the-treatment-2014",
+  t: "The Treatment",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "vortex-2021",
+  t: "Vortex",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "young-hearts-2024",
+  t: "Young Hearts",
+  y: 2024,
+  b: "k",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: ["family"],
+  p: 5
+}, {
+  id: "another-day-of-life-2018",
+  t: "Another Day of Life",
+  y: 2018,
+  b: "t",
+  s: "live",
+  g: ["animation", "drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "black-2015",
+  t: "Black",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["action", "crime", "drama"],
+  tg: ["detective"],
+  p: 4
+}, {
+  id: "cold-case-hammarskj-ld-2019",
+  t: "Cold Case Hammarskj\u00f6ld",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "colours-of-time-2025",
+  t: "Colours of Time",
+  y: 2025,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "romance"],
+  tg: [],
+  p: 4
+}, {
+  id: "farewell-mr-haffmann-2021",
+  t: "Farewell, Mr. Haffmann",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "het-vonnis-2013",
+  t: "Het vonnis",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama"],
+  tg: ["detective"],
+  p: 4
+}, {
+  id: "hotel-beau-s-jour-2016",
+  t: "Hotel Beau S\u00e9jour",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 4,
+  k: "s"
+}, {
+  id: "i-m-not-a-robot-2023",
+  t: "I'm Not a Robot",
+  y: 2023,
+  b: "x",
+  s: "live",
+  g: ["comedy", "drama", "fantasy"],
+  tg: [],
+  p: 4
+}, {
+  id: "in-safe-hands-2018",
+  t: "In Safe Hands",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "in-syria-2017",
+  t: "In Syria",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 4
+}, {
+  id: "marina-2013",
+  t: "Marina",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical"],
+  tg: ["music"],
+  p: 4
+}, {
+  id: "no-man-s-land-2020",
+  t: "No Man's Land",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: ["war"],
+  p: 4,
+  k: "s"
+}, {
+  id: "onoda-10-000-nights-in-the-jungle-2021",
+  t: "Onoda: 10,000 Nights in the Jungle",
+  y: 2021,
+  b: "x",
+  s: "live",
+  g: ["adventure", "drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "papicha-2019",
+  t: "Papicha",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "playground-2021",
+  t: "Playground",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "promise-at-dawn-2017",
+  t: "Promise at Dawn",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 4
+}, {
+  id: "rebel-2022",
+  t: "Rebel",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["action", "drama", "thriller"],
+  tg: [],
+  p: 4
+}, {
+  id: "rise-2022",
+  t: "Rise",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "soundtrack-to-a-coup-d-etat-2024",
+  t: "Soundtrack to a Coup d'Etat",
+  y: 2024,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical"],
+  tg: ["music"],
+  p: 4
+}, {
+  id: "the-attack-2012",
+  t: "The Attack",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 4
+}, {
+  id: "the-big-bad-fox-and-other-tales-2017",
+  t: "The Big Bad Fox and Other Tales",
+  y: 2017,
+  b: "t",
+  s: "live",
+  g: ["adventure", "animation", "comedy"],
+  tg: [],
+  p: 4
+}, {
+  id: "the-braid-2023",
+  t: "The Braid",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "the-conductor-2018",
+  t: "The Conductor",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "the-painting-2011",
+  t: "The Painting",
+  y: 2011,
+  b: "t",
+  s: "live",
+  g: ["adventure", "animation", "drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "the-source-2011",
+  t: "The Source",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "tori-and-lokita-2022",
+  t: "Tori and Lokita",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama"],
+  tg: ["detective"],
+  p: 4
+}, {
+  id: "two-of-us-2019",
+  t: "Two of Us",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 4
+}, {
+  id: "when-pigs-have-wings-2011",
+  t: "When Pigs Have Wings",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["comedy"],
+  tg: [],
+  p: 4
+}, {
+  id: "zillion-2022",
+  t: "Zillion",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama", "crime"],
+  tg: ["detective"],
+  p: 4
+},
+// ===== France, 2011 onwards =====
+{
+  id: "now-you-see-me-2013",
+  t: "Now You See Me",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["crime", "mystery", "thriller"],
+  tg: ["detective"],
+  p: 9
+}, {
+  id: "source-code-2011",
+  t: "Source Code",
+  y: 2011,
+  b: "x",
+  s: "live",
+  g: ["action", "drama", "mystery"],
+  tg: ["detective"],
+  p: 9
+}, {
+  id: "anatomy-of-a-fall-2023",
+  t: "Anatomy of a Fall",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 8
+}, {
+  id: "call-me-by-your-name-2017",
+  t: "Call Me by Your Name",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 8
+}, {
+  id: "i-tonya-2017",
+  t: "I, Tonya",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama", "comedy"],
+  tg: [],
+  p: 8
+}, {
+  id: "melancholia-2011",
+  t: "Melancholia",
+  y: 2011,
+  b: "x",
+  s: "live",
+  g: ["drama", "scifi"],
+  tg: [],
+  p: 8
+}, {
+  id: "snowpiercer-2013",
+  t: "Snowpiercer",
+  y: 2013,
+  b: "x",
+  s: "live",
+  g: ["action", "drama", "scifi"],
+  tg: [],
+  p: 8
+}, {
+  id: "the-adventures-of-tintin-2011",
+  t: "The Adventures of Tintin",
+  y: 2011,
+  b: "t",
+  s: "live",
+  g: ["action", "adventure", "animation"],
+  tg: [],
+  p: 8
+}, {
+  id: "the-father-2020",
+  t: "The Father",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["drama", "mystery"],
+  tg: ["detective"],
+  p: 8
+}, {
+  id: "the-lobster-2015",
+  t: "The Lobster",
+  y: 2015,
+  b: "x",
+  s: "live",
+  g: ["drama", "romance", "scifi"],
+  tg: [],
+  p: 8
+}, {
+  id: "triangle-of-sadness-2022",
+  t: "Triangle of Sadness",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "amour-2012",
+  t: "Amour",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "anthropoid-2016",
+  t: "Anthropoid",
+  y: 2016,
+  b: "x",
+  s: "live",
+  g: ["action", "drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "carnage-2011",
+  t: "Carnage",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "cold-war-2018",
+  t: "Cold War",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical", "romance"],
+  tg: ["music"],
+  p: 7
+}, {
+  id: "force-majeure-2014",
+  t: "Force Majeure",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "guillermo-del-toro-s-pinocchio-2022",
+  t: "Guillermo del Toro's Pinocchio",
+  y: 2022,
+  b: "t",
+  s: "live",
+  g: ["adventure", "animation", "drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "i-m-still-here-2024",
+  t: "I'm Still Here",
+  y: 2024,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "ida-2013",
+  t: "Ida",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "inside-llewyn-davis-2013",
+  t: "Inside Llewyn Davis",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical"],
+  tg: ["music"],
+  p: 7
+}, {
+  id: "miss-sloane-2016",
+  t: "Miss Sloane",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "only-lovers-left-alive-2013",
+  t: "Only Lovers Left Alive",
+  y: 2013,
+  b: "x",
+  s: "live",
+  g: ["comedy", "drama", "fantasy"],
+  tg: [],
+  p: 7
+}, {
+  id: "pain-and-glory-2019",
+  t: "Pain and Glory",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "philomena-2013",
+  t: "Philomena",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama", "comedy"],
+  tg: [],
+  p: 7
+}, {
+  id: "portrait-of-a-lady-on-fire-2019",
+  t: "Portrait of a Lady on Fire",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 7
+}, {
+  id: "pride-2014",
+  t: "Pride",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama", "comedy"],
+  tg: [],
+  p: 7
+}, {
+  id: "sentimental-value-2025",
+  t: "Sentimental Value",
+  y: 2025,
+  b: "k",
+  s: "live",
+  g: ["drama"],
+  tg: ["family"],
+  p: 7
+}, {
+  id: "snowden-2016",
+  t: "Snowden",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama", "crime"],
+  tg: ["detective"],
+  p: 7
+}, {
+  id: "still-alice-2014",
+  t: "Still Alice",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "the-death-of-stalin-2017",
+  t: "The Death of Stalin",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "the-great-beauty-2013",
+  t: "The Great Beauty",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "the-guernsey-literary-and-potato-p-2018",
+  t: "The Guernsey Literary and Potato Peel Pie Society",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: ["war"],
+  p: 7
+}, {
+  id: "the-little-prince-2015",
+  t: "The Little Prince",
+  y: 2015,
+  b: "t",
+  s: "live",
+  g: ["adventure", "animation", "comedy"],
+  tg: [],
+  p: 7
+}, {
+  id: "the-lunchbox-2013",
+  t: "The Lunchbox",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 7
+}, {
+  id: "the-salesman-2016",
+  t: "The Salesman",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 7
+}, {
+  id: "the-secret-agent-2025",
+  t: "The Secret Agent",
+  y: 2025,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 7
+}, {
+  id: "the-square-2017",
+  t: "The Square",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "the-worst-person-in-the-world-2021",
+  t: "The Worst Person in the World",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "romance"],
+  tg: [],
+  p: 7
+}, {
+  id: "winter-sleep-2014",
+  t: "Winter Sleep",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "youth-2015",
+  t: "Youth",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "musical"],
+  tg: ["music"],
+  p: 7
+}, {
+  id: "a-hero-2021",
+  t: "A Hero",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "about-dry-grasses-2023",
+  t: "About Dry Grasses",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "an-officer-and-a-spy-2019",
+  t: "An Officer and a Spy",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 6
+}, {
+  id: "bacurau-2019",
+  t: "Bacurau",
+  y: 2019,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "black-box-2021",
+  t: "Black Box",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["drama", "mystery", "thriller"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "corpus-christi-2019",
+  t: "Corpus Christi",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "dheepan-2015",
+  t: "Dheepan",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "dogman-2018",
+  t: "Dogman",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "thriller"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "flee-2021",
+  t: "Flee",
+  y: 2021,
+  b: "t",
+  s: "live",
+  g: ["animation", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "frantz-2016",
+  t: "Frantz",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 6
+}, {
+  id: "happy-as-lazzaro-2018",
+  t: "Happy as Lazzaro",
+  y: 2018,
+  b: "x",
+  s: "live",
+  g: ["drama", "fantasy", "mystery"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "holy-spider-2022",
+  t: "Holy Spider",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "thriller"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "i-am-not-your-negro-2016",
+  t: "I Am Not Your Negro",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "i-lost-my-body-2019",
+  t: "I Lost My Body",
+  y: 2019,
+  b: "t",
+  s: "live",
+  g: ["animation", "drama", "fantasy"],
+  tg: [],
+  p: 6
+}, {
+  id: "in-the-fade-2017",
+  t: "In the Fade",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "in-the-house-2012",
+  t: "In the House",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama", "mystery", "thriller"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "it-was-just-an-accident-2025",
+  t: "It Was Just an Accident",
+  y: 2025,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "jodorowsky-s-dune-2013",
+  t: "Jodorowsky's Dune",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "la-chimera-2023",
+  t: "La Chimera",
+  y: 2023,
+  b: "x",
+  s: "live",
+  g: ["adventure", "comedy", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "la-belle-poque-2019",
+  t: "La belle \u00e9poque",
+  y: 2019,
+  b: "x",
+  s: "live",
+  g: ["comedy", "drama", "fantasy"],
+  tg: [],
+  p: 6
+}, {
+  id: "laurence-anyways-2012",
+  t: "Laurence Anyways",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 6
+}, {
+  id: "le-havre-2011",
+  t: "Le Havre",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "les-mis-rables-2019",
+  t: "Les Mis\u00e9rables",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "thriller"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "masaan-2015",
+  t: "Masaan",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "mustang-2015",
+  t: "Mustang",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "my-life-as-a-zucchini-2016",
+  t: "My Life as a Zucchini",
+  y: 2016,
+  b: "t",
+  s: "live",
+  g: ["animation", "comedy", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "no-2012",
+  t: "No",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "petite-maman-2021",
+  t: "Petite Maman",
+  y: 2021,
+  b: "x",
+  s: "live",
+  g: ["drama", "fantasy"],
+  tg: [],
+  p: 6
+}, {
+  id: "quo-vadis-aida-2020",
+  t: "Quo Vadis, Aida?",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 6
+}, {
+  id: "race-2016",
+  t: "Race",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama", "sports"],
+  tg: ["sports"],
+  p: 6
+}, {
+  id: "robot-dreams-2023",
+  t: "Robot Dreams",
+  y: 2023,
+  b: "t",
+  s: "live",
+  g: ["animation", "comedy", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "sorry-we-missed-you-2019",
+  t: "Sorry We Missed You",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "sorry-baby-2025",
+  t: "Sorry, Baby",
+  y: 2025,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "the-beasts-2022",
+  t: "The Beasts",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 6
+}, {
+  id: "the-b-lier-family-2014",
+  t: "The B\u00e9lier Family",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "musical"],
+  tg: ["music"],
+  p: 6
+}, {
+  id: "the-captain-2017",
+  t: "The Captain",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 6
+}, {
+  id: "the-count-of-monte-cristo-2024",
+  t: "The Count of Monte Cristo",
+  y: 2024,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "the-insult-2017",
+  t: "The Insult",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "thriller"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "the-past-2013",
+  t: "The Past",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama", "mystery"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "the-salt-of-the-earth-2014",
+  t: "The Salt of the Earth",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "the-seed-of-the-sacred-fig-2024",
+  t: "The Seed of the Sacred Fig",
+  y: 2024,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "thriller"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "the-taste-of-things-2023",
+  t: "The Taste of Things",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 6
+}, {
+  id: "the-turin-horse-2011",
+  t: "The Turin Horse",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "the-voice-of-hind-rajab-2025",
+  t: "The Voice of Hind Rajab",
+  y: 2025,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 6
+}, {
+  id: "the-wild-pear-tree-2018",
+  t: "The Wild Pear Tree",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "the-young-pope-2016",
+  t: "The Young Pope",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6,
+  k: "s"
+}, {
+  id: "timbuktu-2014",
+  t: "Timbuktu",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 6
+}, {
+  id: "tomboy-2011",
+  t: "Tomboy",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "two-is-a-family-2016",
+  t: "Two Is a Family",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "venus-in-fur-2013",
+  t: "Venus in Fur",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "wolfwalkers-2020",
+  t: "Wolfwalkers",
+  y: 2020,
+  b: "t",
+  s: "live",
+  g: ["action", "adventure", "animation"],
+  tg: [],
+  p: 6
+}, {
+  id: "120-bpm-beats-per-minute-2017",
+  t: "120 BPM (Beats Per Minute)",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "5-broken-cameras-2011",
+  t: "5 Broken Cameras",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 5
+}, {
+  id: "a-bag-of-marbles-2017",
+  t: "A Bag of Marbles",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "a-twelve-year-night-2018",
+  t: "A Twelve-Year Night",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["adventure", "drama", "crime"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "aferim-2015",
+  t: "Aferim!",
+  y: 2015,
+  b: "x",
+  s: "live",
+  g: ["adventure", "comedy", "drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "after-lucia-2012",
+  t: "After Lucia",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "arco-2025",
+  t: "Arco",
+  y: 2025,
+  b: "t",
+  s: "live",
+  g: ["adventure", "animation", "fantasy"],
+  tg: [],
+  p: 5
+}, {
+  id: "asako-i-ii-2018",
+  t: "Asako I & II",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "bad-seeds-2018",
+  t: "Bad Seeds",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["comedy"],
+  tg: [],
+  p: 5
+}, {
+  id: "being-17-2016",
+  t: "Being 17",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "burning-days-2022",
+  t: "Burning Days",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 5
+}, {
+  id: "caf-de-flore-2011",
+  t: "Caf\u00e9 de Flore",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "clash-2016",
+  t: "Clash",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: ["war"],
+  p: 5
+}, {
+  id: "crossing-2024",
+  t: "Crossing",
+  y: 2024,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "crossing-lines-2013",
+  t: "Crossing Lines",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["action", "crime", "drama"],
+  tg: ["detective"],
+  p: 5,
+  k: "s"
+}, {
+  id: "custody-2017",
+  t: "Custody",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 5
+}, {
+  id: "devils-2020",
+  t: "Devils",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 5,
+  k: "s"
+}, {
+  id: "diplomacy-2014",
+  t: "Diplomacy",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 5
+}, {
+  id: "divines-2016",
+  t: "Divines",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "do-not-expect-too-much-from-the-en-2023",
+  t: "Do Not Expect Too Much from the End of the World",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "endless-poetry-2016",
+  t: "Endless Poetry",
+  y: 2016,
+  b: "x",
+  s: "live",
+  g: ["drama", "fantasy"],
+  tg: [],
+  p: 5
+}, {
+  id: "faces-places-2017",
+  t: "Faces Places",
+  y: 2017,
+  b: "x",
+  s: "live",
+  g: ["adventure", "drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "family-business-2019",
+  t: "Family Business",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["comedy"],
+  tg: [],
+  p: 5,
+  k: "s"
+}, {
+  id: "far-from-men-2014",
+  t: "Far from Men",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 5
+}, {
+  id: "full-time-2021",
+  t: "Full Time",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 5
+}, {
+  id: "gett-2014",
+  t: "Gett",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "godland-2022",
+  t: "Godland",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "hannah-arendt-2012",
+  t: "Hannah Arendt",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "happening-2021",
+  t: "Happening",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "hidden-kisses-2016",
+  t: "Hidden Kisses",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "hitchcock-truffaut-2015",
+  t: "Hitchcock/Truffaut",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "human-2015",
+  t: "Human",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "human-capital-2013",
+  t: "Human Capital",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "in-bloom-2013",
+  t: "In Bloom",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "la-mante-2017",
+  t: "La Mante",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "thriller"],
+  tg: ["detective"],
+  p: 5,
+  k: "s"
+}, {
+  id: "left-handed-girl-2025",
+  t: "Left-Handed Girl",
+  y: 2025,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "like-crazy-2016",
+  t: "Like Crazy",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "long-day-s-journey-into-night-2018",
+  t: "Long Day's Journey Into Night",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama", "mystery", "romance"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "lost-illusions-2021",
+  t: "Lost Illusions",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "magical-girl-2014",
+  t: "Magical Girl",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 5
+}, {
+  id: "mars-express-2023",
+  t: "Mars Express",
+  y: 2023,
+  b: "t",
+  s: "live",
+  g: ["action", "animation", "mystery"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "midnight-sun-2016",
+  t: "Midnight Sun",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 5,
+  k: "s"
+}, {
+  id: "mr-mme-adelman-2017",
+  t: "Mr & Mme Adelman",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "mune-guardian-of-the-moon-2014",
+  t: "Mune: Guardian of the Moon",
+  y: 2014,
+  b: "t",
+  s: "live",
+  g: ["adventure", "animation", "comedy"],
+  tg: [],
+  p: 5
+}, {
+  id: "my-favourite-cake-2024",
+  t: "My Favourite Cake",
+  y: 2024,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "my-king-2015",
+  t: "My King",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "nouvelle-vague-2025",
+  t: "Nouvelle Vague",
+  y: 2025,
+  b: "r",
+  s: "live",
+  g: ["drama", "comedy"],
+  tg: [],
+  p: 5
+}, {
+  id: "only-the-animals-2019",
+  t: "Only the Animals",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "palestine-36-2025",
+  t: "Palestine 36",
+  y: 2025,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 5
+}, {
+  id: "pina-2011",
+  t: "Pina",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical"],
+  tg: ["music"],
+  p: 5
+}, {
+  id: "play-2011",
+  t: "Play",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "polisse-2011",
+  t: "Polisse",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "pressure-2026",
+  t: "Pressure",
+  y: 2026,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 5
+}, {
+  id: "sauvage-wild-2018",
+  t: "Sauvage/Wild",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "see-you-up-there-2017",
+  t: "See You Up There",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["comedy", "crime", "drama"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "sieranevada-2016",
+  t: "Sieranevada",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "sir-2018",
+  t: "Sir",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "snow-white-2012",
+  t: "Snow White",
+  y: 2012,
+  b: "x",
+  s: "live",
+  g: ["drama", "fantasy"],
+  tg: [],
+  p: 5
+}, {
+  id: "something-useful-2017",
+  t: "Something Useful",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "souleymane-s-story-2024",
+  t: "Souleymane's Story",
+  y: 2024,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "sweet-bean-2015",
+  t: "Sweet Bean",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "tabu-2012",
+  t: "Tabu",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "the-dance-of-reality-2013",
+  t: "The Dance of Reality",
+  y: 2013,
+  b: "x",
+  s: "live",
+  g: ["drama", "fantasy"],
+  tg: [],
+  p: 5
+}, {
+  id: "the-endless-trench-2019",
+  t: "The Endless Trench",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "the-gatekeepers-2012",
+  t: "The Gatekeepers",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 5
+}, {
+  id: "the-gilded-cage-2013",
+  t: "The Gilded Cage",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "the-hookup-plan-2018",
+  t: "The Hookup Plan",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["comedy", "romance"],
+  tg: [],
+  p: 5,
+  k: "s"
+}, {
+  id: "the-look-of-silence-2014",
+  t: "The Look of Silence",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "the-marching-band-2024",
+  t: "The Marching Band",
+  y: 2024,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "musical"],
+  tg: ["music"],
+  p: 5
+}, {
+  id: "the-patience-stone-2012",
+  t: "The Patience Stone",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 5
+}, {
+  id: "the-specials-2019",
+  t: "The Specials",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "the-summit-of-the-gods-2021",
+  t: "The Summit of the Gods",
+  y: 2021,
+  b: "t",
+  s: "live",
+  g: ["adventure", "animation", "drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "the-traitor-2019",
+  t: "The Traitor",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama", "crime"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "what-will-people-say-2017",
+  t: "What Will People Say",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "where-do-we-go-now-2011",
+  t: "Where Do We Go Now?",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "woman-at-war-2018",
+  t: "Woman at War",
+  y: 2018,
+  b: "x",
+  s: "live",
+  g: ["adventure", "comedy", "drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "a-very-secret-service-2015",
+  t: "A Very Secret Service",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["comedy"],
+  tg: [],
+  p: 4,
+  k: "s"
+}, {
+  id: "after-love-2020",
+  t: "After Love",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "all-your-faces-2023",
+  t: "All Your Faces",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "apocalypse-la-1-re-guerre-mondiale-2014",
+  t: "Apocalypse la 1\u00e8re Guerre mondiale",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 4,
+  k: "s"
+}, {
+  id: "circles-2013",
+  t: "Circles",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "corn-island-2014",
+  t: "Corn Island",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 4
+}, {
+  id: "crist-bal-balenciaga-2024",
+  t: "Crist\u00f3bal Balenciaga",
+  y: 2024,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4,
+  k: "s"
+}, {
+  id: "cyrano-my-love-2018",
+  t: "Cyrano, My Love",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "diaz-don-t-clean-up-this-blood-2012",
+  t: "Diaz - Don't Clean Up This Blood",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "dior-and-i-2014",
+  t: "Dior and I",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "driving-madeleine-2022",
+  t: "Driving Madeleine",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "four-daughters-2023",
+  t: "Four Daughters",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "frenzy-2015",
+  t: "Frenzy",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 4
+}, {
+  id: "girl-you-know-it-s-true-2023",
+  t: "Girl You Know It's True",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical"],
+  tg: ["music"],
+  p: 4
+}, {
+  id: "inhuman-resources-2020",
+  t: "Inhuman Resources",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 4,
+  k: "s"
+}, {
+  id: "kahlil-gibran-s-the-prophet-2014",
+  t: "Kahlil Gibran's The Prophet",
+  y: 2014,
+  b: "t",
+  s: "live",
+  g: ["animation", "drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "li-l-quinquin-2014",
+  t: "Li'l Quinquin",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["comedy", "crime", "mystery"],
+  tg: ["detective"],
+  p: 4,
+  k: "s"
+}, {
+  id: "long-way-north-2015",
+  t: "Long Way North",
+  y: 2015,
+  b: "t",
+  s: "live",
+  g: ["adventure", "animation", "drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "monsieur-aznavour-2024",
+  t: "Monsieur Aznavour",
+  y: 2024,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical"],
+  tg: ["music"],
+  p: 4
+}, {
+  id: "my-happy-family-2017",
+  t: "My Happy Family",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "pamfir-2022",
+  t: "Pamfir",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["action", "drama", "thriller"],
+  tg: [],
+  p: 4
+}, {
+  id: "stations-of-the-cross-2014",
+  t: "Stations of the Cross",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "the-collapse-2019",
+  t: "The Collapse",
+  y: 2019,
+  b: "x",
+  s: "live",
+  g: ["adventure"],
+  tg: [],
+  p: 4,
+  k: "s"
+}, {
+  id: "the-snows-of-kilimanjaro-2011",
+  t: "The Snows of Kilimanjaro",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "romance"],
+  tg: [],
+  p: 4
+}, {
+  id: "what-the-day-owes-the-night-2012",
+  t: "What the Day Owes the Night",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 4
+},
+// ===== United Kingdom, 2011 onwards =====
+{
+  id: "darkest-hour-2017",
+  t: "Darkest Hour",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "sex-education-2019",
+  t: "Sex Education",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "romance"],
+  tg: [],
+  p: 8,
+  k: "s"
+}, {
+  id: "shame-2011",
+  t: "Shame",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "the-king-2019",
+  t: "The King",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "71-2014",
+  t: "'71",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["action", "crime", "drama"],
+  tg: ["detective"],
+  p: 7
+}, {
+  id: "all-of-us-strangers-2023",
+  t: "All of Us Strangers",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 7
+}, {
+  id: "amy-2015",
+  t: "Amy",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical"],
+  tg: ["music"],
+  p: 7
+}, {
+  id: "belfast-2021",
+  t: "Belfast",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "boiling-point-2021",
+  t: "Boiling Point",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 7
+}, {
+  id: "brooklyn-2015",
+  t: "Brooklyn",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 7
+}, {
+  id: "calvary-2014",
+  t: "Calvary",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 7
+}, {
+  id: "downton-abbey-2019",
+  t: "Downton Abbey",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 7
+}, {
+  id: "eye-in-the-sky-2015",
+  t: "Eye in the Sky",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: ["war"],
+  p: 7
+}, {
+  id: "searching-for-sugar-man-2012",
+  t: "Searching for Sugar Man",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical"],
+  tg: ["music"],
+  p: 7
+}, {
+  id: "taboo-2017",
+  t: "Taboo",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama", "mystery", "thriller"],
+  tg: ["detective"],
+  p: 7,
+  k: "s"
+}, {
+  id: "the-best-exotic-marigold-hotel-2011",
+  t: "The Best Exotic Marigold Hotel",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "romance"],
+  tg: [],
+  p: 7
+}, {
+  id: "the-courier-2020",
+  t: "The Courier",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["drama", "mystery"],
+  tg: ["detective"],
+  p: 7
+}, {
+  id: "the-guard-2011",
+  t: "The Guard",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["comedy", "crime", "thriller"],
+  tg: ["detective"],
+  p: 7
+}, {
+  id: "the-man-who-knew-infinity-2015",
+  t: "The Man Who Knew Infinity",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "the-stranger-2020",
+  t: "The Stranger",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 7,
+  k: "s"
+}, {
+  id: "a-street-cat-named-bob-2016",
+  t: "A Street Cat Named Bob",
+  y: 2016,
+  b: "k",
+  s: "live",
+  g: ["drama"],
+  tg: ["family"],
+  p: 6
+}, {
+  id: "a-very-english-scandal-2018",
+  t: "A Very English Scandal",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama", "comedy", "crime"],
+  tg: ["detective"],
+  p: 6,
+  k: "s"
+}, {
+  id: "belle-2013",
+  t: "Belle",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 6
+}, {
+  id: "breathe-2017",
+  t: "Breathe",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 6
+}, {
+  id: "c-b-strike-2017",
+  t: "C.B. Strike",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 6,
+  k: "s"
+}, {
+  id: "david-attenborough-a-life-on-our-p-2020",
+  t: "David Attenborough: A Life on Our Planet",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "diego-maradona-2019",
+  t: "Diego Maradona",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama", "sports"],
+  tg: ["sports"],
+  p: 6
+}, {
+  id: "god-s-own-country-2017",
+  t: "God's Own Country",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 6
+}, {
+  id: "good-luck-to-you-leo-grande-2022",
+  t: "Good Luck to You, Leo Grande",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "i-swear-2025",
+  t: "I Swear",
+  y: 2025,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "kneecap-2024",
+  t: "Kneecap",
+  y: 2024,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "musical"],
+  tg: ["music"],
+  p: 6
+}, {
+  id: "living-2022",
+  t: "Living",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "one-life-2023",
+  t: "One Life",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "ricky-gervais-humanity-2018",
+  t: "Ricky Gervais: Humanity",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "ricky-gervais-supernature-2022",
+  t: "Ricky Gervais: SuperNature",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["comedy"],
+  tg: [],
+  p: 6
+}, {
+  id: "rivals-2024",
+  t: "Rivals",
+  y: 2024,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6,
+  k: "s"
+}, {
+  id: "stan-ollie-2018",
+  t: "Stan & Ollie",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama", "comedy"],
+  tg: [],
+  p: 6
+}, {
+  id: "starred-up-2013",
+  t: "Starred Up",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "thriller"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "tell-me-who-i-am-2019",
+  t: "Tell Me Who I Am",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama", "mystery"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "testament-of-youth-2014",
+  t: "Testament of Youth",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "the-act-of-killing-2012",
+  t: "The Act of Killing",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama", "crime"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "the-ballad-of-wallis-island-2025",
+  t: "The Ballad of Wallis Island",
+  y: 2025,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "musical"],
+  tg: ["music"],
+  p: 6
+}, {
+  id: "the-boy-who-harnessed-the-wind-2019",
+  t: "The Boy Who Harnessed the Wind",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "the-english-game-2020",
+  t: "The English Game",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["drama", "sports"],
+  tg: ["sports"],
+  p: 6,
+  k: "s"
+}, {
+  id: "the-musketeers-2014",
+  t: "The Musketeers",
+  y: 2014,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "drama"],
+  tg: [],
+  p: 6,
+  k: "s"
+}, {
+  id: "they-shall-not-grow-old-2018",
+  t: "They Shall Not Grow Old",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 6
+}, {
+  id: "tyrannosaur-2011",
+  t: "Tyrannosaur",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "war-peace-2016",
+  t: "War & Peace",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 6,
+  k: "s"
+}, {
+  id: "weekend-2011",
+  t: "Weekend",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 6
+}, {
+  id: "20-000-days-on-earth-2014",
+  t: "20,000 Days on Earth",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical"],
+  tg: ["music"],
+  p: 5
+}, {
+  id: "baptiste-2019",
+  t: "Baptiste",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "thriller"],
+  tg: ["detective"],
+  p: 5,
+  k: "s"
+}, {
+  id: "birdsong-2012",
+  t: "Birdsong",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: ["war"],
+  p: 5,
+  k: "s"
+}, {
+  id: "broken-2012",
+  t: "Broken",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "cunk-on-life-2024",
+  t: "Cunk on Life",
+  y: 2024,
+  b: "r",
+  s: "live",
+  g: ["comedy"],
+  tg: [],
+  p: 5
+}, {
+  id: "for-sama-2019",
+  t: "For Sama",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 5
+}, {
+  id: "great-expectations-2011",
+  t: "Great Expectations",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5,
+  k: "s"
+}, {
+  id: "informer-2018",
+  t: "Informer",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "thriller"],
+  tg: ["detective"],
+  p: 5,
+  k: "s"
+}, {
+  id: "mrs-wilson-2018",
+  t: "Mrs. Wilson",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama", "mystery"],
+  tg: ["detective"],
+  p: 5,
+  k: "s"
+}, {
+  id: "oasis-supersonic-2016",
+  t: "Oasis: Supersonic",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical"],
+  tg: ["music"],
+  p: 5
+}, {
+  id: "ordeal-by-innocence-2018",
+  t: "Ordeal by Innocence",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 5,
+  k: "s"
+}, {
+  id: "rye-lane-2023",
+  t: "Rye Lane",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "staged-2020",
+  t: "Staged",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 5,
+  k: "s"
+}, {
+  id: "the-bastard-son-the-devil-himself-2022",
+  t: "The Bastard Son & The Devil Himself",
+  y: 2022,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "drama"],
+  tg: [],
+  p: 5,
+  k: "s"
+}, {
+  id: "the-paradise-2012",
+  t: "The Paradise",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5,
+  k: "s"
+}, {
+  id: "the-phantom-of-the-opera-at-the-ro-2011",
+  t: "The Phantom of the Opera at the Royal Albert Hall",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "the-salisbury-poisonings-2020",
+  t: "The Salisbury Poisonings",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 5,
+  k: "s"
+}, {
+  id: "the-selfish-giant-2013",
+  t: "The Selfish Giant",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "this-is-england-88-2011",
+  t: "This Is England '88",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["comedy", "crime", "drama"],
+  tg: ["detective"],
+  p: 5,
+  k: "s"
+}, {
+  id: "this-is-england-90-2015",
+  t: "This Is England '90",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["comedy", "crime", "drama"],
+  tg: ["detective"],
+  p: 5,
+  k: "s"
+}, {
+  id: "virunga-2014",
+  t: "Virunga",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 5
+}, {
+  id: "we-are-lady-parts-2021",
+  t: "We Are Lady Parts",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["comedy", "musical"],
+  tg: ["music"],
+  p: 5,
+  k: "s"
+}, {
+  id: "wham-2023",
+  t: "Wham!",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical"],
+  tg: ["music"],
+  p: 5
+}, {
+  id: "wild-bill-2011",
+  t: "Wild Bill",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["comedy", "crime", "drama"],
+  tg: ["detective"],
+  p: 5
+},
+// ===== Japan, 2011 onwards =====
+{
+  id: "the-theory-of-everything-2014",
+  t: "The Theory of Everything",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 8
+}, {
+  id: "burning-2018",
+  t: "Burning",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["japan", "detective"],
+  p: 7
+}, {
+  id: "cyberpunk-edgerunners-2022",
+  t: "Cyberpunk: Edgerunners",
+  y: 2022,
+  b: "t",
+  s: "live",
+  g: ["action", "adventure", "animation"],
+  tg: [],
+  p: 7,
+  k: "s"
+}, {
+  id: "rental-family-2025",
+  t: "Rental Family",
+  y: 2025,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "silence-2016",
+  t: "Silence",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "the-final-chapters-special-2-2023",
+  t: "The Final Chapters: Special 2",
+  y: 2023,
+  b: "t",
+  s: "live",
+  g: ["action", "adventure", "animation"],
+  tg: [],
+  p: 7
+}, {
+  id: "the-tale-of-the-princess-kaguya-2013",
+  t: "The Tale of The Princess Kaguya",
+  y: 2013,
+  b: "k",
+  s: "live",
+  g: ["animation", "drama"],
+  tg: ["family", "japan", "anime"],
+  p: 7
+}, {
+  id: "attack-on-titan-the-last-attack-2024",
+  t: "Attack on Titan: The Last Attack",
+  y: 2024,
+  b: "t",
+  s: "live",
+  g: ["action", "adventure", "animation"],
+  tg: ["japan", "anime"],
+  p: 6
+}, {
+  id: "demon-slayer-kimetsu-no-yaiba-mt-n-2020",
+  t: "Demon Slayer: Kimetsu no Yaiba - Mt. Natagumo Arc",
+  y: 2020,
+  b: "t",
+  s: "live",
+  g: ["action", "animation", "fantasy"],
+  tg: ["japan", "anime"],
+  p: 6
+}, {
+  id: "like-father-like-son-2013",
+  t: "Like Father, Like Son",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["japan"],
+  p: 6
+}, {
+  id: "monster-2023",
+  t: "Monster",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["drama", "mystery", "thriller"],
+  tg: ["japan", "detective"],
+  p: 6
+}, {
+  id: "one-cut-of-the-dead-2017",
+  t: "One Cut of the Dead",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "horror"],
+  tg: ["japan"],
+  p: 6
+}, {
+  id: "our-little-sister-2015",
+  t: "Our Little Sister",
+  y: 2015,
+  b: "k",
+  s: "live",
+  g: ["drama"],
+  tg: ["family", "japan"],
+  p: 6
+}, {
+  id: "rurouni-kenshin-part-i-origins-2012",
+  t: "Rurouni Kenshin Part I: Origins",
+  y: 2012,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "drama"],
+  tg: ["japan"],
+  p: 6
+}, {
+  id: "rurouni-kenshin-part-ii-kyoto-infe-2014",
+  t: "Rurouni Kenshin Part II: Kyoto Inferno",
+  y: 2014,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "drama"],
+  tg: ["japan"],
+  p: 6
+}, {
+  id: "the-last-naruto-the-movie-2014",
+  t: "The Last: Naruto the Movie",
+  y: 2014,
+  b: "t",
+  s: "live",
+  g: ["action", "adventure", "animation"],
+  tg: ["japan", "anime"],
+  p: 6
+}, {
+  id: "after-the-storm-2016",
+  t: "After the Storm",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: ["japan"],
+  p: 5
+}, {
+  id: "attack-on-titan-the-roar-of-awaken-2018",
+  t: "Attack on Titan: The Roar of Awakening",
+  y: 2018,
+  b: "t",
+  s: "live",
+  g: ["action", "animation", "fantasy"],
+  tg: ["japan", "anime"],
+  p: 5
+}, {
+  id: "beastars-2019",
+  t: "Beastars",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["animation", "crime", "drama"],
+  tg: ["detective"],
+  p: 5,
+  k: "s"
+}, {
+  id: "beyond-the-infinite-two-minutes-2020",
+  t: "Beyond the Infinite Two Minutes",
+  y: 2020,
+  b: "x",
+  s: "live",
+  g: ["comedy", "scifi"],
+  tg: ["japan"],
+  p: 5
+}, {
+  id: "demon-slayer-kimetsu-no-yaiba-to-t-2023",
+  t: "Demon Slayer: Kimetsu No Yaiba - To the Swordsmith Village",
+  y: 2023,
+  b: "t",
+  s: "live",
+  g: ["action", "adventure", "animation"],
+  tg: ["japan", "anime"],
+  p: 5
+}, {
+  id: "hara-kiri-death-of-a-samurai-2011",
+  t: "Hara-Kiri: Death of a Samurai",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["japan"],
+  p: 5
+}, {
+  id: "i-wish-2011",
+  t: "I Wish",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["japan"],
+  p: 5
+}, {
+  id: "kabaneri-of-the-iron-fortress-2016",
+  t: "Kabaneri of the Iron Fortress",
+  y: 2016,
+  b: "t",
+  s: "live",
+  g: ["action", "adventure", "animation"],
+  tg: ["japan", "anime"],
+  p: 5,
+  k: "s"
+}, {
+  id: "kokuho-2025",
+  t: "Kokuho",
+  y: 2025,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["japan"],
+  p: 5
+}, {
+  id: "my-tomorrow-your-yesterday-2016",
+  t: "My Tomorrow, Your Yesterday",
+  y: 2016,
+  b: "x",
+  s: "live",
+  g: ["drama", "fantasy", "romance"],
+  tg: ["japan"],
+  p: 5
+}, {
+  id: "road-to-ninja-naruto-the-movie-2012",
+  t: "Road to Ninja - Naruto the Movie",
+  y: 2012,
+  b: "t",
+  s: "live",
+  g: ["action", "adventure", "animation"],
+  tg: ["japan", "anime"],
+  p: 5
+}, {
+  id: "rurouni-kenshin-final-chapter-part-2021",
+  t: "Rurouni Kenshin: Final Chapter Part I - The Final",
+  y: 2021,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "drama"],
+  tg: ["japan"],
+  p: 5
+}, {
+  id: "rurouni-kenshin-final-chapter-part-2021-2",
+  t: "Rurouni Kenshin: Final Chapter Part II - The Beginning",
+  y: 2021,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "drama"],
+  tg: ["japan"],
+  p: 5
+}, {
+  id: "rurouni-kenshin-the-legend-ends-2014",
+  t: "Rurouni Kenshin: The Legend Ends",
+  y: 2014,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "drama"],
+  tg: ["japan"],
+  p: 5
+}, {
+  id: "the-anthem-of-the-heart-2015",
+  t: "The Anthem of the Heart",
+  y: 2015,
+  b: "t",
+  s: "live",
+  g: ["animation", "drama", "fantasy"],
+  tg: ["japan", "anime"],
+  p: 5
+}, {
+  id: "the-kingdom-of-dreams-and-madness-2013",
+  t: "The Kingdom of Dreams and Madness",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["japan"],
+  p: 5
+}, {
+  id: "the-naked-director-2019",
+  t: "The Naked Director",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["japan"],
+  p: 5,
+  k: "s"
+}, {
+  id: "the-night-is-short-walk-on-girl-2017",
+  t: "The Night Is Short, Walk on Girl",
+  y: 2017,
+  b: "t",
+  s: "live",
+  g: ["adventure", "animation", "comedy"],
+  tg: ["japan", "anime"],
+  p: 5
+}, {
+  id: "wheel-of-fortune-and-fantasy-2021",
+  t: "Wheel of Fortune and Fantasy",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: ["japan"],
+  p: 5
+}, {
+  id: "black-box-diaries-2024",
+  t: "Black Box Diaries",
+  y: 2024,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama"],
+  tg: ["japan", "detective"],
+  p: 4
+}, {
+  id: "cherry-magic-thirty-years-of-virgi-2020",
+  t: "Cherry Magic! Thirty Years of Virginity Can Make You a Wizard?!",
+  y: 2020,
+  b: "x",
+  s: "live",
+  g: ["comedy", "fantasy", "romance"],
+  tg: ["japan"],
+  p: 4,
+  k: "s"
+}, {
+  id: "demon-slayer-kimetsu-no-yaiba-asak-2021",
+  t: "Demon Slayer: Kimetsu no Yaiba - Asakusa Arc",
+  y: 2021,
+  b: "t",
+  s: "live",
+  g: ["action", "animation", "fantasy"],
+  tg: ["japan", "anime"],
+  p: 4
+}, {
+  id: "drawing-closer-2024",
+  t: "Drawing Closer",
+  y: 2024,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: ["japan"],
+  p: 4
+}, {
+  id: "flying-colors-2015",
+  t: "Flying Colors",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: ["japan"],
+  p: 4
+}, {
+  id: "kizumonogatari-part-2-nekketsu-2016",
+  t: "Kizumonogatari Part 2: Nekketsu",
+  y: 2016,
+  b: "t",
+  s: "live",
+  g: ["action", "animation", "drama"],
+  tg: ["japan", "anime"],
+  p: 4
+}, {
+  id: "kizumonogatari-part-3-reiketsu-2017",
+  t: "Kizumonogatari Part 3: Reiketsu",
+  y: 2017,
+  b: "t",
+  s: "live",
+  g: ["action", "animation", "drama"],
+  tg: ["japan", "anime"],
+  p: 4
+}, {
+  id: "supernatural-the-animation-2011",
+  t: "Supernatural: The Animation",
+  y: 2011,
+  b: "t",
+  s: "live",
+  g: ["adventure", "animation", "drama"],
+  tg: ["japan", "anime"],
+  p: 4,
+  k: "s"
+}, {
+  id: "tsuredure-children-2017",
+  t: "Tsuredure Children",
+  y: 2017,
+  b: "t",
+  s: "live",
+  g: ["animation", "comedy", "romance"],
+  tg: [],
+  p: 4,
+  k: "s"
+}, {
+  id: "we-made-a-beautiful-bouquet-2021",
+  t: "We Made a Beautiful Bouquet",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: ["japan"],
+  p: 4
+}, {
+  id: "wood-job-2014",
+  t: "Wood Job!",
+  y: 2014,
+  b: "x",
+  s: "live",
+  g: ["adventure", "comedy"],
+  tg: ["japan"],
+  p: 4
+},
+// ===== South Korea, 2011 onwards =====
+{
+  id: "decision-to-leave-2022",
+  t: "Decision to Leave",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 7
+}, {
+  id: "forgotten-2017",
+  t: "Forgotten",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["crime", "mystery", "thriller"],
+  tg: ["detective"],
+  p: 7
+}, {
+  id: "no-other-choice-2025",
+  t: "No Other Choice",
+  y: 2025,
+  b: "r",
+  s: "live",
+  g: ["comedy", "crime", "drama"],
+  tg: ["detective"],
+  p: 7
+}, {
+  id: "the-wailing-2016",
+  t: "The Wailing",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama", "horror"],
+  tg: [],
+  p: 7
+}, {
+  id: "a-hard-day-2014",
+  t: "A Hard Day",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["action", "crime", "thriller"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "a-taxi-driver-2017",
+  t: "A Taxi Driver",
+  y: 2017,
+  b: "x",
+  s: "live",
+  g: ["action", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "along-with-the-gods-the-two-worlds-2017",
+  t: "Along With the Gods: The Two Worlds",
+  y: 2017,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "miracle-in-cell-no-7-2013",
+  t: "Miracle in Cell No. 7",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "new-world-2013",
+  t: "New World",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["action", "crime", "drama"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "silenced-2011",
+  t: "Silenced",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "thriller"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "the-glory-2022",
+  t: "The Glory",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama", "mystery", "thriller"],
+  tg: ["detective"],
+  p: 6,
+  k: "s"
+}, {
+  id: "the-witch-part-1-the-subversion-2018",
+  t: "The Witch: Part 1 - The Subversion",
+  y: 2018,
+  b: "x",
+  s: "live",
+  g: ["action", "mystery", "scifi"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "1987-when-the-day-comes-2017",
+  t: "1987: When the Day Comes",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 5
+}, {
+  id: "20th-century-girl-2022",
+  t: "20th Century Girl",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "a-korean-odyssey-2017",
+  t: "A Korean Odyssey",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["comedy", "fantasy", "horror"],
+  tg: [],
+  p: 5,
+  k: "s"
+}, {
+  id: "a-werewolf-boy-2012",
+  t: "A Werewolf Boy",
+  y: 2012,
+  b: "x",
+  s: "live",
+  g: ["drama", "fantasy", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "always-2011",
+  t: "Always",
+  y: 2011,
+  b: "x",
+  s: "live",
+  g: ["action", "drama", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "assassination-2015",
+  t: "Assassination",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["action", "drama", "thriller"],
+  tg: [],
+  p: 5
+}, {
+  id: "be-with-you-2018",
+  t: "Be with You",
+  y: 2018,
+  b: "x",
+  s: "live",
+  g: ["drama", "fantasy", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "hope-2013",
+  t: "Hope",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "jung-kook-i-am-still-2024",
+  t: "Jung Kook: I Am Still",
+  y: 2024,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical"],
+  tg: ["music"],
+  p: 5
+}, {
+  id: "masquerade-2012",
+  t: "Masquerade",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "memoir-of-a-murderer-2017",
+  t: "Memoir of a Murderer",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["action", "crime", "mystery"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "memories-of-the-alhambra-2018",
+  t: "Memories of the Alhambra",
+  y: 2018,
+  b: "x",
+  s: "live",
+  g: ["drama", "romance", "scifi"],
+  tg: [],
+  p: 5,
+  k: "s"
+}, {
+  id: "midnight-runners-2017",
+  t: "Midnight Runners",
+  y: 2017,
+  b: "x",
+  s: "live",
+  g: ["action", "comedy"],
+  tg: [],
+  p: 5
+}, {
+  id: "montage-2013",
+  t: "Montage",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["crime", "mystery", "thriller"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "my-way-2011",
+  t: "My Way",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["action", "drama"],
+  tg: ["war"],
+  p: 5
+}, {
+  id: "ode-to-my-father-2014",
+  t: "Ode to My Father",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 5
+}, {
+  id: "sunny-2011",
+  t: "Sunny",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "the-attorney-2013",
+  t: "The Attorney",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "the-beauty-inside-2015",
+  t: "The Beauty Inside",
+  y: 2015,
+  b: "x",
+  s: "live",
+  g: ["drama", "fantasy", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "the-front-line-2011",
+  t: "The Front Line",
+  y: 2011,
+  b: "x",
+  s: "live",
+  g: ["action", "drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "the-outlaws-2017",
+  t: "The Outlaws",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["action", "crime", "thriller"],
+  tg: ["detective"],
+  p: 5
+}, {
+  id: "the-spy-gone-north-2018",
+  t: "The Spy Gone North",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 5
+}, {
+  id: "the-tiger-2015",
+  t: "The Tiger",
+  y: 2015,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "drama"],
+  tg: [],
+  p: 5
+}, {
+  id: "tune-in-for-love-2019",
+  t: "Tune in for Love",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 5
+}, {
+  id: "12-12-the-day-2023",
+  t: "12.12: The Day",
+  y: 2023,
+  b: "x",
+  s: "live",
+  g: ["action", "drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "architecture-101-2012",
+  t: "Architecture 101",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 4
+}, {
+  id: "burn-the-stage-the-movie-2018",
+  t: "Burn the Stage: The Movie",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical"],
+  tg: ["music"],
+  p: 4
+}, {
+  id: "doctor-stranger-2014",
+  t: "Doctor Stranger",
+  y: 2014,
+  b: "x",
+  s: "live",
+  g: ["action", "drama", "romance"],
+  tg: [],
+  p: 4,
+  k: "s"
+}, {
+  id: "doctors-2016",
+  t: "Doctors",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "romance"],
+  tg: [],
+  p: 4,
+  k: "s"
+}, {
+  id: "house-of-hummingbird-2018",
+  t: "House of Hummingbird",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "kim-ji-young-born-1982-2019",
+  t: "Kim Ji-young: Born 1982",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "lawless-lawyer-2018",
+  t: "Lawless Lawyer",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["action", "drama", "thriller"],
+  tg: [],
+  p: 4,
+  k: "s"
+}, {
+  id: "little-forest-2018",
+  t: "Little Forest",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "miss-granny-2014",
+  t: "Miss Granny",
+  y: 2014,
+  b: "x",
+  s: "live",
+  g: ["comedy", "drama", "fantasy"],
+  tg: [],
+  p: 4
+}, {
+  id: "my-annoying-brother-2016",
+  t: "My Annoying Brother",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "sports"],
+  tg: ["sports"],
+  p: 4
+}, {
+  id: "my-first-first-love-2019",
+  t: "My First First Love",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 4,
+  k: "s"
+}, {
+  id: "my-holo-love-2020",
+  t: "My Holo Love",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "romance"],
+  tg: [],
+  p: 4,
+  k: "s"
+}, {
+  id: "my-lovely-liar-2023",
+  t: "My Lovely Liar",
+  y: 2023,
+  b: "x",
+  s: "live",
+  g: ["comedy", "fantasy", "mystery"],
+  tg: ["detective"],
+  p: 4,
+  k: "s"
+}, {
+  id: "one-ordinary-day-2021",
+  t: "One Ordinary Day",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 4,
+  k: "s"
+}, {
+  id: "school-2017-2017",
+  t: "School 2017",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "mystery"],
+  tg: ["detective"],
+  p: 4,
+  k: "s"
+}, {
+  id: "the-net-2016",
+  t: "The Net",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 4
+}, {
+  id: "the-secret-life-of-my-secretary-2019",
+  t: "The Secret Life of My Secretary",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["comedy", "romance"],
+  tg: [],
+  p: 4,
+  k: "s"
+}, {
+  id: "who-are-you-school-2015-2015",
+  t: "Who Are You: School 2015",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["drama", "mystery", "romance"],
+  tg: ["detective"],
+  p: 4,
+  k: "s"
+},
+// ===== United States, 2011 onwards =====
+{
+  id: "12-years-a-slave-2013",
+  t: "12 Years a Slave",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 9
+}, {
+  id: "argo-2012",
+  t: "Argo",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 9
+}, {
+  id: "birdman-or-the-unexpected-virtue-o-2014",
+  t: "Birdman or (The Unexpected Virtue of Ignorance)",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 9
+}, {
+  id: "captain-america-civil-war-2016",
+  t: "Captain America: Civil War",
+  y: 2016,
+  b: "x",
+  s: "live",
+  g: ["action", "scifi"],
+  tg: [],
+  p: 9
+}, {
+  id: "deadpool-2-2018",
+  t: "Deadpool 2",
+  y: 2018,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "comedy"],
+  tg: [],
+  p: 9
+}, {
+  id: "drive-2011",
+  t: "Drive",
+  y: 2011,
+  b: "x",
+  s: "live",
+  g: ["action", "drama"],
+  tg: [],
+  p: 9
+}, {
+  id: "dune-part-one-2021",
+  t: "Dune: Part One",
+  y: 2021,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "drama"],
+  tg: [],
+  p: 9
+}, {
+  id: "fury-2014",
+  t: "Fury",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["action", "drama"],
+  tg: ["war"],
+  p: 9
+}, {
+  id: "guardians-of-the-galaxy-vol-2-2017",
+  t: "Guardians of the Galaxy: Vol. 2",
+  y: 2017,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "comedy"],
+  tg: [],
+  p: 9
+}, {
+  id: "hacksaw-ridge-2016",
+  t: "Hacksaw Ridge",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 9
+}, {
+  id: "harry-potter-and-the-deathly-hallo-2011",
+  t: "Harry Potter and the Deathly Hallows: Part 2",
+  y: 2011,
+  b: "k",
+  s: "live",
+  g: ["adventure", "fantasy"],
+  tg: ["family"],
+  p: 9
+}, {
+  id: "life-of-pi-2012",
+  t: "Life of Pi",
+  y: 2012,
+  b: "x",
+  s: "live",
+  g: ["adventure", "drama", "fantasy"],
+  tg: [],
+  p: 9
+}, {
+  id: "nightcrawler-2014",
+  t: "Nightcrawler",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "thriller"],
+  tg: ["detective"],
+  p: 9
+}, {
+  id: "once-upon-a-time-in-hollywood-2019",
+  t: "Once Upon a Time in... Hollywood",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 9
+}, {
+  id: "rise-of-the-planet-of-the-apes-2011",
+  t: "Rise of the Planet of the Apes",
+  y: 2011,
+  b: "x",
+  s: "live",
+  g: ["action", "drama", "scifi"],
+  tg: [],
+  p: 9
+}, {
+  id: "rush-2013",
+  t: "Rush",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama", "sports"],
+  tg: ["sports"],
+  p: 9
+}, {
+  id: "silver-linings-playbook-2012",
+  t: "Silver Linings Playbook",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "romance"],
+  tg: [],
+  p: 9
+}, {
+  id: "star-wars-episode-vii-the-force-aw-2015",
+  t: "Star Wars: Episode VII - The Force Awakens",
+  y: 2015,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "scifi"],
+  tg: [],
+  p: 9
+}, {
+  id: "the-hateful-eight-2015",
+  t: "The Hateful Eight",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 9
+}, {
+  id: "the-hobbit-the-desolation-of-smaug-2013",
+  t: "The Hobbit: The Desolation of Smaug",
+  y: 2013,
+  b: "x",
+  s: "live",
+  g: ["adventure", "fantasy"],
+  tg: [],
+  p: 9
+}, {
+  id: "the-imitation-game-2014",
+  t: "The Imitation Game",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 9
+}, {
+  id: "the-perks-of-being-a-wallflower-2012",
+  t: "The Perks of Being a Wallflower",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 9
+}, {
+  id: "the-revenant-2015",
+  t: "The Revenant",
+  y: 2015,
+  b: "x",
+  s: "live",
+  g: ["action", "drama", "adventure"],
+  tg: [],
+  p: 9
+}, {
+  id: "three-billboards-outside-ebbing-mi-2017",
+  t: "Three Billboards Outside Ebbing, Missouri",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["comedy", "crime", "drama"],
+  tg: ["detective"],
+  p: 9
+}, {
+  id: "x-men-days-of-future-past-2014",
+  t: "X-Men: Days of Future Past",
+  y: 2014,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "scifi"],
+  tg: [],
+  p: 9
+}, {
+  id: "x-men-first-class-2011",
+  t: "X-Men: First Class",
+  y: 2011,
+  b: "x",
+  s: "live",
+  g: ["action", "scifi"],
+  tg: [],
+  p: 9
+}, {
+  id: "50-50-2011",
+  t: "50/50",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "romance"],
+  tg: [],
+  p: 8
+}, {
+  id: "a-star-is-born-2018",
+  t: "A Star Is Born",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical", "romance"],
+  tg: ["music"],
+  p: 8
+}, {
+  id: "all-quiet-on-the-western-front-2022",
+  t: "All Quiet on the Western Front",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 8
+}, {
+  id: "before-midnight-2013",
+  t: "Before Midnight",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 8
+}, {
+  id: "boyhood-2014",
+  t: "Boyhood",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "bridge-of-spies-2015",
+  t: "Bridge of Spies",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 8
+}, {
+  id: "captain-fantastic-2016",
+  t: "Captain Fantastic",
+  y: 2016,
+  b: "x",
+  s: "live",
+  g: ["adventure", "comedy", "drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "captain-phillips-2013",
+  t: "Captain Phillips",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["action", "drama", "crime"],
+  tg: ["detective"],
+  p: 8
+}, {
+  id: "dallas-buyers-club-2013",
+  t: "Dallas Buyers Club",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "dawn-of-the-planet-of-the-apes-2014",
+  t: "Dawn of the Planet of the Apes",
+  y: 2014,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "end-of-watch-2012",
+  t: "End of Watch",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["action", "crime", "drama"],
+  tg: ["detective"],
+  p: 8
+}, {
+  id: "euphoria-2019",
+  t: "Euphoria",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 8,
+  k: "s"
+}, {
+  id: "gotham-2014",
+  t: "Gotham",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["action", "crime", "drama"],
+  tg: ["detective"],
+  p: 8,
+  k: "s"
+}, {
+  id: "guardians-of-the-galaxy-vol-3-2023",
+  t: "Guardians of the Galaxy Vol. 3",
+  y: 2023,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "comedy"],
+  tg: [],
+  p: 8
+}, {
+  id: "hell-or-high-water-2016",
+  t: "Hell or High Water",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "thriller"],
+  tg: ["detective"],
+  p: 8
+}, {
+  id: "isle-of-dogs-2018",
+  t: "Isle of Dogs",
+  y: 2018,
+  b: "t",
+  s: "live",
+  g: ["adventure", "animation", "comedy"],
+  tg: [],
+  p: 8
+}, {
+  id: "jojo-rabbit-2019",
+  t: "Jojo Rabbit",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: ["war"],
+  p: 8
+}, {
+  id: "lion-2016",
+  t: "Lion",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "little-women-2019",
+  t: "Little Women",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 8
+}, {
+  id: "manchester-by-the-sea-2016",
+  t: "Manchester by the Sea",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "marriage-story-2019",
+  t: "Marriage Story",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 8
+}, {
+  id: "marty-supreme-2025",
+  t: "Marty Supreme",
+  y: 2025,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "sports"],
+  tg: ["sports"],
+  p: 8
+}, {
+  id: "midnight-in-paris-2011",
+  t: "Midnight in Paris",
+  y: 2011,
+  b: "x",
+  s: "live",
+  g: ["comedy", "fantasy", "romance"],
+  tg: [],
+  p: 8
+}, {
+  id: "mission-impossible-dead-reckoning--2023",
+  t: "Mission: Impossible - Dead Reckoning Part One",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["action", "adventure", "thriller"],
+  tg: [],
+  p: 8
+}, {
+  id: "moonrise-kingdom-2012",
+  t: "Moonrise Kingdom",
+  y: 2012,
+  b: "x",
+  s: "live",
+  g: ["adventure", "comedy", "drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "obsession-2025",
+  t: "Obsession",
+  y: 2025,
+  b: "r",
+  s: "live",
+  g: ["horror", "romance", "thriller"],
+  tg: [],
+  p: 8
+}, {
+  id: "poor-things-2023",
+  t: "Poor Things",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "romance"],
+  tg: [],
+  p: 8
+}, {
+  id: "project-hail-mary-2026",
+  t: "Project Hail Mary",
+  y: 2026,
+  b: "x",
+  s: "live",
+  g: ["adventure", "comedy", "drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "roma-2018",
+  t: "Roma",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "room-2015",
+  t: "Room",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 8
+}, {
+  id: "searching-2018",
+  t: "Searching",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama", "mystery", "thriller"],
+  tg: ["detective"],
+  p: 8
+}, {
+  id: "sicario-2015",
+  t: "Sicario",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["action", "crime", "drama"],
+  tg: ["detective"],
+  p: 8
+}, {
+  id: "sound-of-metal-2019",
+  t: "Sound of Metal",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical"],
+  tg: ["music"],
+  p: 8
+}, {
+  id: "star-trek-into-darkness-2013",
+  t: "Star Trek Into Darkness",
+  y: 2013,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "scifi"],
+  tg: [],
+  p: 8
+}, {
+  id: "straight-outta-compton-2015",
+  t: "Straight Outta Compton",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "the-banshees-of-inisherin-2022",
+  t: "The Banshees of Inisherin",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "the-gentlemen-2019",
+  t: "The Gentlemen",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["action", "comedy", "crime"],
+  tg: ["detective"],
+  p: 8
+}, {
+  id: "the-girl-with-the-dragon-tattoo-2011",
+  t: "The Girl with the Dragon Tattoo",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 8
+}, {
+  id: "the-help-2011",
+  t: "The Help",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "the-holdovers-2023",
+  t: "The Holdovers",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "the-irishman-2019",
+  t: "The Irishman",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama", "crime"],
+  tg: ["detective"],
+  p: 8
+}, {
+  id: "the-trial-of-the-chicago-7-2020",
+  t: "The Trial of the Chicago 7",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 8
+}, {
+  id: "the-whale-2022",
+  t: "The Whale",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 8
+}, {
+  id: "warrior-2011",
+  t: "Warrior",
+  y: 2011,
+  b: "x",
+  s: "live",
+  g: ["action", "drama", "sports"],
+  tg: ["sports"],
+  p: 8
+}, {
+  id: "wind-river-2017",
+  t: "Wind River",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 8
+}, {
+  id: "zack-snyder-s-justice-league-2021",
+  t: "Zack Snyder's Justice League",
+  y: 2021,
+  b: "x",
+  s: "live",
+  g: ["adventure", "fantasy", "scifi"],
+  tg: [],
+  p: 8
+}, {
+  id: "20-days-in-mariupol-2023",
+  t: "20 Days in Mariupol",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 7
+}, {
+  id: "a-series-of-unfortunate-events-2017",
+  t: "A Series of Unfortunate Events",
+  y: 2017,
+  b: "x",
+  s: "live",
+  g: ["adventure", "comedy", "drama"],
+  tg: [],
+  p: 7,
+  k: "s"
+}, {
+  id: "aftersun-2022",
+  t: "Aftersun",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "bates-motel-2013",
+  t: "Bates Motel",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama", "horror", "mystery"],
+  tg: ["detective"],
+  p: 7,
+  k: "s"
+}, {
+  id: "batman-the-dark-knight-returns-par-2012",
+  t: "Batman: The Dark Knight Returns, Part 1",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["action", "animation", "crime"],
+  tg: ["detective"],
+  p: 7
+}, {
+  id: "batman-the-dark-knight-returns-par-2013",
+  t: "Batman: The Dark Knight Returns, Part 2",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["action", "animation", "crime"],
+  tg: ["detective"],
+  p: 7
+}, {
+  id: "beasts-of-no-nation-2015",
+  t: "Beasts of No Nation",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: ["war"],
+  p: 7
+}, {
+  id: "blackfish-2013",
+  t: "Blackfish",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 7
+}, {
+  id: "bo-burnham-inside-2021",
+  t: "Bo Burnham: Inside",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "citizenfour-2014",
+  t: "Citizenfour",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "cosmos-a-spacetime-odyssey-2014",
+  t: "Cosmos: A Spacetime Odyssey",
+  y: 2014,
+  b: "k",
+  s: "live",
+  g: ["drama"],
+  tg: ["family"],
+  p: 7,
+  k: "s"
+}, {
+  id: "dark-waters-2019",
+  t: "Dark Waters",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "detachment-2011",
+  t: "Detachment",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "devs-2020",
+  t: "Devs",
+  y: 2020,
+  b: "x",
+  s: "live",
+  g: ["drama", "mystery", "scifi"],
+  tg: ["detective"],
+  p: 7,
+  k: "s"
+}, {
+  id: "elementary-2012",
+  t: "Elementary",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["action", "adventure", "crime"],
+  tg: ["detective"],
+  p: 7,
+  k: "s"
+}, {
+  id: "free-solo-2018",
+  t: "Free Solo",
+  y: 2018,
+  b: "x",
+  s: "live",
+  g: ["adventure", "drama", "sports"],
+  tg: ["sports"],
+  p: 7
+}, {
+  id: "gifted-2017",
+  t: "Gifted",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "hamnet-2025",
+  t: "Hamnet",
+  y: 2025,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "hotel-mumbai-2018",
+  t: "Hotel Mumbai",
+  y: 2018,
+  b: "x",
+  s: "live",
+  g: ["action", "drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "how-to-train-your-dragon-2025",
+  t: "How to Train Your Dragon",
+  y: 2025,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "comedy"],
+  tg: [],
+  p: 7
+}, {
+  id: "icarus-2017",
+  t: "Icarus",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama", "sports"],
+  tg: ["sports"],
+  p: 7
+}, {
+  id: "just-mercy-2019",
+  t: "Just Mercy",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama", "crime"],
+  tg: ["detective"],
+  p: 7
+}, {
+  id: "justice-league-the-flashpoint-para-2013",
+  t: "Justice League: The Flashpoint Paradox",
+  y: 2013,
+  b: "t",
+  s: "live",
+  g: ["action", "adventure", "animation"],
+  tg: [],
+  p: 7
+}, {
+  id: "killing-eve-2018",
+  t: "Killing Eve",
+  y: 2018,
+  b: "x",
+  s: "live",
+  g: ["action", "adventure", "drama"],
+  tg: [],
+  p: 7,
+  k: "s"
+}, {
+  id: "limitless-2015",
+  t: "Limitless",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["comedy", "crime", "drama"],
+  tg: ["detective"],
+  p: 7,
+  k: "s"
+}, {
+  id: "loving-vincent-2017",
+  t: "Loving Vincent",
+  y: 2017,
+  b: "t",
+  s: "live",
+  g: ["animation", "drama", "mystery"],
+  tg: ["detective"],
+  p: 7
+}, {
+  id: "me-and-earl-and-the-dying-girl-2015",
+  t: "Me and Earl and the Dying Girl",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "narcos-mexico-2018",
+  t: "Narcos: Mexico",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama", "crime"],
+  tg: ["detective"],
+  p: 7,
+  k: "s"
+}, {
+  id: "navalny-2022",
+  t: "Navalny",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "nebraska-2013",
+  t: "Nebraska",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "only-the-brave-2017",
+  t: "Only the Brave",
+  y: 2017,
+  b: "x",
+  s: "live",
+  g: ["action", "drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "over-the-garden-wall-2014",
+  t: "Over the Garden Wall",
+  y: 2014,
+  b: "t",
+  s: "live",
+  g: ["adventure", "animation", "comedy"],
+  tg: [],
+  p: 7,
+  k: "s"
+}, {
+  id: "queen-charlotte-a-bridgerton-story-2023",
+  t: "Queen Charlotte: A Bridgerton Story",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 7,
+  k: "s"
+}, {
+  id: "scandal-2012",
+  t: "Scandal",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 7,
+  k: "s"
+}, {
+  id: "short-term-12-2013",
+  t: "Short Term 12",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "society-of-the-snow-2023",
+  t: "Society of the Snow",
+  y: 2023,
+  b: "x",
+  s: "live",
+  g: ["adventure", "drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "sound-of-freedom-2023",
+  t: "Sound of Freedom",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["drama", "crime"],
+  tg: ["detective"],
+  p: 7
+}, {
+  id: "the-americans-2013",
+  t: "The Americans",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 7,
+  k: "s"
+}, {
+  id: "the-florida-project-2017",
+  t: "The Florida Project",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "the-jinx-the-life-and-deaths-of-ro-2015",
+  t: "The Jinx: The Life and Deaths of Robert Durst",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["drama", "crime"],
+  tg: ["detective"],
+  p: 7,
+  k: "s"
+}, {
+  id: "the-peanut-butter-falcon-2019",
+  t: "The Peanut Butter Falcon",
+  y: 2019,
+  b: "x",
+  s: "live",
+  g: ["adventure", "comedy", "drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "the-social-dilemma-2020",
+  t: "The Social Dilemma",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "the-two-popes-2019",
+  t: "The Two Popes",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "thirteen-lives-2022",
+  t: "Thirteen Lives",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama", "thriller"],
+  tg: [],
+  p: 7
+}, {
+  id: "togo-2019",
+  t: "Togo",
+  y: 2019,
+  b: "x",
+  s: "live",
+  g: ["adventure", "drama"],
+  tg: [],
+  p: 7
+}, {
+  id: "transformers-one-2024",
+  t: "Transformers One",
+  y: 2024,
+  b: "t",
+  s: "live",
+  g: ["action", "adventure", "animation"],
+  tg: [],
+  p: 7
+}, {
+  id: "unorthodox-2020",
+  t: "Unorthodox",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 7,
+  k: "s"
+}, {
+  id: "13th-2016",
+  t: "13th",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "14-peaks-nothing-is-impossible-2021",
+  t: "14 Peaks: Nothing Is Impossible",
+  y: 2021,
+  b: "x",
+  s: "live",
+  g: ["adventure", "drama", "sports"],
+  tg: ["sports"],
+  p: 6
+}, {
+  id: "a-league-of-their-own-2022",
+  t: "A League of Their Own",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "sports"],
+  tg: ["sports"],
+  p: 6,
+  k: "s"
+}, {
+  id: "fellow-travelers-2023",
+  t: "Fellow Travelers",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 6,
+  k: "s"
+}, {
+  id: "fleishman-is-in-trouble-2022",
+  t: "Fleishman Is in Trouble",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6,
+  k: "s"
+}, {
+  id: "going-clear-scientology-the-prison-2015",
+  t: "Going Clear: Scientology & the Prison of Belief",
+  y: 2015,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "hatfields-mccoys-2012",
+  t: "Hatfields & McCoys",
+  y: 2012,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 6,
+  k: "s"
+}, {
+  id: "high-fidelity-2020",
+  t: "High Fidelity",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "musical"],
+  tg: ["music"],
+  p: 6,
+  k: "s"
+}, {
+  id: "jiro-dreams-of-sushi-2011",
+  t: "Jiro Dreams of Sushi",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "justice-league-dark-apokolips-war-2020",
+  t: "Justice League Dark: Apokolips War",
+  y: 2020,
+  b: "t",
+  s: "live",
+  g: ["action", "adventure", "animation"],
+  tg: [],
+  p: 6
+}, {
+  id: "kingdom-2014",
+  t: "Kingdom",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama", "sports"],
+  tg: ["sports"],
+  p: 6,
+  k: "s"
+}, {
+  id: "love-victor-2020",
+  t: "Love, Victor",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "romance"],
+  tg: [],
+  p: 6,
+  k: "s"
+}, {
+  id: "marcel-the-shell-with-shoes-on-2021",
+  t: "Marcel the Shell with Shoes On",
+  y: 2021,
+  b: "t",
+  s: "live",
+  g: ["animation", "comedy", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "masters-of-sex-2013",
+  t: "Masters of Sex",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama", "romance"],
+  tg: [],
+  p: 6,
+  k: "s"
+}, {
+  id: "messiah-2020",
+  t: "Messiah",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["drama", "mystery", "thriller"],
+  tg: ["detective"],
+  p: 6,
+  k: "s"
+}, {
+  id: "mildred-pierce-2011",
+  t: "Mildred Pierce",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "mystery"],
+  tg: ["detective"],
+  p: 6,
+  k: "s"
+}, {
+  id: "mr-church-2016",
+  t: "Mr. Church",
+  y: 2016,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "my-brilliant-friend-2018",
+  t: "My Brilliant Friend",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6,
+  k: "s"
+}, {
+  id: "olive-kitteridge-2014",
+  t: "Olive Kitteridge",
+  y: 2014,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6,
+  k: "s"
+}, {
+  id: "one-day-at-a-time-2017",
+  t: "One Day at a Time",
+  y: 2017,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 6,
+  k: "s"
+}, {
+  id: "paperman-2012",
+  t: "Paperman",
+  y: 2012,
+  b: "k",
+  s: "live",
+  g: ["animation", "comedy"],
+  tg: ["family"],
+  p: 6
+}, {
+  id: "rectify-2013",
+  t: "Rectify",
+  y: 2013,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6,
+  k: "s"
+}, {
+  id: "remarkably-bright-creatures-2026",
+  t: "Remarkably Bright Creatures",
+  y: 2026,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "samsara-2011",
+  t: "Samsara",
+  y: 2011,
+  b: "r",
+  s: "live",
+  g: ["drama", "musical"],
+  tg: ["music"],
+  p: 6
+}, {
+  id: "scenes-from-a-marriage-2021",
+  t: "Scenes from a Marriage",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6,
+  k: "s"
+}, {
+  id: "seaspiracy-2021",
+  t: "Seaspiracy",
+  y: 2021,
+  b: "x",
+  s: "live",
+  g: ["adventure", "drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "sing-sing-2023",
+  t: "Sing Sing",
+  y: 2023,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "the-act-2019",
+  t: "The Act",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["drama", "crime"],
+  tg: ["detective"],
+  p: 6,
+  k: "s"
+}, {
+  id: "the-art-of-racing-in-the-rain-2019",
+  t: "The Art of Racing in the Rain",
+  y: 2019,
+  b: "r",
+  s: "live",
+  g: ["comedy", "drama", "romance"],
+  tg: [],
+  p: 6
+}, {
+  id: "the-beatles-get-back-2021",
+  t: "The Beatles: Get Back",
+  y: 2021,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6,
+  k: "s"
+}, {
+  id: "the-dissident-2020",
+  t: "The Dissident",
+  y: 2020,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama", "thriller"],
+  tg: ["detective"],
+  p: 6
+}, {
+  id: "three-identical-strangers-2018",
+  t: "Three Identical Strangers",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
+}, {
+  id: "waco-2018",
+  t: "Waco",
+  y: 2018,
+  b: "r",
+  s: "live",
+  g: ["crime", "drama"],
+  tg: ["detective"],
+  p: 6,
+  k: "s"
+}, {
+  id: "welcome-to-wrexham-2022",
+  t: "Welcome to Wrexham",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama", "sports"],
+  tg: ["sports"],
+  p: 6,
+  k: "s"
+}, {
+  id: "what-is-a-woman-2022",
+  t: "What Is a Woman?",
+  y: 2022,
+  b: "r",
+  s: "live",
+  g: ["drama"],
+  tg: [],
+  p: 6
 }];
+
+// ---------- Built-in critic scores ----------
+// Real figures for every title, so the app is useful with no API key at all.
+// IMDb user ratings come from IMDb's official public dataset
+// (datasets.imdbws.com). The Rotten Tomatoes figure is the CRITICS'
+// Tomatometer and the Metacritic figure is the critics' Metascore, both from
+// Wikidata, filtered by determination method so neither is confused with
+// Rotten Tomatoes' /10 review average. Rotten Tomatoes' audience score
+// (Popcornmeter) has no free bulk source anywhere and is not included.
+// Format: [imdb, votes in thousands, tomatometer, metascore], trailing
+// values omitted when unknown.
+const BUILTIN_SCORES_DATE = "2026-07-27";
+const BUILTIN_SCORES = {
+  "12-12-the-day-2023": [7.5, 5],
+  "12-years-a-slave-2013": [8.1, 791, 95, 96],
+  "120-bpm-beats-per-minute-2017": [7.4, 18, 99, 84],
+  "12angry": [9.0, 993, 100, 97],
+  "13th-2016": [8.2, 39, 97, 81],
+  "14-peaks-nothing-is-impossible-2021": [7.7, 34],
+  "1987-when-the-day-comes-2017": [7.7, 8, 82],
+  "20-000-days-on-earth-2014": [7.4, 12, 95, 83],
+  "20-days-in-mariupol-2023": [8.6, 65, 100, 83],
+  "20th-century-girl-2022": [7.4, 16],
+  "3body": [7.5, 183],
+  "5-broken-cameras-2011": [7.9, 7, 96, 78],
+  "50-50-2011": [7.6, 355, 93, 72],
+  "71-2014": [7.2, 65, 96, 83],
+  "a-bag-of-marbles-2017": [7.3, 7, 83],
+  "a-hard-day-2014": [7.2, 19],
+  "a-hero-2021": [7.5, 33, 97, 82],
+  "a-korean-odyssey-2017": [7.9, 7],
+  "a-league-of-their-own-2022": [7.6, 26],
+  "a-series-of-unfortunate-events-2017": [7.7, 73],
+  "a-star-is-born-2018": [7.6, 451, 90, 88],
+  "a-street-cat-named-bob-2016": [7.3, 37, 77, 54],
+  "a-taxi-driver-2017": [7.9, 39, 97, 69],
+  "a-twelve-year-night-2018": [7.5, 12, 80],
+  "a-very-english-scandal-2018": [7.6, 18],
+  "a-very-secret-service-2015": [7.7, 4],
+  "a-werewolf-boy-2012": [7.2, 10, 100],
+  "abbott": [8.2, 54],
+  "abominable": [7.0, 47, 83, 61],
+  "about-dry-grasses-2023": [7.7, 20, 92, 88],
+  "abouttime": [7.8, 438, 71, 55],
+  "acrossverse": [8.5, 537, 95, 86],
+  "addams": [7.0, 202, 67, 57],
+  "adolescence": [8.1, 311],
+  "aferim-2015": [7.6, 9, 98, 84],
+  "after-love-2020": [7.3, 5, 97, 81],
+  "after-lucia-2012": [7.1, 7, 86],
+  "after-the-storm-2016": [7.4, 14, 96, 84],
+  "aftersun-2022": [7.6, 131, 96, 95],
+  "air": [7.4, 197, 92, 73],
+  "akira": [8.0, 229, 91, 68],
+  "aladdin": [8.0, 503, 96, 86],
+  "aladdin19": [6.9, 317, 57, 53],
+  "aliceborderland": [7.8, 150],
+  "alien": [8.4, 1070, 93, 89],
+  "aliens": [8.4, 844, 93, 84],
+  "all-of-us-strangers-2023": [7.6, 80, 96, 90],
+  "all-quiet-on-the-western-front-2022": [7.8, 342, 90, 76],
+  "all-your-faces-2023": [7.5, 5, 100],
+  "along-with-the-gods-the-two-worlds-2017": [7.2, 22, 67],
+  "always-2011": [7.7, 13],
+  "amelie": [8.2, 843, 90, 70],
+  "amour-2012": [7.9, 111, 93, 95],
+  "amy-2015": [7.8, 58, 95, 85],
+  "an-officer-and-a-spy-2019": [7.2, 23, 76, 59],
+  "anastasia": [7.2, 148, 83, 61],
+  "anatomy-of-a-fall-2023": [7.6, 235, 96, 86],
+  "anchorman": [7.1, 403, 66, 63],
+  "andor": [8.6, 282, 96, 84],
+  "anora": [7.4, 300, 93, 91],
+  "another-day-of-life-2018": [7.3, 3, 89],
+  "anthropoid-2016": [7.2, 60, 66, 59],
+  "aot": [9.1, 733],
+  "apocalypse-la-1-re-guerre-mondiale-2014": [8.8, 3],
+  "april-and-the-extraordinary-world-2015": [7.3, 9, 97],
+  "aquaman": [6.8, 556, 65, 55],
+  "architecture-101-2012": [7.2, 5],
+  "arco-2025": [7.3, 8],
+  "argo-2012": [7.7, 670, 96, 86],
+  "aristocats": [7.1, 126, 64, 66],
+  "arrietty": [7.6, 118, 94, 80],
+  "arrival": [7.9, 872, 94, 81],
+  "asako-i-ii-2018": [7.1, 6, 78],
+  "assassination-2015": [7.2, 9, 83, 64],
+  "atla": [9.3, 449],
+  "atlantis": [6.9, 149, 48, 52],
+  "attack-on-titan-the-last-attack-2024": [9.0, 33],
+  "attack-on-titan-the-roar-of-awaken-2018": [8.3, 7],
+  "avatar": [7.9, 1508, 81, 83],
+  "avatar2": [7.5, 641, 76, 67],
+  "avatar3": [7.2, 195, 68, 61],
+  "avengers": [8.0, 1568, 91, 69],
+  "babe": [6.9, 143, 98, 83],
+  "babydriver": [7.5, 690, 0, 86],
+  "backfuture": [8.5, 1464, 92, 88],
+  "bacurau-2019": [7.3, 35, 93, 82],
+  "bad-seeds-2018": [7.2, 7],
+  "badguys": [6.9, 82, 87, 64],
+  "badguys2": [7.0, 30, 88, 64],
+  "baptiste-2019": [7.3, 11],
+  "barbie": [6.8, 698, 88, 80],
+  "bates-motel-2013": [8.1, 126],
+  "batman-the-dark-knight-returns-par-2012": [7.9, 68, 100],
+  "batman-the-dark-knight-returns-par-2013": [8.3, 62],
+  "batmanbegins": [8.2, 1729, 85, 70],
+  "be-with-you-2018": [7.7, 8],
+  "beastars-2019": [7.6, 16],
+  "beasts-of-no-nation-2015": [7.7, 92, 92, 79],
+  "beating-hearts-2024": [7.0, 9, 32, 50],
+  "beautifulmind": [8.2, 1059, 74, 72],
+  "beauty": [8.0, 508, 95, 95],
+  "beauty17": [7.1, 361, 71, 65],
+  "before-midnight-2013": [7.9, 187, 98, 94],
+  "being-17-2016": [7.2, 8, 95, 83],
+  "belfast-2021": [7.2, 139, 86, 75],
+  "belle": [7.0, 21, 95, 83],
+  "belle-2013": [7.3, 35, 84, 64],
+  "bettercall": [9.0, 850],
+  "beyond-the-hills-2012": [7.5, 14, 91, 79],
+  "beyond-the-infinite-two-minutes-2020": [7.2, 11],
+  "bighero6": [7.8, 558, 90, 74],
+  "bigshort": [7.8, 544, 89, 81],
+  "birdman-or-the-unexpected-virtue-o-2014": [7.7, 701, 91, 87],
+  "birdsong-2012": [7.3, 7],
+  "black-2015": [7.0, 5, 60],
+  "black-box-2021": [7.2, 20, 94],
+  "black-box-diaries-2024": [7.5, 5, 98, 82],
+  "blackfish-2013": [8.1, 77, 98, 83],
+  "blackmirror": [8.7, 743],
+  "blackpanther": [7.3, 916, 96, 88],
+  "bladerunner": [8.0, 761, 88, 81],
+  "blue-is-the-warmest-colour-2013": [7.6, 174, 88, 90],
+  "bluey": [9.3, 49],
+  "bo-burnham-inside-2021": [8.6, 60, 93],
+  "bohemian": [7.9, 651, 60, 49],
+  "boiling-point-2021": [7.5, 57, 99, 73],
+  "bolt": [6.8, 250, 90, 67],
+  "bossbaby": [6.3, 160, 53, 50],
+  "bourne": [7.8, 617, 84, 68],
+  "boxtrolls": [6.8, 65, 78, 61],
+  "boyhood-2014": [7.9, 383, 97, 100],
+  "boys": [8.5, 1011],
+  "brave": [7.1, 483, 79, 69],
+  "breakingbad": [9.5, 2648],
+  "breathe-2017": [7.2, 27, 68, 51],
+  "bridesmaids": [6.8, 327, 90, 75],
+  "bridge-of-spies-2015": [7.6, 346, 91, 81],
+  "bridgerton": [7.5, 231],
+  "brimstone-2016": [7.0, 50, 43, 45],
+  "broken-2012": [7.2, 16, 63, 53],
+  "brooklyn-2015": [7.5, 159, 97, 88],
+  "brooklyn99": [8.4, 420],
+  "brutalist": [7.2, 161, 93, 90],
+  "bugs": [7.2, 339, 92, 78],
+  "bullettrain": [7.3, 542, 53, 49],
+  "bullhead-2011": [7.3, 25, 87, 68],
+  "burn-the-stage-the-movie-2018": [8.5, 5],
+  "burning-2018": [7.4, 87, 95, 91],
+  "burning-days-2022": [7.4, 15],
+  "by-the-grace-of-god-2018": [7.2, 9, 96, 75],
+  "c-b-strike-2017": [7.9, 33],
+  "caf-de-flore-2011": [7.3, 17, 64],
+  "call-me-by-your-name-2017": [7.8, 362, 94, 94],
+  "calvary-2014": [7.4, 68, 89, 77],
+  "captain-america-civil-war-2016": [7.8, 936, 90, 75],
+  "captain-fantastic-2016": [7.8, 252, 82, 72],
+  "captain-phillips-2013": [7.8, 521, 93, 82],
+  "captainmarvel": [6.7, 664, 79, 64],
+  "captainunderpants": [6.2, 37, 87, 69],
+  "carnage-2011": [7.1, 139, 70, 61],
+  "cars": [7.3, 543, 75, 73],
+  "cars3": [6.7, 155, 70, 59],
+  "casablanca": [8.5, 658, 99, 100],
+  "casinoroyale": [8.0, 750, 94, 80],
+  "casper": [6.2, 160, 59, 49],
+  "castlesky": [8.0, 200, 96, 78],
+  "catchme": [8.1, 1253, 96, 75],
+  "challengers": [7.0, 182, 88, 82],
+  "charlie": [6.7, 575, 83, 72],
+  "chernobyl": [9.3, 1052, 95, 82],
+  "cherry-magic-thirty-years-of-virgi-2020": [8.2, 4],
+  "chicken-with-plums-2011": [7.0, 10, 74, 69],
+  "chickenrun": [7.1, 226, 97, 88],
+  "cind15": [6.9, 206, 84, 67],
+  "circles-2013": [7.7, 5],
+  "citizenfour-2014": [8.0, 60, 96, 88],
+  "clash-2016": [7.4, 7, 93],
+  "close-2022": [7.8, 49, 91, 81],
+  "cloudy": [6.9, 288, 86, 66],
+  "clue": [7.3, 124, 66, 41],
+  "clueless": [6.9, 280, 81, 73],
+  "coco": [8.4, 718, 97, 81],
+  "coda": [8.0, 231, 94, 72],
+  "cold-case-hammarskj-ld-2019": [7.5, 3],
+  "cold-war-2018": [7.5, 66, 92, 90],
+  "colours-of-time-2025": [7.2, 4],
+  "come-as-you-are-2011": [7.3, 8],
+  "conclave": [7.4, 284, 93, 79],
+  "conjuring": [7.5, 628, 86, 68],
+  "coolrun": [7.0, 124, 76, 60],
+  "coraline": [7.8, 303, 91, 80],
+  "corn-island-2014": [7.4, 5, 80],
+  "corpus-christi-2019": [7.7, 24, 98],
+  "cosmos-a-spacetime-odyssey-2014": [9.2, 141],
+  "crazyrich": [6.9, 210, 91, 74],
+  "crazystupid": [7.4, 625, 79, 68],
+  "creed": [7.6, 337, 95, 82],
+  "crist-bal-balenciaga-2024": [7.4, 2],
+  "croods": [7.1, 253, 71, 55],
+  "crossing-2024": [7.4, 7, 97, 82],
+  "crossing-lines-2013": [7.3, 14],
+  "crown": [8.6, 283],
+  "cruella": [7.3, 299, 75, 59],
+  "cunk-on-life-2024": [7.3, 12],
+  "custody-2017": [7.5, 11, 96],
+  "cyberpunk-edgerunners-2022": [8.3, 131, 100],
+  "cyrano-my-love-2018": [7.3, 4, 0, 61],
+  "dallas-buyers-club-2013": [7.9, 551, 92, 77],
+  "dandadan": [8.3, 57],
+  "dark-waters-2019": [7.6, 123, 89, 73],
+  "darkest-hour-2017": [7.4, 245, 84, 75],
+  "darkknight": [9.1, 3196, 94, 85],
+  "darkseries": [8.7, 554, 95, 72],
+  "david-attenborough-a-life-on-our-p-2020": [8.9, 36, 95],
+  "dawn-of-the-planet-of-the-apes-2014": [7.6, 513, 91, 79],
+  "days500": [7.6, 623, 85, 76],
+  "deadpoets": [8.1, 661, 84, 79],
+  "deadpool": [8.0, 1262, 85, 65],
+  "deadpool-2-2018": [7.6, 750, 83, 66],
+  "deadpool3": [7.5, 579, 78, 56],
+  "decision-to-leave-2022": [7.3, 70, 94, 85],
+  "delicious-2021": [7.0, 7, 100],
+  "demon-slayer-kimetsu-no-yaiba-asak-2021": [8.4, 6],
+  "demon-slayer-kimetsu-no-yaiba-mt-n-2020": [8.7, 19],
+  "demon-slayer-kimetsu-no-yaiba-to-t-2023": [7.7, 18],
+  "departed": [8.5, 1565, 91, 85],
+  "departures": [8.0, 58, 80, 68],
+  "detachment-2011": [7.7, 113, 57, 52],
+  "devilprada": [7.0, 562, 75, 62],
+  "devils-2020": [7.2, 6],
+  "devs-2020": [7.6, 58],
+  "dheepan-2015": [7.2, 18, 87, 76],
+  "diaz-don-t-clean-up-this-blood-2012": [7.3, 4, 40],
+  "diego-maradona-2019": [7.7, 19, 90, 78],
+  "diehard": [8.2, 1034, 94, 72],
+  "dior-and-i-2014": [7.2, 4, 84, 70],
+  "diplomacy-2014": [7.1, 6, 94, 72],
+  "divines-2016": [7.3, 11, 84, 71],
+  "django": [8.5, 1898, 87, 81],
+  "dkr": [8.4, 2010, 87, 78],
+  "dm": [7.6, 637, 80, 72],
+  "dm4": [6.2, 83, 56, 52],
+  "do-not-expect-too-much-from-the-en-2023": [7.3, 6, 97, 95],
+  "doctor-stranger-2014": [7.5, 4],
+  "doctors-2016": [7.6, 4],
+  "dogman": [6.3, 14, 82, 66],
+  "dogman-2018": [7.2, 32, 84, 71],
+  "doraemon": [7.4, 11],
+  "dory": [7.2, 337, 94, 77],
+  "downton-abbey-2019": [7.4, 72, 84, 64],
+  "drawing-closer-2024": [7.7, 4],
+  "drive-2011": [7.8, 768, 93, 79],
+  "drivemycar": [7.5, 77, 97, 91],
+  "driving-madeleine-2022": [7.2, 4, 100, 64],
+  "dumbo": [7.2, 151, 95, 96],
+  "dune": [8.0, 1077, 83, 74],
+  "dune-part-one-2021": [8.0, 1077, 83, 74],
+  "dune2": [8.4, 777, 92, 79],
+  "dunkirk": [7.8, 816, 92, 94],
+  "edgetomorrow": [7.9, 810, 91, 71],
+  "eeaao": [7.7, 656, 93, 81],
+  "elemental": [7.0, 167, 73, 58],
+  "elementary-2012": [7.9, 127],
+  "elf": [7.1, 348, 86, 66],
+  "elio": [6.6, 47, 83, 66],
+  "elle-2016": [7.1, 75, 91, 89],
+  "elvis": [7.3, 263, 77, 64],
+  "emperor": [7.4, 251, 86, 70],
+  "empire": [8.7, 1514, 93, 82],
+  "encanto": [7.2, 299, 92, 75],
+  "enchanted": [7.1, 226, 93, 75],
+  "end-of-watch-2012": [7.6, 294, 85, 68],
+  "endgame": [8.4, 1463, 94, 78],
+  "endless-poetry-2016": [7.5, 7, 93, 78],
+  "ennio-2021": [8.2, 8],
+  "enola": [6.7, 252, 91, 68],
+  "erastour": [8.0, 26, 99, 82],
+  "ernest-celestine-2012": [7.8, 25, 98, 86],
+  "et": [7.9, 474, 99, 92],
+  "eternalsunshine": [8.3, 1189, 93, 89],
+  "euphoria-2019": [8.1, 319, 87, 70],
+  "eva31": [8.0, 19, 100, 85],
+  "exmachina": [7.7, 643, 92, 78],
+  "eye-in-the-sky-2015": [7.3, 96, 95, 73],
+  "f1": [7.6, 378, 82, 68],
+  "faces-places-2017": [7.8, 14, 99, 94],
+  "fallout": [8.3, 399],
+  "family-business-2019": [7.4, 6],
+  "fantasticbeasts": [7.2, 543, 74, 66],
+  "far-from-men-2014": [7.2, 10, 84],
+  "farewell-mr-haffmann-2021": [7.1, 4],
+  "farfromhome": [7.3, 649, 91, 69],
+  "fargo": [8.8, 472],
+  "faultstars": [7.6, 426, 81, 69],
+  "fellow-travelers-2023": [8.2, 19],
+  "ferdinand": [6.7, 72, 70, 58],
+  "ferris": [7.8, 419, 83, 61],
+  "fewgoodmen": [7.8, 319, 84, 62],
+  "fightclub": [8.8, 2635, 81, 67],
+  "filth-2013": [7.0, 123, 66, 56],
+  "firstlove": [8.4, 7],
+  "fivecm": [7.4, 72],
+  "flee-2021": [7.9, 21, 98, 91],
+  "fleishman-is-in-trouble-2022": [7.7, 20, 87, 79],
+  "flow": [7.8, 151, 97, 87],
+  "flowermoon": [7.5, 310, 93, 89],
+  "flying-colors-2015": [7.3, 5],
+  "for-sama-2019": [8.5, 14, 98, 89],
+  "force-majeure-2014": [7.2, 73, 94, 87],
+  "forceawakens": [7.7, 1031, 93, 80],
+  "fordferrari": [8.1, 579, 92, 81],
+  "forgotten-2017": [7.4, 63],
+  "forrest": [8.8, 2514, 75, 82],
+  "four-daughters-2023": [7.4, 5, 96, 80],
+  "frantz-2016": [7.5, 19, 91, 73],
+  "freaky": [6.4, 179, 88, 70],
+  "free-solo-2018": [8.1, 88, 97],
+  "freeguy": [7.1, 493, 80, 62],
+  "freewilly": [6.1, 90, 71, 79],
+  "frenzy-2015": [7.1, 5],
+  "friends": [8.8, 1200],
+  "frieren": [8.9, 81],
+  "frozen": [7.4, 718, 89, 75],
+  "frozen2": [6.8, 221, 77, 64],
+  "full-time-2021": [7.4, 7, 98, 83],
+  "furiosa": [7.4, 324, 90, 79],
+  "fury-2014": [7.6, 614, 76, 64],
+  "gabby": [5.4, 3, 85, 46],
+  "galaxyquest": [7.4, 193, 90, 70],
+  "getout": [7.8, 828, 98, 85],
+  "gett-2014": [7.7, 7, 100, 90],
+  "ghostbusters": [7.8, 488, 95, 71],
+  "gifted-2017": [7.6, 161, 73, 60],
+  "gilmore": [8.2, 175],
+  "girl-2018": [7.2, 18, 83, 73],
+  "girl-you-know-it-s-true-2023": [7.1, 5, 85],
+  "girlleapt": [7.6, 76, 84],
+  "gits": [7.9, 175, 95, 76],
+  "gladiator": [8.5, 1865, 80, 67],
+  "gladiator2": [6.4, 306, 70, 64],
+  "glassonion": [7.1, 529, 92, 81],
+  "god-s-own-country-2017": [7.6, 42, 98, 85],
+  "godfather": [9.2, 2240, 97, 100],
+  "godfather2": [9.0, 1503, 96, 90],
+  "godland-2022": [7.1, 10, 91, 81],
+  "godzillaminus": [7.6, 228, 98, 81],
+  "going-clear-scientology-the-prison-2015": [8.0, 43, 95, 80],
+  "gonegirl": [8.1, 1179, 88, 79],
+  "good-luck-to-you-leo-grande-2022": [7.2, 45, 93, 78],
+  "gooddino": [6.7, 141, 76, 66],
+  "goodfellas": [8.7, 1402, 93, 92],
+  "goodplace": [8.2, 223],
+  "goodwill": [8.4, 1229, 97, 71],
+  "goonies": [7.7, 329, 76, 62],
+  "got": [9.2, 2639],
+  "gotg": [8.0, 1372, 91, 76],
+  "gotham-2014": [7.8, 252],
+  "graduation-2016": [7.3, 16, 95],
+  "grandbudapest": [8.1, 979, 92, 88],
+  "gravity": [7.7, 903, 96, 96],
+  "great-expectations-2011": [7.5, 9],
+  "greenbook": [8.2, 695, 77, 69],
+  "grinch": [6.4, 115, 59, 51],
+  "guardians-of-the-galaxy-vol-2-2017": [7.6, 836, 85, 67],
+  "guardians-of-the-galaxy-vol-3-2023": [7.9, 478, 82, 64],
+  "guillermo-del-toro-s-pinocchio-2022": [7.6, 166, 96, 79],
+  "gxk": [6.0, 137, 54, 47],
+  "hacksaw-ridge-2016": [8.1, 689, 84, 71],
+  "haikyu": [7.8, 8],
+  "hamilton": [8.3, 141, 98, 88],
+  "hamnet-2025": [7.8, 126, 86],
+  "handmaiden": [8.1, 206, 96, 85],
+  "hangover": [7.7, 937, 79, 73],
+  "hannah-arendt-2012": [7.1, 13, 88, 69],
+  "happening-2021": [7.4, 14, 99, 86],
+  "happy-as-lazzaro-2018": [7.5, 23, 91],
+  "happyfeet": [6.4, 215, 76, 77],
+  "hara-kiri-death-of-a-samurai-2011": [7.3, 10, 76],
+  "harry-potter-and-the-deathly-hallo-2011": [8.1, 1054, 96, 85],
+  "hatfields-mccoys-2012": [7.9, 31],
+  "heat": [8.3, 812, 84, 76],
+  "heavy-trip-2018": [7.0, 13, 94, 72],
+  "hell-or-high-water-2016": [7.6, 280, 97, 88],
+  "her": [8.0, 730, 94, 91],
+  "hercules": [7.3, 282, 83, 74],
+  "hereditary": [7.3, 464, 90, 87],
+  "heron": [7.3, 150, 97, 91],
+  "het-vonnis-2013": [7.1, 3],
+  "hidden-kisses-2016": [7.3, 6],
+  "hiddenfigures": [7.8, 292, 93, 74],
+  "high-fidelity-2020": [7.7, 18],
+  "highandlow": [8.4, 73, 97, 90],
+  "hitch": [6.6, 351, 69, 58],
+  "hitchcock-truffaut-2015": [7.3, 8, 96],
+  "hobbit": [7.8, 932, 64, 58],
+  "hocus": [6.9, 173, 41, 43],
+  "holes": [7.0, 111, 78, 71],
+  "holy-spider-2022": [7.3, 32, 83, 66],
+  "homealone": [7.8, 750, 67, 63],
+  "homecoming": [7.4, 808, 92, 73],
+  "hope-2013": [8.2, 12],
+  "horton": [6.8, 159, 79, 71],
+  "hotd": [8.3, 550],
+  "hotel-beau-s-jour-2016": [7.6, 5],
+  "hotel-mumbai-2018": [7.6, 80, 76, 62],
+  "hotelt": [7.1, 317, 45, 47],
+  "house-of-hummingbird-2018": [7.4, 4, 100, 82],
+  "how-to-train-your-dragon-2025": [7.7, 138, 78, 61],
+  "howl": [8.2, 517, 88, 82],
+  "howtolose": [6.6, 326, 42, 45],
+  "hp1": [7.7, 958, 80, 65],
+  "hp3": [7.9, 773, 91, 82],
+  "hpgoblet": [7.7, 759, 88, 81],
+  "httyd": [8.1, 902, 99, 75],
+  "httyd2": [7.8, 405, 92, 77],
+  "httyd3": [7.4, 181, 90, 71],
+  "httydLA": [7.7, 138, 78, 61],
+  "human-2015": [8.6, 9],
+  "human-capital-2013": [7.2, 14, 81, 63],
+  "hunger": [7.2, 1088, 84, 68],
+  "i-am-not-your-negro-2016": [7.9, 25, 99, 95],
+  "i-daniel-blake-2016": [7.8, 69, 92, 78],
+  "i-lost-my-body-2019": [7.5, 39, 96, 81],
+  "i-m-not-a-robot-2023": [7.1, 4],
+  "i-m-still-here-2024": [8.1, 170, 97, 85],
+  "i-swear-2025": [8.4, 54],
+  "i-tonya-2017": [7.5, 263, 90, 77],
+  "i-wish-2011": [7.4, 9, 94, 80],
+  "icarus-2017": [7.9, 58, 92],
+  "iceage": [7.5, 569, 77, 61],
+  "ida-2013": [7.4, 63, 95, 91],
+  "ikiru": [8.3, 103, 98, 92],
+  "in-bloom-2013": [7.3, 7, 90, 72],
+  "in-safe-hands-2018": [7.2, 3, 85],
+  "in-syria-2017": [7.1, 3, 89],
+  "in-the-fade-2017": [7.1, 38, 75, 65],
+  "in-the-house-2012": [7.3, 36, 88, 72],
+  "inception": [8.8, 2841, 87, 74],
+  "incredibles": [8.0, 909, 97, 90],
+  "incredibles2": [7.5, 374, 93, 80],
+  "indiana": [8.4, 1115, 94, 86],
+  "infinitywar": [8.4, 1388, 85, 68],
+  "informer-2018": [7.8, 7],
+  "inglourious": [8.4, 1802, 89, 69],
+  "inhuman-resources-2020": [7.2, 5],
+  "inside-llewyn-davis-2013": [7.4, 173, 92, 93],
+  "insideout": [8.1, 925, 98, 94],
+  "insideout2": [7.5, 256, 90, 73],
+  "intern": [7.1, 312, 59, 51],
+  "interstellar": [8.7, 2568, 73, 74],
+  "intouchables": [8.5, 1035, 76, 57],
+  "io-capitano-2023": [7.6, 18, 96, 79],
+  "irongiant": [8.1, 263, 96, 85],
+  "ironman": [7.9, 1234, 94, 79],
+  "isle-of-dogs-2018": [7.8, 213, 90, 82],
+  "it": [7.3, 703, 85, 69],
+  "it-was-just-an-accident-2025": [7.4, 38, 98, 92],
+  "italianjob": [7.0, 409, 72, 68],
+  "jaws": [8.1, 744, 97, 87],
+  "jiro-dreams-of-sushi-2011": [7.8, 40, 99, 77],
+  "jjk0": [7.8, 65],
+  "jjkseries": [8.5, 215],
+  "jodorowsky-s-dune-2013": [8.0, 29, 98, 79],
+  "johnwick": [7.5, 834, 86, 68],
+  "johnwick4": [7.6, 416, 94, 78],
+  "jojo-rabbit-2019": [7.9, 491, 80, 58],
+  "joker": [8.3, 1709, 68, 59],
+  "jumanji": [7.1, 416, 55, 39],
+  "jumanji2": [6.9, 507, 77, 58],
+  "jung-kook-i-am-still-2024": [8.2, 8],
+  "junglebook": [7.6, 215, 86, 65],
+  "junglebook16": [7.3, 307, 94, 77],
+  "juno": [7.4, 574, 93, 81],
+  "jurassic": [8.2, 1189, 92, 68],
+  "just-mercy-2019": [7.6, 85, 85],
+  "justice-league-dark-apokolips-war-2020": [7.7, 30, 100],
+  "justice-league-the-flashpoint-para-2013": [8.1, 66, 100],
+  "jworld": [6.9, 734, 72, 59],
+  "kabaneri-of-the-iron-fortress-2016": [7.2, 8],
+  "kahlil-gibran-s-the-prophet-2014": [7.1, 5, 66],
+  "karatekid": [6.3, 229, 66, 61],
+  "kfp": [7.6, 586, 87, 74],
+  "kfp4": [6.3, 84, 71, 54],
+  "kiki": [7.8, 190, 98, 85],
+  "killbill": [8.2, 1316, 85, 69],
+  "killing-eve-2018": [8.0, 155],
+  "kim-ji-young-born-1982-2019": [7.3, 5],
+  "kimetsu": [8.5, 232],
+  "kingdom-2014": [8.5, 21],
+  "kingsman": [7.7, 781, 75, 60],
+  "kizumonogatari-part-2-nekketsu-2016": [7.6, 4],
+  "kizumonogatari-part-3-reiketsu-2017": [7.9, 5],
+  "klaus": [8.2, 240, 95, 65],
+  "kneecap-2024": [7.6, 26, 96, 76],
+  "knives": [7.9, 884, 97, 82],
+  "kokuho-2025": [7.5, 6],
+  "kongskull": [6.7, 377, 75, 62],
+  "kpop": [7.4, 139, 92, 77],
+  "kubo": [7.7, 148, 97, 84],
+  "la-belle-poque-2019": [7.4, 22, 90, 75],
+  "la-chimera-2023": [7.3, 23, 94, 91],
+  "la-mante-2017": [7.4, 15],
+  "ladybird": [7.4, 366, 99, 93],
+  "ladytramp": [7.3, 163, 93, 78],
+  "lalaland": [8.0, 770, 91, 94],
+  "last-breath-2019": [7.6, 9, 93],
+  "lastdance": [9.0, 182],
+  "lastofus": [8.4, 744, 96, 84],
+  "laurence-anyways-2012": [7.6, 23, 84, 73],
+  "lawless-lawyer-2018": [7.6, 3],
+  "le-havre-2011": [7.2, 25, 99, 82],
+  "left-handed-girl-2025": [7.3, 9],
+  "legallyblonde": [6.5, 290, 72, 59],
+  "lego": [7.7, 419, 96, 83],
+  "legobatman": [7.3, 196, 89, 75],
+  "leo": [7.2, 74],
+  "les-mis-rables-2019": [7.6, 31, 88, 78],
+  "lesmis": [7.5, 364, 70, 63],
+  "li-l-quinquin-2014": [7.3, 3, 100],
+  "life-of-pi-2012": [7.9, 703, 86, 79],
+  "lifeisbeautiful": [8.6, 817, 81, 58],
+  "lightyear": [6.1, 138, 74, 60],
+  "like-crazy-2016": [7.1, 11, 84],
+  "like-father-like-son-2013": [7.8, 31, 87, 73],
+  "lilo": [7.4, 246, 87, 74],
+  "liloLA": [6.7, 97, 72, 53],
+  "limitless-2015": [7.6, 75],
+  "lion-2016": [8.0, 268, 85, 69],
+  "lionking": [8.5, 1268, 92, 88],
+  "little-am-lie-or-the-character-of--2025": [7.6, 6],
+  "little-forest-2018": [7.3, 5],
+  "little-women-2019": [7.7, 286, 95, 91],
+  "littlemiss": [7.8, 562, 91, 80],
+  "living-2022": [7.2, 40, 94, 81],
+  "logan": [8.1, 933, 93, 77],
+  "loki": [8.2, 477],
+  "long-day-s-journey-into-night-2018": [7.1, 11, 93],
+  "long-way-north-2015": [7.2, 4, 98],
+  "lookback": [7.8, 23],
+  "lorax": [6.4, 145, 53, 46],
+  "lost-illusions-2021": [7.4, 8, 93, 81],
+  "lotr1": [8.9, 2221, 91, 92],
+  "lotr3": [9.0, 2178, 94, 94],
+  "love-victor-2020": [7.9, 25],
+  "loveactually": [7.5, 582, 64, 55],
+  "loveless-2017": [7.6, 38, 94, 86],
+  "loving-vincent-2017": [7.8, 69, 84, 62],
+  "luca": [7.4, 226, 91, 71],
+  "luck": [6.5, 36, 49, 48],
+  "m3gan": [6.3, 183, 93, 72],
+  "madagascar": [7.0, 484, 55, 57],
+  "madmax": [8.1, 1213, 97, 90],
+  "magical-girl-2014": [7.2, 8, 100],
+  "maleficent": [6.9, 426, 54, 56],
+  "mammamia": [6.5, 309, 55, 51],
+  "manchester-by-the-sea-2016": [7.8, 360, 96, 96],
+  "mandalorian": [8.6, 661, 90, 71],
+  "maquia": [7.4, 11, 100, 72],
+  "marcel-the-shell-with-shoes-on-2021": [7.6, 34, 98, 80],
+  "marina-2013": [7.2, 4],
+  "mario": [7.0, 299, 59, 46],
+  "marnie": [7.6, 56, 92, 72],
+  "marriage-story-2019": [7.9, 374, 95, 94],
+  "mars-express-2023": [7.5, 15, 100, 76],
+  "martian": [8.0, 1021, 91, 80],
+  "marty-supreme-2025": [7.6, 203, 94],
+  "maryp": [7.8, 200, 97, 88],
+  "masaan-2015": [8.1, 36, 92],
+  "masquerade-2012": [7.8, 8, 100],
+  "masters-of-sex-2013": [7.9, 40],
+  "matilda": [7.0, 197, 92, 72],
+  "matildamus": [7.0, 34, 92],
+  "matrix": [8.7, 2262, 83, 73],
+  "mazerunner": [6.8, 567, 65, 57],
+  "me-and-earl-and-the-dying-girl-2015": [7.7, 145, 81, 74],
+  "meangirls": [7.1, 489, 84, 66],
+  "meetrobinsons": [6.8, 123, 68, 61],
+  "meg": [5.7, 230, 47, 46],
+  "megamind": [7.3, 328, 73, 63],
+  "melancholia-2011": [7.1, 209, 80, 81],
+  "memento": [8.4, 1446, 94, 83],
+  "memoir-of-a-murderer-2017": [7.2, 15],
+  "memories-of-the-alhambra-2018": [7.7, 8],
+  "mermaid": [7.6, 314, 92, 88],
+  "messiah-2020": [7.6, 50],
+  "mha": [8.2, 124],
+  "mib": [7.3, 668, 91, 72],
+  "midnight-in-paris-2011": [7.6, 473, 93, 81],
+  "midnight-runners-2017": [7.3, 12],
+  "midnight-sun-2016": [7.4, 6],
+  "mifallout": [7.7, 422, 97, 87],
+  "migration": [6.6, 48, 73, 56],
+  "mildred-pierce-2011": [7.6, 26],
+  "mindhunter": [8.6, 401],
+  "minecraft": [5.6, 164, 47, 45],
+  "minions": [6.4, 288, 55, 56],
+  "minions2": [6.5, 108, 70, 56],
+  "minuscule-valley-of-the-lost-ants-2013": [7.1, 10, 90],
+  "miracle-in-cell-no-7-2013": [8.1, 26],
+  "mirai": [7.0, 20, 91, 81],
+  "miss-granny-2014": [7.2, 5],
+  "miss-sloane-2016": [7.5, 89, 76, 64],
+  "mission-impossible-dead-reckoning--2023": [7.6, 330, 96, 81],
+  "mitchells": [7.6, 144, 97, 81],
+  "moana": [7.6, 447, 95, 81],
+  "moana2": [6.3, 128, 61, 58],
+  "modernfamily": [8.5, 544],
+  "moneyball": [7.6, 513, 94, 87],
+  "moneyheist": [8.2, 614, 92],
+  "mononoke": [8.3, 487, 93, 76],
+  "monsieur-aznavour-2024": [7.2, 5],
+  "monster-2023": [7.8, 43, 96, 79],
+  "monstersinc": [8.1, 1083, 96, 79],
+  "monstersu": [7.2, 428, 80, 65],
+  "montage-2013": [7.4, 9],
+  "moonrise-kingdom-2012": [7.7, 384, 93, 84],
+  "mr-church-2016": [7.6, 34, 24, 37],
+  "mr-mme-adelman-2017": [7.3, 6],
+  "mrs-harris-goes-to-paris-2022": [7.1, 38, 94, 70],
+  "mrs-wilson-2018": [7.4, 10],
+  "mrsdoubtfire": [7.1, 318, 70, 54],
+  "mufasa": [6.6, 84, 56, 56],
+  "mugentrain": [8.2, 102, 98, 72],
+  "mulan": [7.7, 349, 91, 72],
+  "mune-guardian-of-the-moon-2014": [7.1, 9, 80],
+  "murderorient": [6.5, 323, 60, 52],
+  "mustang-2015": [7.6, 43, 97, 83],
+  "my-annoying-brother-2016": [7.3, 5],
+  "my-brilliant-friend-2018": [8.6, 23],
+  "my-favourite-cake-2024": [7.4, 10, 100],
+  "my-first-first-love-2019": [7.4, 4],
+  "my-happy-family-2017": [7.4, 5, 100],
+  "my-holo-love-2020": [7.6, 5],
+  "my-king-2015": [7.1, 15, 0, 68],
+  "my-life-as-a-zucchini-2016": [7.8, 33, 99, 85],
+  "my-lovely-liar-2023": [7.3, 4],
+  "my-tomorrow-your-yesterday-2016": [7.4, 6],
+  "my-way-2011": [7.6, 14, 21, 30],
+  "narcos": [8.7, 532],
+  "narcos-mexico-2018": [8.3, 102],
+  "narnia": [6.9, 460, 75, 75],
+  "nationaltreasure": [6.9, 380, 46, 40],
+  "natm": [6.5, 413, 42, 48],
+  "nausicaa": [8.0, 198, 91, 86],
+  "navalny-2022": [7.8, 69, 99, 82],
+  "nebraska-2013": [7.7, 129, 90, 86],
+  "nemo": [8.2, 1217, 99, 90],
+  "new-world-2013": [7.5, 29, 0, 58],
+  "nightcrawler-2014": [7.8, 675, 95, 76],
+  "nightmarebc": [7.9, 413, 95, 82],
+  "nimona": [7.5, 63, 92, 75],
+  "no-2012": [7.4, 27, 93, 81],
+  "no-man-s-land-2020": [7.8, 5],
+  "no-other-choice-2025": [7.5, 70, 100],
+  "nocountry": [8.2, 1202, 93, 92],
+  "north-sea-texas-2011": [7.1, 11, 83, 63],
+  "nosferatu": [7.1, 271, 84, 78],
+  "notebook": [7.8, 696, 54, 53],
+  "nottinghill": [7.2, 388, 84, 68],
+  "nouvelle-vague-2025": [7.3, 12, 91, 71],
+  "now-you-see-me-2013": [7.2, 775, 50, 50],
+  "nowayhome": [8.1, 1037, 93, 71],
+  "oasis-supersonic-2016": [7.8, 14, 84],
+  "obsession-2025": [7.9, 264],
+  "oceans": [7.7, 678, 83, 74],
+  "ode-to-my-father-2014": [7.8, 7, 75],
+  "odyssey": [8.5, 233, 94, 89],
+  "office": [9.0, 841],
+  "oldboy": [8.3, 726, 82, 78],
+  "olive-kitteridge-2014": [8.3, 30],
+  "once-upon-a-time-in-hollywood-2019": [7.6, 970, 85, 84],
+  "one-cut-of-the-dead-2017": [7.6, 36, 100, 86],
+  "one-day-at-a-time-2017": [8.1, 20],
+  "one-life-2023": [7.5, 41, 90, 69],
+  "one-ordinary-day-2021": [8.0, 4],
+  "onebattle": [7.6, 429, 94, 95],
+  "onepiecelive": [8.3, 209],
+  "onepiecered": [6.7, 27],
+  "only-lovers-left-alive-2013": [7.2, 116, 86, 79],
+  "only-the-animals-2019": [7.1, 9, 93, 69],
+  "only-the-brave-2017": [7.6, 93, 87, 72],
+  "onlymurders": [8.0, 205],
+  "onlyyesterday": [7.6, 43, 100, 90],
+  "onoda-10-000-nights-in-the-jungle-2021": [7.2, 3, 97, 78],
+  "onward": [7.4, 188, 88, 61],
+  "oppenheimer": [8.2, 1071, 93, 90],
+  "ordeal-by-innocence-2018": [7.2, 13],
+  "our-little-sister-2015": [7.6, 19, 94, 75],
+  "over-the-garden-wall-2014": [8.7, 91],
+  "overhedge": [6.7, 205, 75],
+  "ozark": [8.4, 396],
+  "pachinko": [8.4, 18],
+  "pacificrim": [6.9, 562, 72, 65],
+  "paddington": [7.3, 158, 97, 77],
+  "paddington2": [7.8, 115, 99, 88],
+  "paddington3": [6.6, 36, 93, 65],
+  "pain-and-glory-2019": [7.5, 67, 96, 87],
+  "palestine-36-2025": [7.5, 7],
+  "pamfir-2022": [7.4, 4],
+  "paperman-2012": [8.2, 37],
+  "papicha-2019": [7.1, 4, 87],
+  "paprika": [7.7, 115, 87, 81],
+  "paranorman": [7.0, 118, 89, 72],
+  "parasite": [8.5, 1180, 99, 97],
+  "parenttrap": [6.7, 175, 87, 63],
+  "parks": [8.6, 317],
+  "pastlives": [7.8, 176, 95, 94],
+  "pawpatrol": [6.1, 10, 80, 50],
+  "peakyblinders": [8.7, 785],
+  "percy": [5.9, 217, 49, 47],
+  "perfectblue": [8.0, 125, 80, 67],
+  "perfectdays": [7.9, 109, 96, 80],
+  "peterpan": [7.2, 167, 78, 76],
+  "peterrabbit": [6.6, 54, 64, 51],
+  "petite-maman-2021": [7.3, 21, 97, 93],
+  "pets": [6.5, 238, 71, 61],
+  "pfrog": [7.2, 189, 86, 73],
+  "philomena-2013": [7.6, 108, 91, 77],
+  "pikachu": [6.5, 198, 68, 53],
+  "pina-2011": [7.6, 17, 95, 83],
+  "pinocchio": [7.4, 174, 100, 99],
+  "pirates": [8.1, 1335, 79, 63],
+  "pitchperfect": [7.1, 353, 81, 66],
+  "planetearth": [9.4, 176],
+  "play-2011": [7.1, 7, 81, 81],
+  "playground-2021": [7.3, 5, 100, 86],
+  "pluribus": [7.9, 166],
+  "pokemon1": [6.4, 50, 16, 35],
+  "polisse-2011": [7.3, 16, 87, 74],
+  "ponyo": [7.6, 187, 91, 86],
+  "poor-things-2023": [7.7, 419, 92, 88],
+  "porco": [7.7, 118, 96, 83],
+  "portrait-of-a-lady-on-fire-2019": [8.0, 129, 97, 95],
+  "pressure-2026": [7.3, 17],
+  "prestige": [8.5, 1605, 77, 66],
+  "pride-2014": [7.8, 65, 92, 79],
+  "prideprej": [7.8, 380, 87, 82],
+  "princeegypt": [7.2, 164, 79, 64],
+  "princessbride": [8.0, 489, 96, 78],
+  "princessd": [6.4, 184, 49, 52],
+  "prisoners": [8.2, 947, 81, 70],
+  "project-hail-mary-2026": [8.2, 457],
+  "promare": [7.0, 6, 97],
+  "promise-at-dawn-2017": [7.1, 4],
+  "proposal": [6.8, 401, 45, 48],
+  "pulpfiction": [8.8, 2451, 92, 95],
+  "puss2": [7.9, 228, 95, 73],
+  "queen-charlotte-a-bridgerton-story-2023": [7.6, 79],
+  "queensgambit": [8.5, 671],
+  "quietplace": [7.5, 664, 96, 82],
+  "quo-vadis-aida-2020": [8.0, 42, 100, 97],
+  "r-m-n-2022": [7.2, 7, 96, 81],
+  "race-2016": [7.1, 44, 63, 56],
+  "ralph2": [7.0, 208, 88, 71],
+  "rashomon": [8.1, 198, 98, 98],
+  "ratatouille": [8.1, 955, 96, 96],
+  "raya": [7.3, 189, 93, 74],
+  "reacher": [8.0, 298],
+  "readyplayer": [7.4, 547, 72, 64],
+  "realsteel": [7.1, 383, 60, 56],
+  "rebel-2022": [7.3, 3, 90],
+  "rectify-2013": [8.3, 29],
+  "remarkably-bright-creatures-2026": [7.7, 43, 83, 55],
+  "rental-family-2025": [7.6, 62, 88],
+  "ricky-gervais-humanity-2018": [8.0, 25],
+  "ricky-gervais-supernature-2022": [7.6, 25],
+  "rio": [6.9, 276, 72, 63],
+  "riphagen-2016": [7.1, 9],
+  "rise-2022": [7.0, 4],
+  "rise-of-the-planet-of-the-apes-2011": [7.6, 608, 82, 68],
+  "riseguardians": [7.2, 211, 75, 58],
+  "rivals-2024": [7.9, 20],
+  "road-to-ninja-naruto-the-movie-2012": [7.6, 10],
+  "robinhood": [7.5, 151, 58, 57],
+  "robot-dreams-2023": [7.6, 25, 98, 87],
+  "rocketman": [7.3, 211, 89, 69],
+  "rocky": [8.1, 695, 91, 70],
+  "rogueone": [7.8, 761, 84, 65],
+  "roma-2018": [7.6, 179, 96, 96],
+  "room-2015": [8.1, 482, 93, 86],
+  "rrr": [7.8, 226, 93, 83],
+  "rurouni-kenshin-final-chapter-part-2021": [7.4, 13],
+  "rurouni-kenshin-part-i-origins-2012": [7.4, 32],
+  "rurouni-kenshin-part-ii-kyoto-infe-2014": [7.5, 20],
+  "rurouni-kenshin-the-legend-ends-2014": [7.5, 16],
+  "rush-2013": [8.1, 563, 89, 74],
+  "rust-and-bone-2012": [7.4, 73, 82, 73],
+  "rye-lane-2023": [7.2, 16, 98, 83],
+  "sakamoto": [7.5, 17],
+  "samsara-2011": [8.4, 40, 76, 65],
+  "sauvage-wild-2018": [7.1, 6, 93, 75],
+  "savingryan": [8.6, 1651, 94, 91],
+  "scandal-2012": [7.7, 85],
+  "scenes-from-a-marriage-2021": [8.0, 34],
+  "schindler": [9.0, 1594, 98, 95],
+  "schitt": [8.5, 175],
+  "school-2017-2017": [7.5, 3],
+  "schoolrock": [7.2, 360, 92, 82],
+  "se7en": [8.6, 2040, 84, 65],
+  "seabeast": [7.0, 66, 94, 74],
+  "searching-2018": [7.6, 194, 92, 71],
+  "searching-for-sugar-man-2012": [8.2, 77, 95, 79],
+  "seaspiracy-2021": [8.1, 36, 75],
+  "see-you-up-there-2017": [7.4, 12, 94],
+  "sentimental-value-2025": [7.7, 85, 97, 86],
+  "sevensamurai": [8.6, 404, 100, 98],
+  "severance": [8.6, 398],
+  "sex-education-2019": [8.2, 401],
+  "shame-2011": [7.2, 218, 79, 72],
+  "shangchi": [7.3, 493, 92, 71],
+  "shaun": [7.3, 47, 99],
+  "shawshank": [9.3, 3213, 89, 82],
+  "sherlock": [9.0, 1094],
+  "shingodzilla": [6.9, 46, 86, 67],
+  "shogun": [8.6, 249],
+  "shoplifters": [7.9, 96, 99, 93],
+  "short-term-12-2013": [7.9, 96, 98],
+  "showman": [7.5, 350, 57, 48],
+  "shrek": [7.9, 816, 88, 84],
+  "shrek2": [7.4, 560, 89, 75],
+  "shrinking": [8.2, 128],
+  "shutter": [8.2, 1666, 68, 63],
+  "sicario-2015": [7.7, 544, 92, 82],
+  "sieranevada-2016": [7.3, 6, 92],
+  "silence": [8.6, 1736, 95, 86],
+  "silence-2016": [7.2, 135, 83, 79],
+  "silenced-2011": [8.0, 28],
+  "silentvoice": [8.2, 146, 94, 78],
+  "silo": [8.1, 222],
+  "silver-linings-playbook-2012": [7.7, 776, 92, 81],
+  "sing": [7.1, 215, 71, 59],
+  "sing-sing-2023": [7.6, 30, 98, 84],
+  "sing2": [7.3, 102, 72, 49],
+  "singinrain": [8.3, 284, 100, 99],
+  "singstreet": [7.9, 108, 95, 79],
+  "sinners": [7.5, 506, 97, 84],
+  "sir-2018": [7.7, 10],
+  "sixthsense": [8.2, 1152, 86, 64],
+  "skyfall": [7.8, 777, 92, 81],
+  "slamdunk": [8.0, 13],
+  "slowhorses": [8.3, 151],
+  "slumdog": [8.0, 913, 92, 84],
+  "smurfs25": [4.3, 8, 20, 31],
+  "snow-white-2012": [7.5, 12, 95, 82],
+  "snowden-2016": [7.3, 174, 61, 58],
+  "snowpiercer-2013": [7.1, 423, 94, 84],
+  "socialnetwork": [7.8, 824, 96, 95],
+  "society-of-the-snow-2023": [7.8, 176, 90, 72],
+  "sololeveling": [8.5, 117],
+  "something-useful-2017": [7.6, 6],
+  "song-of-the-sea-2014": [8.0, 69, 99, 85],
+  "sonic": [6.5, 195, 64, 47],
+  "sonic3": [6.9, 83, 85, 56],
+  "sorry-baby-2025": [7.1, 25, 97, 88],
+  "sorry-we-missed-you-2019": [7.6, 28, 88, 82],
+  "soul": [8.0, 454, 95, 83],
+  "souleymane-s-story-2024": [7.6, 7, 100, 81],
+  "sound-of-freedom-2023": [7.6, 139, 57, 36],
+  "sound-of-metal-2019": [7.7, 188, 97, 82],
+  "soundmusic": [8.1, 293, 83, 63],
+  "soundtrack-to-a-coup-d-etat-2024": [7.8, 4, 0, 91],
+  "source-code-2011": [7.5, 585, 92, 74],
+  "spacejam": [6.5, 230, 44, 57],
+  "spiderverse": [8.4, 801, 97, 87],
+  "spirit": [7.2, 95, 69, 52],
+  "spirited": [8.6, 976, 96, 96],
+  "spongebob": [7.2, 112, 68, 67],
+  "spotlight": [8.1, 538, 97, 93],
+  "spyfamily": [8.2, 64],
+  "spykids": [5.7, 137, 92, 71],
+  "squidgame": [7.9, 769],
+  "staged-2020": [8.5, 12],
+  "stan-ollie-2018": [7.2, 42, 92, 75],
+  "star-trek-into-darkness-2013": [7.7, 511, 84, 72],
+  "star-wars-episode-vii-the-force-aw-2015": [7.7, 1031, 93, 80],
+  "stardust": [7.6, 300, 77, 66],
+  "starred-up-2013": [7.3, 52, 99, 81],
+  "starwars4": [8.6, 1579, 94, 90],
+  "stations-of-the-cross-2014": [7.4, 5, 93, 68],
+  "stepbrothers": [6.9, 343, 55, 51],
+  "still-alice-2014": [7.5, 151, 85, 72],
+  "straight-outta-compton-2015": [7.8, 235, 89, 72],
+  "strangerthings": [8.6, 1721],
+  "stuartlittle": [6.0, 161, 67, 61],
+  "substance": [7.2, 453, 89, 78],
+  "succession": [8.8, 362],
+  "suite-fran-aise-2014": [7.0, 31, 76, 63],
+  "suits": [8.4, 545],
+  "summerwars": [7.4, 34, 79, 63],
+  "sunny-2011": [7.7, 7],
+  "superbad": [7.6, 699, 88, 76],
+  "superman25": [7.0, 432, 83, 68],
+  "supernatural-the-animation-2011": [7.3, 3],
+  "suzume": [7.6, 65, 96, 77],
+  "sweet-bean-2015": [7.4, 14, 85, 60],
+  "taboo-2017": [8.3, 164],
+  "tabu-2012": [7.3, 8, 88, 79],
+  "tampopo": [7.9, 27, 100, 87],
+  "tangled": [7.7, 550, 89, 71],
+  "tarzan": [7.3, 271, 90, 80],
+  "tatb": [7.0, 142, 96, 64],
+  "tedlasso": [8.7, 451],
+  "tell-me-who-i-am-2019": [7.6, 20, 97],
+  "tenet": [7.3, 696, 69, 69],
+  "tenthings": [7.4, 456, 71, 70],
+  "terminal": [7.4, 539, 61, 55],
+  "terminator2": [8.6, 1291, 90, 75],
+  "testament-of-youth-2014": [7.2, 32, 84, 76],
+  "the-act-2019": [7.8, 43],
+  "the-act-of-killing-2012": [8.2, 45, 95, 92],
+  "the-adventures-of-tintin-2011": [7.3, 256, 75, 68],
+  "the-african-doctor-2016": [7.0, 12],
+  "the-americans-2013": [8.4, 125],
+  "the-angels-share-2012": [7.0, 28, 89, 66],
+  "the-anthem-of-the-heart-2015": [7.3, 7],
+  "the-art-of-racing-in-the-rain-2019": [7.6, 49, 44, 43],
+  "the-artist-2011": [7.8, 256, 95, 89],
+  "the-attack-2012": [7.1, 5, 87],
+  "the-attorney-2013": [7.7, 9, 77],
+  "the-b-lier-family-2014": [7.3, 31, 83],
+  "the-ballad-of-wallis-island-2025": [7.4, 25, 96, 78],
+  "the-banshees-of-inisherin-2022": [7.6, 298, 96, 87],
+  "the-bastard-son-the-devil-himself-2022": [7.5, 17],
+  "the-beasts-2022": [7.5, 26, 97, 85],
+  "the-beatles-get-back-2021": [8.9, 37, 0, 85],
+  "the-beauty-inside-2015": [7.3, 9, 70],
+  "the-best-exotic-marigold-hotel-2011": [7.2, 104, 77, 62],
+  "the-big-bad-fox-and-other-tales-2017": [7.4, 5, 97],
+  "the-blue-caftan-2022": [7.5, 8, 96],
+  "the-book-of-vision-2020": [7.1, 18],
+  "the-boy-who-harnessed-the-wind-2019": [7.6, 53, 86, 68],
+  "the-braid-2023": [7.2, 3],
+  "the-brand-new-testament-2015": [7.1, 37, 82, 70],
+  "the-broken-circle-breakdown-2012": [7.7, 45, 83, 70],
+  "the-captain-2017": [7.3, 24, 83],
+  "the-collapse-2019": [7.7, 3],
+  "the-conductor-2018": [7.3, 5],
+  "the-connection-2014": [7.1, 14, 77, 67],
+  "the-count-of-monte-cristo-2024": [7.6, 49, 96, 75],
+  "the-courier-2020": [7.2, 82, 85, 65],
+  "the-dance-of-reality-2013": [7.4, 10, 94, 76],
+  "the-danish-girl-2015": [7.1, 207, 66, 66],
+  "the-death-of-stalin-2017": [7.3, 128, 95, 88],
+  "the-devil-s-double-2011": [7.0, 66, 54, 52],
+  "the-dissident-2020": [7.8, 31, 96],
+  "the-eight-mountains-2022": [7.7, 20, 90, 78],
+  "the-endless-trench-2019": [7.2, 8, 92],
+  "the-english-game-2020": [7.6, 19],
+  "the-father-2020": [8.2, 247, 98, 88],
+  "the-final-chapters-special-2-2023": [9.0, 92],
+  "the-florida-project-2017": [7.6, 148, 96, 92],
+  "the-front-line-2011": [7.3, 8, 69, 59],
+  "the-gatekeepers-2012": [7.6, 6, 94, 91],
+  "the-gentlemen-2019": [7.8, 461, 75, 51],
+  "the-gilded-cage-2013": [7.1, 11],
+  "the-girl-with-the-dragon-tattoo-2011": [7.8, 531, 86, 71],
+  "the-glory-2022": [8.2, 46],
+  "the-great-beauty-2013": [7.7, 107, 91, 86],
+  "the-guard-2011": [7.3, 102, 94, 78],
+  "the-guernsey-literary-and-potato-p-2018": [7.3, 58, 81, 65],
+  "the-hateful-eight-2015": [7.8, 727, 74, 68],
+  "the-help-2011": [8.1, 531, 76, 62],
+  "the-hobbit-the-desolation-of-smaug-2013": [7.8, 757, 74, 66],
+  "the-holdovers-2023": [7.9, 272, 97, 82],
+  "the-hookup-plan-2018": [7.1, 6],
+  "the-imitation-game-2014": [8.0, 882, 90, 71],
+  "the-innocents-2016": [7.3, 12, 95, 78],
+  "the-insult-2017": [7.6, 19, 86, 72],
+  "the-irishman-2019": [7.8, 476, 95, 94],
+  "the-jinx-the-life-and-deaths-of-ro-2015": [8.6, 59],
+  "the-kid-with-a-bike-2011": [7.4, 30, 96, 87],
+  "the-king-2019": [7.3, 181, 71, 62],
+  "the-kingdom-of-dreams-and-madness-2013": [7.7, 6, 92],
+  "the-last-naruto-the-movie-2014": [7.6, 21],
+  "the-little-prince-2015": [7.6, 72, 92, 70],
+  "the-lobster-2015": [7.1, 336, 87, 82],
+  "the-look-of-silence-2014": [8.2, 15, 96, 92],
+  "the-lunchbox-2013": [7.8, 69, 97, 76],
+  "the-man-who-knew-infinity-2015": [7.2, 67, 63, 56],
+  "the-marching-band-2024": [7.4, 7],
+  "the-missing-2014": [8.1, 33],
+  "the-musketeers-2014": [7.8, 25],
+  "the-naked-director-2019": [7.6, 8],
+  "the-net-2016": [7.4, 5, 83],
+  "the-night-is-short-walk-on-girl-2017": [7.5, 7, 90],
+  "the-night-of-the-12th-2022": [7.0, 13, 94],
+  "the-old-oak-2023": [7.1, 15, 83, 69],
+  "the-outlaws-2017": [7.2, 17, 91],
+  "the-painting-2011": [7.3, 5, 82],
+  "the-paradise-2012": [7.7, 14],
+  "the-past-2013": [7.7, 53, 92, 85],
+  "the-patience-stone-2012": [7.1, 6, 84],
+  "the-peanut-butter-falcon-2019": [7.6, 120, 95, 70],
+  "the-perks-of-being-a-wallflower-2012": [7.9, 602, 85, 67],
+  "the-phantom-of-the-opera-at-the-ro-2011": [8.8, 11],
+  "the-red-turtle-2016": [7.5, 42, 93, 86],
+  "the-revenant-2015": [8.0, 956, 78, 76],
+  "the-salesman-2016": [7.7, 69, 96, 85],
+  "the-salisbury-poisonings-2020": [7.2, 8],
+  "the-salt-of-the-earth-2014": [8.4, 25, 95, 83],
+  "the-secret-agent-2025": [7.2, 60, 99],
+  "the-secret-life-of-my-secretary-2019": [7.3, 3],
+  "the-seed-of-the-sacred-fig-2024": [7.5, 21, 97, 84],
+  "the-selfish-giant-2013": [7.3, 13, 98, 83],
+  "the-snows-of-kilimanjaro-2011": [7.2, 4, 100],
+  "the-social-dilemma-2020": [7.6, 95, 85, 78],
+  "the-source-2011": [7.2, 4, 70],
+  "the-specials-2019": [7.4, 12, 82],
+  "the-spy-gone-north-2018": [7.4, 7, 100],
+  "the-square-2017": [7.1, 83, 85, 73],
+  "the-stranger-2020": [7.2, 70],
+  "the-stranger-2025": [7.1, 6, 100],
+  "the-summit-of-the-gods-2021": [7.5, 11, 100],
+  "the-tale-of-the-princess-kaguya-2013": [8.0, 63, 100, 89],
+  "the-taste-of-things-2023": [7.4, 21, 97, 85],
+  "the-theory-of-everything-2014": [7.7, 509, 80, 71],
+  "the-tiger-2015": [7.2, 8, 100],
+  "the-traitor-2019": [7.1, 15, 85, 64],
+  "the-treatment-2014": [7.1, 11, 93],
+  "the-trial-of-the-chicago-7-2020": [7.7, 206, 89, 76],
+  "the-turin-horse-2011": [7.7, 22, 89, 80],
+  "the-two-popes-2019": [7.6, 147, 88, 75],
+  "the-voice-of-hind-rajab-2025": [8.2, 20, 98, 85],
+  "the-wailing-2016": [7.4, 101, 99, 81],
+  "the-whale-2022": [7.6, 307, 64, 60],
+  "the-wild-pear-tree-2018": [8.0, 31, 94, 86],
+  "the-witch-part-1-the-subversion-2018": [7.2, 23, 89],
+  "the-worst-person-in-the-world-2021": [7.7, 130, 96, 91],
+  "the-young-pope-2016": [8.3, 52],
+  "thebatman": [7.8, 938, 85, 72],
+  "thebear": [8.5, 318],
+  "they-shall-not-grow-old-2018": [8.2, 41, 99, 91],
+  "thirteen-lives-2022": [7.8, 80, 86, 66],
+  "this-is-england-88-2011": [8.3, 13],
+  "this-is-england-90-2015": [8.4, 11],
+  "thorrag": [7.9, 902, 93, 74],
+  "three-billboards-outside-ebbing-mi-2017": [8.1, 612, 90, 88],
+  "three-identical-strangers-2018": [7.6, 45, 96, 81],
+  "timbuktu-2014": [7.1, 19, 98, 92],
+  "titanic": [8.0, 1403, 88, 75],
+  "titans": [7.8, 251, 71, 48],
+  "togo-2019": [7.9, 63, 92],
+  "tokyostory": [8.1, 78, 100, 100],
+  "tomboy-2011": [7.4, 23, 96, 74],
+  "topgun": [8.2, 894, 96, 78],
+  "tori-and-lokita-2022": [7.1, 4, 88, 78],
+  "totoro": [8.1, 436, 93, 87],
+  "toystory": [8.3, 1189, 100, 96],
+  "toystory3": [8.3, 982, 98, 92],
+  "toystory4": [7.6, 325, 97, 84],
+  "traintobusan": [7.6, 311, 95, 73],
+  "transformers": [7.1, 723, 57, 61],
+  "transformers-one-2024": [7.6, 68, 89, 64],
+  "treasureplanet": [7.2, 149, 69, 60],
+  "triangle-of-sadness-2022": [7.2, 218, 72, 63],
+  "trolls": [6.4, 102, 76, 55],
+  "trolls3": [6.0, 20, 64],
+  "tron": [6.8, 388, 51, 49],
+  "truedetective": [8.8, 762],
+  "truman": [8.2, 1390, 94, 90],
+  "tsuredure-children-2017": [7.2, 3],
+  "tune-in-for-love-2019": [7.2, 8],
+  "turningred": [6.9, 176, 95, 83],
+  "twilight": [5.4, 530, 49, 56],
+  "twisters": [6.5, 198, 75, 65],
+  "two-days-one-night-2014": [7.3, 52, 96, 89],
+  "two-is-a-family-2016": [7.3, 30, 43],
+  "two-of-us-2019": [7.2, 4, 98],
+  "tyrannosaur-2011": [7.5, 36, 83, 65],
+  "uncharted": [6.3, 304, 41, 45],
+  "unorthodox-2020": [8.0, 99],
+  "up": [8.3, 1246, 98, 88],
+  "usualsuspects": [8.5, 1246, 87, 76],
+  "venus-in-fur-2013": [7.1, 22, 88, 69],
+  "virunga-2014": [8.1, 13, 100, 95],
+  "vortex-2021": [7.4, 11],
+  "w1917": [8.2, 779, 88, 78],
+  "waco-2018": [7.8, 29],
+  "wallace": [7.5, 42, 100, 83],
+  "walle": [8.4, 1332, 95, 95],
+  "waltermitty": [7.3, 375, 53, 54],
+  "war-peace-2016": [8.1, 30],
+  "warrior-2011": [8.1, 531, 84, 71],
+  "we-are-lady-parts-2021": [8.3, 8],
+  "we-made-a-beautiful-bouquet-2021": [7.5, 5],
+  "weapons": [7.4, 383, 93, 81],
+  "weathering": [7.5, 71, 93],
+  "wednesday": [8.0, 504],
+  "weekend-2011": [7.6, 35, 95, 81],
+  "welcome-to-wrexham-2022": [8.3, 26],
+  "wham-2023": [7.5, 10],
+  "what-is-a-woman-2022": [8.1, 48, 75],
+  "what-s-in-a-name-2012": [7.3, 20, 71, 66],
+  "what-the-day-owes-the-night-2012": [7.8, 5],
+  "what-will-people-say-2017": [7.4, 6, 78],
+  "wheel-of-fortune-and-fantasy-2021": [7.5, 11, 99, 86],
+  "when-pigs-have-wings-2011": [7.0, 4],
+  "where-do-we-go-now-2011": [7.4, 14, 53, 60],
+  "whiplash": [8.5, 1168, 94, 89],
+  "whisper": [7.8, 84, 95, 75],
+  "whitelotus": [8.0, 330],
+  "who-are-you-school-2015-2015": [7.6, 4],
+  "wicked": [7.3, 254, 88, 73],
+  "wicked2": [6.6, 71, 67, 58],
+  "wild-bill-2011": [7.2, 15, 100],
+  "wildrobot": [8.2, 232, 97, 85],
+  "willywonka71": [7.8, 246, 92, 67],
+  "wind-river-2017": [7.7, 318, 87, 73],
+  "winnie": [7.1, 31, 90, 74],
+  "winter-sleep-2014": [8.0, 59, 87, 88],
+  "wintersoldier": [7.7, 979, 90, 70],
+  "wish": [5.5, 51, 48, 47],
+  "wizardoz": [8.1, 470, 98, 92],
+  "wolf": [8.2, 1807, 80, 75],
+  "wolfchildren": [8.1, 55, 95, 76],
+  "wolfwalkers-2020": [8.0, 46, 99, 87],
+  "woman-at-war-2018": [7.4, 12, 97, 81],
+  "wonder": [7.9, 198, 86, 66],
+  "wonderwoman": [7.3, 738, 93, 76],
+  "wonka": [6.9, 195, 82, 66],
+  "wood-job-2014": [7.5, 4],
+  "wreck": [7.7, 502, 87, 72],
+  "x-men-days-of-future-past-2014": [7.9, 791, 90, 75],
+  "x-men-first-class-2011": [7.7, 767, 86, 65],
+  "young-hearts-2024": [7.9, 9, 90, 69],
+  "yourname": [8.4, 399, 98, 81],
+  "youth-2015": [7.3, 89, 72, 64],
+  "zack-snyder-s-justice-league-2021": [7.9, 477, 71, 54],
+  "zillion-2022": [7.2, 4],
+  "zodiac": [7.7, 680, 90, 79],
+  "zootopia": [8.0, 644, 98, 78],
+  "zootopia2": [7.3, 147, 90, 73]
+};
+
+// Built-ins underneath, anything fetched laid on top. A lookup that came back
+// empty must never wipe a good built-in rating.
+function mergeScores(fetched) {
+  const out = {};
+  Object.keys(BUILTIN_SCORES).forEach(function (id) {
+    const b = BUILTIN_SCORES[id];
+    const e = {
+      imdb: b[0],
+      votes: b[1] * 1000,
+      src: "b"
+    };
+    if (b[2]) e.rt = b[2];
+    if (b[3]) e.mc = b[3];
+    out[id] = e;
+  });
+  Object.keys(fetched || {}).forEach(function (id) {
+    const f = fetched[id];
+    if (!f) return;
+    if (f.miss) {
+      if (!out[id]) out[id] = f;
+      return;
+    }
+    out[id] = Object.assign({}, out[id] || {}, f);
+  });
+  return out;
+}
 
 // ---------- Live registry (built-ins + packs + manual additions) ----------
 const BUILTIN_MOVIES = MOVIES;
@@ -5447,11 +12153,12 @@ function sanitizeScores(raw) {
     if (n(e.imdb, 0, 10) !== undefined) o.imdb = n(e.imdb, 0, 10);
     if (n(e.rt, 0, 100) !== undefined) o.rt = n(e.rt, 0, 100);
     if (n(e.mc, 0, 100) !== undefined) o.mc = n(e.mc, 0, 100);
+    if (n(e.ra, 0, 100) !== undefined) o.ra = n(e.ra, 0, 100);
     if (n(e.tmdb, 0, 10) !== undefined) o.tmdb = n(e.tmdb, 0, 10);
     if (n(e.votes, 0, 1e9) !== undefined) o.votes = n(e.votes, 0, 1e9);
     if (e.miss) o.miss = 1;
     o.at = Number(e.at) || 0;
-    if (o.imdb === undefined && o.rt === undefined && o.mc === undefined && o.tmdb === undefined && !o.miss) return;
+    if (o.imdb === undefined && o.rt === undefined && o.mc === undefined && o.ra === undefined && o.tmdb === undefined && !o.miss) return;
     out[id] = o;
   });
   return out;
@@ -5466,6 +12173,10 @@ function criticNorm(e) {
   if (e.rt !== undefined) {
     parts.push(e.rt / 100);
     w.push(1.0);
+  }
+  if (e.ra !== undefined) {
+    parts.push(e.ra / 100);
+    w.push(0.8);
   }
   if (e.imdb !== undefined) {
     parts.push(e.imdb / 10);
@@ -5780,6 +12491,21 @@ function blendModels(models) {
     }()
   };
 }
+
+// A stated preference for newer releases, separate from the taste-derived era
+// affinity below. Monotonic: every year further back scores lower, with the
+// curve pivoting at 2011 so anything from the last decade and a half sits
+// clearly above the rest and the 1930s sit firmly at the bottom.
+const RECENCY_PIVOT = 2011;
+function recencyBonus(y) {
+  const now = new Date().getFullYear();
+  const year = num(y, RECENCY_PIVOT);
+  if (year >= RECENCY_PIVOT) {
+    const span = Math.max(1, now - RECENCY_PIVOT);
+    return 0.55 + 0.45 * Math.min(1, (year - RECENCY_PIVOT) / span);
+  }
+  return 0.55 - (RECENCY_PIVOT - year) * 0.0155;
+}
 function eraBonus(m, lovedYears, posYears) {
   const ys = lovedYears.length >= 2 ? lovedYears : posYears.length >= 3 ? posYears : null;
   if (!ys || !ys.length) return 0;
@@ -5866,9 +12592,14 @@ function scoreTitle(m, model, ctx) {
     const cn = criticNorm(ctx.scores[m.id]);
     if (cn !== null) {
       const align = num(model.critic && model.critic.a, 0.3);
-      score += (cn - 0.5) * 2 * align * 0.6;
+      score += (cn - 0.5) * 2 * align * 0.9;
     }
   }
+
+  // Stated preference for newer releases, scaled by how strongly this member
+  // asked for it. Ranks older titles down rather than hiding them.
+  const rec = Math.min(1, Math.max(0, num(ctx.recency, 0.5)));
+  if (rec > 0) score += recencyBonus(m.y) * rec * 1.2;
   if (model.recentGenres) {
     let repeat = false;
     (m.g || []).forEach(k => {
@@ -5941,10 +12672,12 @@ function assembleBatch(scored, model, ctx) {
     take(nx);
   }
   if (wantWild) {
+    // Search the WHOLE pool, not the taste-ranked head. The head is by
+    // definition the most similar, so a bounded horizon finds nothing off-lane
+    // once the catalog is large.
     let wild = null,
       wv = -Infinity;
-    const horizon = Math.min(scored.length, 400);
-    for (let i = 0; i < horizon; i++) {
+    for (let i = 0; i < scored.length; i++) {
       const it = scored[i];
       if (usedIds[it.m.id]) continue;
       if (poolSim(it.m, model.simPool, 3) >= 0.35) continue;
@@ -5964,7 +12697,11 @@ function assembleBatch(scored, model, ctx) {
   }
   return chosen;
 }
-function reasonFor(m, model, rated, wild) {
+function reasonFor(m, model, rated, wild, rewatching) {
+  if (rewatching) {
+    const r = rated ? rated[m.id] : undefined;
+    return r === 2 ? "You loved this — worth another watch" : "Back in the mix for a rewatch";
+  }
   if (wild) return "A change of pace";
   if (m.q && rated && rated[m.q] > 0) {
     const b = MOVIE_BY_ID[m.q];
@@ -6008,6 +12745,7 @@ function reasonFor(m, model, rated, wild) {
     if (num(model.genreExp[k], 0) < 0.5 && !gap) gap = k;
   });
   if (gap) return "Something new: " + lbl(gap);
+  if (m.y >= new Date().getFullYear() - 1) return "Just out";
   return "Worth a look";
 }
 
@@ -6131,6 +12869,7 @@ const KEY_TMDB = "mnp:v10:tmdb"; // api key (never exported)
 const KEY_OMDB = "mnp:v10:omdb"; // critic-score api key (never exported)
 const KEY_SCORES = "mnp:v10:scores"; // { titleId: { imdb, rt, mc, tmdb, votes, at } }
 const WATCHLOG_CAP = 300;
+const num0 = (v, d) => typeof v === "number" && isFinite(v) ? v : d;
 const AVATAR_GLYPHS = ["◆", "●", "▲", "■", "★", "✦", "◐", "❋"];
 function newMember(name, band, glyph) {
   return {
@@ -6140,10 +12879,12 @@ function newMember(name, band, glyph) {
     glyph: AVATAR_GLYPHS.indexOf(glyph) >= 0 ? glyph : AVATAR_GLYPHS[0],
     series: band === "r",
     useCritics: false,
+    recency: 0.5,
     rated: {},
     ratedOrder: [],
     hidden: [],
     watchlist: [],
+    rewatch: [],
     watchlog: [],
     imp: {},
     tonight: null,
@@ -6198,10 +12939,14 @@ function sanitizeMember(p, fallbackName) {
     glyph: AVATAR_GLYPHS.indexOf(p.glyph) >= 0 ? p.glyph : AVATAR_GLYPHS[0],
     series: !!p.series,
     useCritics: !!p.useCritics,
+    // Absent on profiles written before this existed: default to a mild
+    // preference for recent releases rather than none.
+    recency: typeof p.recency === "number" && isFinite(p.recency) ? Math.min(1, Math.max(0, p.recency)) : 0.5,
     rated,
     ratedOrder: order,
     hidden: Array.isArray(p.hidden) ? p.hidden.filter(x => typeof x === "string") : [],
     watchlist: Array.isArray(p.watchlist) ? p.watchlist.filter(x => typeof x === "string") : [],
+    rewatch: Array.isArray(p.rewatch) ? p.rewatch.filter(x => typeof x === "string") : [],
     watchlog: Array.isArray(p.watchlog) ? p.watchlog.filter(h => h && typeof h.id === "string").slice(-WATCHLOG_CAP) : [],
     imp,
     tonight: typeof p.tonight === "string" ? p.tonight : null,
@@ -6279,8 +13024,10 @@ function memberView(profile) {
       band: m.band,
       series: m.series,
       useCritics: !!m.useCritics,
+      recency: num0(m.recency, 0.5),
       hidden: m.hidden,
       watchlist: m.watchlist,
+      rewatch: m.rewatch || [],
       watchlog: m.watchlog,
       tonight: m.tonight,
       label: m.name
@@ -6289,11 +13036,13 @@ function memberView(profile) {
   const rated = {},
     hidden = [],
     watchlist = [],
+    rewatch = [],
     watchlog = [];
   let band = "r",
     series = true,
     tonight = null,
-    useCritics = false;
+    useCritics = false,
+    recencySum = 0;
   list.forEach(m => {
     Object.keys(m.rated).forEach(id => {
       const v = m.rated[id];
@@ -6305,10 +13054,14 @@ function memberView(profile) {
     m.watchlist.forEach(h => {
       if (watchlist.indexOf(h) < 0) watchlist.push(h);
     });
+    (m.rewatch || []).forEach(h => {
+      if (rewatch.indexOf(h) < 0) rewatch.push(h);
+    });
     m.watchlog.forEach(h => watchlog.push(h));
     if (BAND_RANK[m.band] < BAND_RANK[band]) band = m.band;
     if (!m.series) series = false;
     if (m.useCritics) useCritics = true;
+    recencySum += num0(m.recency, 0.5);
     if (m.tonight) tonight = m.tonight;
   });
   watchlog.sort((a, b) => (a.ts || 0) - (b.ts || 0));
@@ -6319,8 +13072,10 @@ function memberView(profile) {
     band,
     series,
     useCritics,
+    recency: recencySum / list.length,
     hidden,
     watchlist,
+    rewatch,
     watchlog: watchlog.slice(-WATCHLOG_CAP),
     tonight,
     label: list.map(m => m.name).join(" + ")
@@ -6627,9 +13382,13 @@ function ScoreChips({
 }) {
   if (!e) return null;
   const items = [];
-  if (e.rt !== undefined) items.push(["RT", e.rt + "%"]);
+  // "Tomatometer" is the critics' score. Rotten Tomatoes also publishes a
+  // separate audience score, which no free source carries, so it is labelled
+  // rather than left ambiguous.
+  if (e.rt !== undefined) items.push(["TOMATO", e.rt + "%"]);
+  if (e.ra !== undefined) items.push(["AUDIENCE", e.ra + "%"]);
   if (e.imdb !== undefined) items.push(["IMDb", e.imdb.toFixed(1)]);
-  if (e.mc !== undefined && !compact) items.push(["MC", String(e.mc)]);
+  if (e.mc !== undefined && !compact) items.push(["META", String(e.mc)]);
   if (!items.length && e.tmdb !== undefined) items.push(["TMDB", e.tmdb.toFixed(1)]);
   if (!items.length) return null;
   return /*#__PURE__*/React.createElement("div", {
@@ -7476,7 +14235,7 @@ function DiscoverTab({
     key: it.m.id,
     m: it.m,
     C: C,
-    reason: reasonFor(it.m, model, view.rated, it.wild),
+    reason: reasonFor(it.m, model, view.rated, it.wild, view.rewatch.indexOf(it.m.id) >= 0),
     rating: view.rated[it.m.id],
     saved: view.watchlist.indexOf(it.m.id) >= 0,
     onRate: r => onRate(it.m.id, r),
@@ -7630,8 +14389,10 @@ function WatchedTab({
   fetchMsg,
   missing,
   hasKey,
-  onOpenScores
+  onOpenScores,
+  onEdit
 }) {
+  const rewatch = view.rewatch || [];
   const rows = useMemo(() => {
     const seenAt = {};
     (view.watchlog || []).forEach(h => {
@@ -7671,7 +14432,7 @@ function WatchedTab({
       style: {
         color: C.mut
       }
-    }, "Everything you rate shows up here with its IMDb, Rotten Tomatoes and Metacritic scores.")));
+    }, "Everything you rate shows up here with its IMDb score built in. Tap any title later to change your verdict or put it back in the mix.")));
   }
   const align = ins.critic || {
     a: 0,
@@ -7686,7 +14447,7 @@ function WatchedTab({
       color: C.ink
     }
   }, "Watched by ", view.label), /*#__PURE__*/React.createElement("div", {
-    className: "grid grid-cols-3 gap-2 mb-3"
+    className: "grid grid-cols-3 gap-2 mb-2"
   }, /*#__PURE__*/React.createElement(StatCard, {
     label: "Titles",
     value: rows.length,
@@ -7694,12 +14455,19 @@ function WatchedTab({
   }), /*#__PURE__*/React.createElement(StatCard, {
     label: "Avg IMDb",
     value: ins.avgImdb === null ? "—" : ins.avgImdb.toFixed(1),
+    sub: "users",
     C: C
   }), /*#__PURE__*/React.createElement(StatCard, {
-    label: "Avg RT",
+    label: "Avg Tomato",
     value: ins.avgRt === null ? "—" : ins.avgRt + "%",
+    sub: "critics",
     C: C
-  })), /*#__PURE__*/React.createElement("div", {
+  })), /*#__PURE__*/React.createElement("p", {
+    className: "text-xs mb-4",
+    style: {
+      color: C.faint
+    }
+  }, "TOMATO is the critics' Tomatometer and META is Metacritic's Metascore. IMDb is the audience."), /*#__PURE__*/React.createElement("div", {
     className: "rounded-xl px-3.5 py-3 mb-4",
     style: {
       background: C.card,
@@ -7749,16 +14517,16 @@ function WatchedTab({
     style: {
       color: C.ink
     }
-  }, /*#__PURE__*/React.createElement("span", {
+  }, "Add Rotten Tomatoes for ", /*#__PURE__*/React.createElement("span", {
     style: {
       fontFamily: FONT_NUM
     }
-  }, missing), " watched ", missing === 1 ? "title has" : "titles have", " no scores yet"), /*#__PURE__*/React.createElement("p", {
+  }, missing), " ", missing === 1 ? "title" : "titles"), /*#__PURE__*/React.createElement("p", {
     className: "text-xs mb-2.5",
     style: {
       color: C.mut
     }
-  }, hasKey ? "Fetch them from OMDb — free, and it covers IMDb, Rotten Tomatoes and Metacritic." : "Add a free OMDb key to pull IMDb, Rotten Tomatoes and Metacritic scores."), /*#__PURE__*/React.createElement("button", {
+  }, "Most titles already have all three built in. A free OMDb key fills the remaining gaps and keeps them current."), /*#__PURE__*/React.createElement("button", {
     onClick: hasKey ? onFetchScores : onOpenScores,
     disabled: fetching,
     className: "w-full py-2.5 rounded-lg text-sm font-semibold focus:outline-none focus-visible:ring-2",
@@ -7783,9 +14551,12 @@ function WatchedTab({
   }, rows.map(x => {
     const meta = RATING_META[String(x.r)];
     const col = meta.tone === "like" ? C.like : meta.tone === "dislike" ? C.dislike : C.ink2;
-    return /*#__PURE__*/React.createElement("div", {
+    const again = rewatch.indexOf(x.id) >= 0;
+    return /*#__PURE__*/React.createElement("button", {
       key: x.id,
-      className: "rounded-xl p-2.5 flex gap-2.5 items-center",
+      onClick: () => onEdit(x.id),
+      "aria-label": "Edit " + x.m.t,
+      className: "w-full text-left rounded-xl p-2.5 flex gap-2.5 items-center focus:outline-none focus-visible:ring-2",
       style: {
         background: C.card,
         border: "1px solid " + C.line
@@ -7810,7 +14581,7 @@ function WatchedTab({
       style: {
         fontFamily: FONT_NUM
       }
-    }, x.m.y), x.ts ? " · " + fmtDate(x.ts) : ""), x.e ? /*#__PURE__*/React.createElement(ScoreChips, {
+    }, x.m.y), x.ts ? " · " + fmtDate(x.ts) : "", again ? " · in the mix again" : ""), x.e ? /*#__PURE__*/React.createElement(ScoreChips, {
       e: x.e,
       C: C
     }) : /*#__PURE__*/React.createElement("span", {
@@ -7820,13 +14591,17 @@ function WatchedTab({
       }
     }, "No scores yet")), /*#__PURE__*/React.createElement("span", {
       className: "shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm",
-      title: meta.label,
       "aria-label": "Your rating: " + meta.label,
       style: {
         color: col,
         background: C.field
       }
-    }, meta.glyph));
+    }, meta.glyph), /*#__PURE__*/React.createElement("span", {
+      className: "shrink-0 text-sm",
+      style: {
+        color: C.faint
+      }
+    }, "›"));
   })));
 }
 
@@ -8245,7 +15020,7 @@ function ProfileTab({
     C: C,
     onClick: () => onEditMember(m.id),
     label: m.glyph + "  " + m.name,
-    sub: bandLabel(m.band) + (m.series ? " · series" : "") + (m.useCritics ? " · critics" : "") + " · " + Object.keys(m.rated).length + " rated"
+    sub: bandLabel(m.band) + (m.series ? " · series" : "") + (m.useCritics ? " · critics" : "") + (m.recency >= 0.99 ? " · new only" : m.recency <= 0.01 ? " · any era" : "") + " · " + Object.keys(m.rated).length + " rated"
   })))), /*#__PURE__*/React.createElement("div", {
     className: "-mt-3 mb-5"
   }, /*#__PURE__*/React.createElement("button", {
@@ -8364,6 +15139,7 @@ function MemberSheet({
   const [glyph, setGlyph] = useState(AVATAR_GLYPHS[0]);
   const [series, setSeries] = useState(false);
   const [useCritics, setUseCritics] = useState(false);
+  const [recency, setRecency] = useState(0.5);
   const [confirmDel, setConfirmDel] = useState(false);
   const [loaded, setLoaded] = useState(null);
   const key = member ? member.id : "new";
@@ -8374,6 +15150,7 @@ function MemberSheet({
     setGlyph(member ? member.glyph : AVATAR_GLYPHS[0]);
     setSeries(member ? member.series : false);
     setUseCritics(member ? !!member.useCritics : false);
+    setRecency(member && typeof member.recency === "number" ? member.recency : 0.5);
     setConfirmDel(false);
   }
   const valid = name.trim().length > 0;
@@ -8459,7 +15236,25 @@ function MemberSheet({
     onClick: () => setSeries(!series),
     C: C,
     label: "Include TV series"
-  })), /*#__PURE__*/React.createElement("div", {
+  })), /*#__PURE__*/React.createElement("label", {
+    className: "block text-xs font-medium mb-1.5",
+    style: {
+      color: C.mut
+    }
+  }, "Release year"), /*#__PURE__*/React.createElement("p", {
+    className: "text-xs mb-2",
+    style: {
+      color: C.faint
+    }
+  }, "How much newer releases are favoured. Older titles are ranked lower, never hidden — worth leaving on Any era for younger members, since most children's films are older."), /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-wrap gap-2 mb-5"
+  }, [[0, "Any era"], [0.5, "Lean recent"], [1, "Strongly recent"]].map(o => /*#__PURE__*/React.createElement(Chip, {
+    key: o[0],
+    label: o[1],
+    on: Math.abs(recency - o[0]) < 0.01,
+    onClick: () => setRecency(o[0]),
+    C: C
+  }))), /*#__PURE__*/React.createElement("div", {
     className: "flex items-center justify-between py-2 mb-4"
   }, /*#__PURE__*/React.createElement("div", {
     className: "pr-3"
@@ -8485,7 +15280,8 @@ function MemberSheet({
       band,
       glyph,
       series,
-      useCritics
+      useCritics,
+      recency
     }),
     className: "w-full py-2.5 rounded-lg text-sm font-semibold focus:outline-none focus-visible:ring-2",
     style: {
@@ -8973,7 +15769,9 @@ function ScoresSheet({
   msg,
   progress,
   scoredCount,
-  catalogTotal
+  rtCount,
+  catalogTotal,
+  builtDate
 }) {
   return /*#__PURE__*/React.createElement(Sheet, {
     open: open,
@@ -8995,12 +15793,17 @@ function ScoresSheet({
       fontFamily: FONT_NUM,
       color: C.ink
     }
-  }, catalogTotal), " titles have scores."), /*#__PURE__*/React.createElement("p", {
+  }, catalogTotal), " titles have an IMDb rating built in — no key needed. ", /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: FONT_NUM,
+      color: C.ink
+    }
+  }, rtCount), " also have Rotten Tomatoes."), /*#__PURE__*/React.createElement("p", {
     className: "text-sm mb-4",
     style: {
       color: C.mut
     }
-  }, "Rotten Tomatoes has no free public API, so scores come from OMDb — one free key that returns IMDb, Rotten Tomatoes and Metacritic together."), /*#__PURE__*/React.createElement("label", {
+  }, "Built in and taken on ", builtDate, ": IMDb user ratings from IMDb's official public dataset, plus the critics' Tomatometer and Metacritic Metascore from Wikidata. Rotten Tomatoes' separate audience score has no free source anywhere, so it is not shown rather than guessed at. A free OMDb key fills remaining gaps and refreshes figures as they drift."), /*#__PURE__*/React.createElement("label", {
     className: "block text-xs font-medium mb-1.5",
     style: {
       color: C.mut
@@ -9035,7 +15838,7 @@ function ScoresSheet({
       background: busy ? C.field : C.ink,
       color: busy ? C.mut : C.bg
     }
-  }, busy ? "Fetching…" : "Get scores for what you have watched"), /*#__PURE__*/React.createElement("button", {
+  }, busy ? "Fetching…" : "Add Rotten Tomatoes for what you have watched"), /*#__PURE__*/React.createElement("button", {
     onClick: onFetchAll,
     disabled: busy,
     className: "w-full py-2.5 rounded-lg text-sm font-medium focus:outline-none focus-visible:ring-2",
@@ -9065,12 +15868,137 @@ function ScoresSheet({
     style: {
       color: C.faint
     }
-  }, "The free tier allows 1,000 lookups a day, so a full catalog pass takes one sitting. Scores are stored on this device and reused; nothing is re-fetched unnecessarily. Coverage is imperfect — Rotten Tomatoes is often missing for older, anime and non-US titles."), /*#__PURE__*/React.createElement("p", {
+  }, "The free tier allows 1,000 lookups a day, so a full catalog pass takes one sitting. Anything fetched is stored on this device and never re-fetched. Coverage is imperfect — Rotten Tomatoes is often missing for older, anime and non-US titles, in which case the built-in IMDb rating simply stays."), /*#__PURE__*/React.createElement("p", {
     className: "text-xs mt-2",
     style: {
       color: C.faint
     }
   }, "Turn scores on per person under Household, so a child's picks stay driven by their own taste if you prefer."));
+}
+
+// ---------- Change your verdict on something already watched ----------
+function WatchedEditSheet({
+  open,
+  onClose,
+  C,
+  m,
+  entry,
+  rating,
+  again,
+  onRate,
+  onToggleAgain,
+  onClear
+}) {
+  const [confirmClear, setConfirmClear] = useState(false);
+  const [loaded, setLoaded] = useState(null);
+  const key = m ? m.id : "none";
+  if (loaded !== key) {
+    setLoaded(key);
+    setConfirmClear(false);
+  }
+  if (!m) return null;
+  return /*#__PURE__*/React.createElement(Sheet, {
+    open: open,
+    onClose: onClose,
+    C: C,
+    title: m.t
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-3 mb-5"
+  }, /*#__PURE__*/React.createElement(Poster, {
+    m: m,
+    C: C,
+    size: 56
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "min-w-0 flex-1"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-sm mb-1.5",
+    style: {
+      color: C.mut
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: FONT_NUM
+    }
+  }, m.y), " · ", bandLabel(m.b), m.k === "s" ? " · Series" : "", " · ", lbl(m.g[0])), entry ? /*#__PURE__*/React.createElement(ScoreChips, {
+    e: entry,
+    C: C
+  }) : /*#__PURE__*/React.createElement("span", {
+    className: "text-xs",
+    style: {
+      color: C.faint
+    }
+  }, "No critic scores yet"))), /*#__PURE__*/React.createElement("div", {
+    className: "text-xs font-medium mb-1.5",
+    style: {
+      color: C.mut
+    }
+  }, "Your verdict"), /*#__PURE__*/React.createElement("p", {
+    className: "text-xs mb-2.5",
+    style: {
+      color: C.faint
+    }
+  }, "Changed your mind after a rewatch? Set it here and the recommendations adjust."), /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-2 mb-5"
+  }, [2, 1, -1].map(r => {
+    const meta = RATING_META[String(r)];
+    const on = rating === r;
+    const col = meta.tone === "like" ? C.like : meta.tone === "dislike" ? C.dislike : C.ink;
+    const bg = meta.tone === "like" ? C.likeBg : meta.tone === "dislike" ? C.dislikeBg : C.field;
+    return /*#__PURE__*/React.createElement("button", {
+      key: r,
+      onClick: () => onRate(r),
+      "aria-label": "Set to " + meta.label,
+      className: "flex-1 flex items-center justify-center gap-1.5 h-11 rounded-lg text-sm font-semibold focus:outline-none focus-visible:ring-2",
+      style: on ? {
+        background: col,
+        color: "#fff"
+      } : {
+        background: bg,
+        color: col,
+        border: "1px solid " + (meta.tone === "neutral" ? C.line : "transparent")
+      }
+    }, /*#__PURE__*/React.createElement("span", null, meta.glyph), /*#__PURE__*/React.createElement("span", null, meta.label));
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between py-2 mb-1"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "pr-3"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-sm font-medium",
+    style: {
+      color: C.ink
+    }
+  }, "Suggest this again"), /*#__PURE__*/React.createElement("div", {
+    className: "text-xs",
+    style: {
+      color: C.mut
+    }
+  }, "Put it back among your picks so you can rewatch it, without losing your rating")), /*#__PURE__*/React.createElement(Toggle, {
+    on: again,
+    onClick: onToggleAgain,
+    C: C,
+    label: "Suggest this again"
+  })), /*#__PURE__*/React.createElement("a", {
+    href: justWatchUrl(m),
+    target: "_blank",
+    rel: "noopener noreferrer",
+    className: "block w-full mt-3 py-2.5 rounded-lg text-sm font-medium text-center focus:outline-none",
+    style: {
+      color: C.ink,
+      border: "1px solid " + C.line
+    }
+  }, "Find where to watch ↗"), /*#__PURE__*/React.createElement("button", {
+    onClick: () => confirmClear ? onClear() : setConfirmClear(true),
+    className: "w-full mt-2 py-2.5 rounded-lg text-sm font-medium focus:outline-none focus-visible:ring-2",
+    style: {
+      color: C.dislike,
+      border: "1px solid " + C.line
+    }
+  }, confirmClear ? "Tap again to remove your rating" : "Remove from watched"), /*#__PURE__*/React.createElement("p", {
+    className: "text-xs mt-2",
+    style: {
+      color: C.faint
+    }
+  }, "Removing clears your rating entirely and returns it to the suggestion pool as if unseen."));
 }
 
 // ============================================================
@@ -9116,6 +16044,7 @@ function App() {
   const [scoreMsg, setScoreMsg] = useState("");
   const [scoreProgress, setScoreProgress] = useState(null);
   const [watchedSort, setWatchedSort] = useState("recent");
+  const [editId, setEditId] = useState(null);
   const packFileRef = useRef(null);
   const impRef = useRef({});
   const recentRef = useRef(new Set());
@@ -9249,17 +16178,19 @@ function App() {
   }, [toast]);
 
   // ---------- Derived ----------
+  // Built-in IMDb ratings ship with the app; anything fetched lays over them.
+  const allScores = useMemo(() => mergeScores(scores), [scores]);
   // `mv` is the household view: one member, or several merged for a shared session.
   const mv = useMemo(() => profile ? memberView(profile) : null, [profile, catalogVersion]);
   const model = useMemo(() => {
     if (!profile || !mv) return null;
-    return blendModels(mv.members.map(m => buildModel(m.rated, m.ratedOrder, m.watchlog, scores)));
-  }, [mv, scores, catalogVersion]);
+    return blendModels(mv.members.map(m => buildModel(m.rated, m.ratedOrder, m.watchlog, allScores)));
+  }, [mv, allScores, catalogVersion]);
   const pool = useMemo(() => {
     if (!mv) return [];
     const rank = BAND_RANK[mv.band];
     const hidden = new Set(mv.hidden);
-    return MOVIE_LIST.filter(m => BAND_RANK[m.b] <= rank && (mv.series || m.k !== "s") && mv.rated[m.id] === undefined && !hidden.has(m.id));
+    return MOVIE_LIST.filter(m => BAND_RANK[m.b] <= rank && (mv.series || m.k !== "s") && (mv.rated[m.id] === undefined || mv.rewatch.indexOf(m.id) >= 0) && !hidden.has(m.id));
   }, [mv, catalogVersion]);
   const recs = useMemo(() => {
     if (!mv || !model) return [];
@@ -9272,14 +16203,15 @@ function App() {
       nonce,
       rated: mv.rated,
       useCritics: mv.useCritics,
-      scores
+      scores: allScores,
+      recency: mv.recency
     };
     const scored = pool.map(m => ({
       m,
       sc: scoreTitle(m, model, ctx)
     })).sort((a, b) => b.sc - a.sc);
     return assembleBatch(scored, model, ctx);
-  }, [pool, model, mood, explore, nonce, scores]);
+  }, [pool, model, mood, explore, nonce, allScores, mv]);
 
   // Impressions and "recently shown" are recorded when the user explicitly asks
   // for different picks — not on every re-render. Otherwise rating one card
@@ -9299,8 +16231,8 @@ function App() {
     mv.members.forEach(m => m.ratedOrder.forEach(id => {
       if (order.indexOf(id) < 0) order.push(id);
     }));
-    return computeInsights(mv.rated, order, mv.hidden, mv.watchlog, scores);
-  }, [mv, scores, catalogVersion]);
+    return computeInsights(mv.rated, order, mv.hidden, mv.watchlog, allScores);
+  }, [mv, allScores, catalogVersion]);
   const results = useMemo(() => {
     if (!mv) return [];
     const q = query.trim().toLowerCase();
@@ -9385,7 +16317,8 @@ function App() {
         rated,
         ratedOrder: order,
         watchlog,
-        watchlist: mem.watchlist.filter(x => x !== id)
+        watchlist: mem.watchlist.filter(x => x !== id),
+        rewatch: (mem.rewatch || []).filter(x => x !== id)
       };
     });
   };
@@ -9473,12 +16406,14 @@ function App() {
           band: form.band,
           glyph: form.glyph,
           series: form.series,
-          useCritics: !!form.useCritics
+          useCritics: !!form.useCritics,
+          recency: typeof form.recency === "number" ? form.recency : 0.5
         };
       } else {
         const nm = newMember(form.name, form.band, form.glyph);
         nm.series = form.series;
         nm.useCritics = !!form.useCritics;
+        nm.recency = typeof form.recency === "number" ? form.recency : 0.5;
         byId[nm.id] = nm;
         order.push(nm.id);
       }
@@ -9719,10 +16654,50 @@ function App() {
     return res.added > 0;
   };
 
+  // Put something already rated back into the suggestion pool without
+  // discarding the rating that taught the model.
+  const toggleRewatch = id => {
+    if (!mv) return;
+    const on = mv.rewatch.indexOf(id) >= 0;
+    const m = MOVIE_BY_ID[id];
+    updateActiveMembers(mem => {
+      const cur = mem.rewatch || [];
+      return {
+        ...mem,
+        rewatch: on ? cur.filter(x => x !== id) : cur.indexOf(id) >= 0 ? cur : [...cur, id]
+      };
+    });
+    setToast({
+      msg: on ? "Removed from your picks" : (m ? m.t : "It") + " is back in your picks"
+    });
+    recentRef.current = new Set();
+    setNonce(n => n + 1);
+  };
+  const clearRating = id => {
+    if (!profile) return;
+    const m = MOVIE_BY_ID[id];
+    snapshotUndo((m ? m.t : "Title") + " removed from watched");
+    updateActiveMembers(mem => {
+      const rated = {
+        ...mem.rated
+      };
+      delete rated[id];
+      return {
+        ...mem,
+        rated,
+        ratedOrder: mem.ratedOrder.filter(x => x !== id),
+        rewatch: (mem.rewatch || []).filter(x => x !== id),
+        watchlog: mem.watchlog.filter(h => h.id !== id)
+      };
+    });
+    setEditId(null);
+  };
+
   // ---------- Critic scores ----------
   const watchedIds = useMemo(() => mv ? Object.keys(mv.rated) : [], [mv]);
   const missingScores = useMemo(() => watchedIds.filter(id => MOVIE_BY_ID[id] && !scores[id]).length, [watchedIds, scores]);
-  const scoredCount = useMemo(() => Object.keys(scores).filter(id => scores[id] && !scores[id].miss).length, [scores]);
+  const scoredCount = useMemo(() => Object.keys(allScores).filter(id => allScores[id] && !allScores[id].miss).length, [allScores]);
+  const rtCount = useMemo(() => Object.keys(allScores).filter(id => allScores[id] && allScores[id].rt !== undefined).length, [allScores]);
 
   // Fetch in small concurrent batches so we stay polite to a free-tier key and
   // can report progress. Anything already known (including a recorded miss) is
@@ -10023,7 +16998,7 @@ input[type=range]::-moz-range-thumb { width: 18px; height: 18px; border: 0; bord
     C: C,
     view: mv,
     ins: ins,
-    scores: scores,
+    scores: allScores,
     sort: watchedSort,
     setSort: setWatchedSort,
     onFetchScores: fetchWatchedScores,
@@ -10034,7 +17009,8 @@ input[type=range]::-moz-range-thumb { width: 18px; height: 18px; border: 0; bord
     onOpenScores: () => {
       setScoreMsg("");
       setScoresOpen(true);
-    }
+    },
+    onEdit: setEditId
   }), tab === "insights" && /*#__PURE__*/React.createElement(InsightsTab, {
     C: C,
     view: mv,
@@ -10066,7 +17042,7 @@ input[type=range]::-moz-range-thumb { width: 18px; height: 18px; border: 0; bord
       setScoreMsg("");
       setScoresOpen(true);
     },
-    scoredCount: scoredCount,
+    scoredCount: rtCount,
     onSignOut: signOut,
     onDeleteProfile: () => deleteProfile(activeId),
     addedCount: addedList.length,
@@ -10117,6 +17093,20 @@ input[type=range]::-moz-range-thumb { width: 18px; height: 18px; border: 0; bord
     onClose: () => setAddOpen(false),
     C: C,
     onAdd: addTitle
+  }), /*#__PURE__*/React.createElement(WatchedEditSheet, {
+    open: !!editId,
+    onClose: () => setEditId(null),
+    C: C,
+    m: editId ? MOVIE_BY_ID[editId] : null,
+    entry: editId ? allScores[editId] : null,
+    rating: editId ? mv.rated[editId] : undefined,
+    again: editId ? mv.rewatch.indexOf(editId) >= 0 : false,
+    onRate: r => {
+      if (mv.rated[editId] !== r) rate(editId, r);
+      setEditId(null);
+    },
+    onToggleAgain: () => toggleRewatch(editId),
+    onClear: () => clearRating(editId)
   }), /*#__PURE__*/React.createElement(ScoresSheet, {
     open: scoresOpen,
     onClose: () => setScoresOpen(false),
@@ -10129,7 +17119,9 @@ input[type=range]::-moz-range-thumb { width: 18px; height: 18px; border: 0; bord
     msg: scoreMsg,
     progress: scoreProgress,
     scoredCount: scoredCount,
-    catalogTotal: MOVIE_LIST.length
+    rtCount: rtCount,
+    catalogTotal: MOVIE_LIST.length,
+    builtDate: BUILTIN_SCORES_DATE
   }), /*#__PURE__*/React.createElement(MemberSheet, {
     open: !!memberSheet,
     onClose: () => setMemberSheet(null),
