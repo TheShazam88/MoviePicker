@@ -83,14 +83,19 @@ gets handed around.
 
 ## What's in the catalog
 
-**1,962 titles**, of which 1,860 are from 2000 onwards: 608 from the 2000s, 775
-from the 2010s and 477 from the 2020s. The original curated family and
-mainstream set, plus a large expansion of well-reviewed cinema and television
-from Belgium, France, the UK, Japan, South Korea and the US.
+**5,344 titles**, nearly all from 2000 onwards, from Belgium, France, the UK,
+Japan, South Korea and the US. Around 1,800 are comedies.
 
-Selection used a lower bar for the smaller industries so they are not buried
-under Hollywood, and a lower vote threshold for very recent releases, which have
-had less time to accumulate votes than a film from 2005.
+Selection balances two things. A **quality** path takes well-reviewed titles,
+with a lower bar for smaller industries so they are not buried under Hollywood,
+and a much lower vote threshold for recent releases, which have had less time to
+accumulate votes than a film from 2005. A **notability** path admits anything
+widely seen regardless of score — you cannot mark a film as watched if it is not
+in the catalog, and popularity is what makes it likely you have seen it.
+
+Rating bars are also adjusted per genre. Audiences score comedy and horror far
+lower than drama for the same level of affection, so a single bar would exclude
+most of the mainstream comedy canon.
 
 Age bands on the imported titles are estimated from genre and deliberately
 err strict: anything with crime, thriller, war or horror is adults-only, and
@@ -144,9 +149,9 @@ launch and offline:
 
 | Figure | Whose opinion | Coverage |
 |---|---|---|
-| **IMDb** | the audience | 1,960 of 1,962 titles |
-| **TOMATO** — Rotten Tomatoes Tomatometer | film critics | 1,468 titles |
-| **META** — Metacritic Metascore | film critics | 1,268 titles |
+| **IMDb** | the audience | all 5,344 titles |
+| **TOMATO** — Rotten Tomatoes Tomatometer | film critics | 4,243 titles |
+| **META** — Metacritic Metascore | film critics | 3,648 titles |
 
 IMDb figures come from IMDb's official public dataset. The Tomatometer and
 Metascore come from Wikidata, filtered by scoring method so the Tomatometer is
@@ -171,8 +176,8 @@ a good built-in rating.
 
 Notes worth knowing:
 
-- The free tier allows **1,000 lookups a day**, and the catalog is 1,962 titles,
-  so a full pass needs two sittings. You almost certainly do not need one.
+- The free tier allows **1,000 lookups a day**, and the catalog is 5,344 titles.
+  You almost certainly do not need a full pass — nearly everything is built in.
 - Scores are stored on the device and reused. Nothing is re-fetched, including
   titles that came back with no data.
 - **Coverage is imperfect.** Rotten Tomatoes is frequently missing for older
@@ -201,7 +206,7 @@ You can see the current reading on the Watched tab under **Critic alignment**.
 
 ## Keeping the catalog current
 
-1,962 titles are built in. Three ways to add more, all under **You**:
+5,344 titles are built in. Three ways to add more, all under **You**:
 
 **1. Update from TMDB (easiest).** Get a free API key at
 themoviedb.org → Settings → API, paste it in once, and tap **Update catalog
@@ -255,7 +260,7 @@ When I send you a new `app.js` (or you change anything else), the update flow is
 cp /path/to/new/app.js app.js
 
 # bump the cache version so phones fetch the new files
-# sw.js line 5:  const CACHE = "mnp-v12";  ->  "mnp-v13"
+# sw.js line 5:  const CACHE = "mnp-v13";  ->  "mnp-v14"
 
 git add -A
 git commit -m "Update Movie Night"
