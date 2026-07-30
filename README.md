@@ -81,7 +81,24 @@ gets handed around.
 
 ---
 
-## The four tabs
+## What's in the catalog
+
+**1,962 titles**, of which 1,860 are from 2000 onwards: 608 from the 2000s, 775
+from the 2010s and 477 from the 2020s. The original curated family and
+mainstream set, plus a large expansion of well-reviewed cinema and television
+from Belgium, France, the UK, Japan, South Korea and the US.
+
+Selection used a lower bar for the smaller industries so they are not buried
+under Hollywood, and a lower vote threshold for very recent releases, which have
+had less time to accumulate votes than a film from 2005.
+
+Age bands on the imported titles are estimated from genre and deliberately
+err strict: anything with crime, thriller, war or horror is adults-only, and
+only animation or explicitly family-tagged titles reach the children's bands.
+Much of that expansion is adult arthouse and prestige drama, so it will mostly
+surface on adult profiles.
+
+## The five tabs
 
 **Discover** — eight picks, chosen for whoever is selected in the Watching row. Each one says why
 it was suggested. Set one as **tonight's pick** to pin it to the top with a
@@ -89,11 +106,21 @@ link to find where it's streaming. The **Discovery slider** controls how
 adventurous the suggestions are: slide left for reliable comfort picks, right to
 push into genres you have not explored. **Surprise me** just decides for you.
 
-**Rate** — this is what makes the app work. The more you rate, the better it
-gets. Three buttons: **Loved**, **Seen**, **Not for me**. There is also a
-**Watchlist** for things you want to keep but have not watched yet. If you have
-seen the family canon already, the one-tap button marks every all-ages and 6+
-film as seen so you are not starting from zero.
+**Rate** — this is what makes the app work, and it is built for volume: the more
+of the catalog you mark, the less chance a suggestion is something you have
+already seen. Three buttons per title: **Loved**, **Seen**, **Not for me**.
+
+- **Search** any title in the catalog.
+- **Filter** by genre, decade, films or series, and **Unrated only** so you are
+  always working on new ground.
+- **Sort** by most popular, newest, best rated or A–Z.
+- A **progress bar** shows how much of your catalog you have marked.
+- Results page in 60 at a time — the whole catalog is reachable, not just the
+  popular head.
+
+Critic scores appear on each row so you can recognise a title you half-remember.
+There is also a **Watchlist** for things you want to keep but have not watched,
+and a one-tap button to mark the whole all-ages and 6+ family canon as seen.
 
 **Insights** — a live picture of what the selected person (or group) actually watches:
 
@@ -110,9 +137,71 @@ film as seen so you are not starting from zero.
 
 ---
 
+## Critic scores
+
+**Scores ship with the app.** No key, no setup, no network — they work on first
+launch and offline:
+
+| Figure | Whose opinion | Coverage |
+|---|---|---|
+| **IMDb** | the audience | 1,960 of 1,962 titles |
+| **TOMATO** — Rotten Tomatoes Tomatometer | film critics | 1,468 titles |
+| **META** — Metacritic Metascore | film critics | 1,268 titles |
+
+IMDb figures come from IMDb's official public dataset. The Tomatometer and
+Metascore come from Wikidata, filtered by scoring method so the Tomatometer is
+never confused with Rotten Tomatoes' separate /10 review average.
+
+**A note on the two Rotten Tomatoes scores.** Rotten Tomatoes publishes a
+critics' Tomatometer *and* an audience score (the Popcornmeter). Only the
+critics' score is obtainable: the audience score appears on fewer than ten
+records in the whole of Wikidata, OMDb does not return it, and Rotten Tomatoes'
+own API is enterprise-only through Fandango. So the app shows the critics'
+figure, labelled **TOMATO**, and does not invent an audience number. IMDb is
+the closest audience measure available, which is why both are shown side by
+side.
+
+**A free OMDb key is optional** — it fills the remaining gaps and refreshes
+figures as they drift. Get one at `omdbapi.com/apikey.aspx`, then
+**You → Critic scores**, paste it, and tap **Add Rotten Tomatoes for what you
+have watched**. There is also a **Fetch the whole catalog** button. Fetched data
+lays on top of the built-ins — it adds Rotten Tomatoes and Metacritic, and
+refreshes the IMDb figure as it drifts. A lookup that finds nothing never wipes
+a good built-in rating.
+
+Notes worth knowing:
+
+- The free tier allows **1,000 lookups a day**, and the catalog is 1,962 titles,
+  so a full pass needs two sittings. You almost certainly do not need one.
+- Scores are stored on the device and reused. Nothing is re-fetched, including
+  titles that came back with no data.
+- **Coverage is imperfect.** Rotten Tomatoes is frequently missing for older
+  films, anime, and non-US releases. IMDb coverage is much better.
+- TMDB's own audience score is captured free during a catalog sync and is used
+  as a fallback for titles you have added yourself, which have no built-in rating.
+
+### Using scores in the recommendations
+
+Off by default. Turn it on per person: **You → tap their name → Use critic
+scores**. It is per-member deliberately, so you can have scores steer your own
+picks while a child's stay driven purely by their own taste.
+
+When it is on, critic scores feed the **main ranking** — not the wildcard slot.
+And they are weighted by how much that person has *historically* agreed with
+critics, learned from what they have already rated:
+
+- If your loves are consistently the well-reviewed titles, scores get a strong
+  positive weight.
+- If you reliably enjoy things critics panned, the weight goes **negative** —
+  a high Rotten Tomatoes score then counts slightly against a suggestion.
+- Until there are about five rated titles with scores, it falls back to a mild
+  positive assumption rather than guessing from thin evidence.
+
+You can see the current reading on the Watched tab under **Critic alignment**.
+
 ## Keeping the catalog current
 
-530 titles are built in. Three ways to add more, all under **You**:
+1,962 titles are built in. Three ways to add more, all under **You**:
 
 **1. Update from TMDB (easiest).** Get a free API key at
 themoviedb.org → Settings → API, paste it in once, and tap **Update catalog
@@ -159,9 +248,58 @@ movie-pack-example.json  a valid pack you can open to see the format
 
 ## Updating the app later
 
-Replace `app.js` and bump the version in `sw.js` (`mnp-v7` → `mnp-v8`), then
-redeploy. Your data is untouched — it lives in the device's own storage, which
-app updates never clear.
+When I send you a new `app.js` (or you change anything else), the update flow is:
+
+```bash
+# in your local clone of the repo
+cp /path/to/new/app.js app.js
+
+# bump the cache version so phones fetch the new files
+# sw.js line 5:  const CACHE = "mnp-v12";  ->  "mnp-v13"
+
+git add -A
+git commit -m "Update Movie Night"
+git push
+```
+
+Bumping `CACHE` in `sw.js` is the part that matters. The service worker only
+reinstalls when its own bytes change, and that is what forces phones to pull the
+new `app.js` instead of serving the cached one.
+
+GitHub Pages takes 1–2 minutes to publish, and its CDN can hold the old files
+for a few more.
+
+### What happens on your phone
+
+Roughly a minute after the deploy, the app will notice on its own:
+
+- If the app is **closed**, the next launch (while online) fetches the new
+  version and just runs it.
+- If the app is **open**, a small **"A new version is ready — Reload"** bar
+  appears at the bottom. Tap Reload.
+- Bringing the app back to the foreground also triggers a check.
+
+There is nothing to reinstall, and the home screen icon does not change. To
+confirm which version you are on: **You → the bottom line shows the version
+number.**
+
+### Your data is not affected
+
+**Everything you have entered stays.** Profiles, household members, PINs,
+ratings, watchlists, watch history, imported titles, critic scores and settings
+live in the phone's own storage for that address — a code update never touches
+it, and every version reads data written by older versions.
+
+Three things *would* lose it, so avoid them:
+
+1. **Changing the URL.** Storage is tied to the exact origin. Moving from
+   `you.github.io/movie-night/` to a different address starts empty. If you ever
+   need to move, take a backup first (**You → Backup & restore**) and restore it
+   on the new address.
+2. **Clearing site data** for that address in Chrome settings.
+3. **Uninstalling** the app and clearing its storage.
+
+Taking an occasional backup is cheap insurance regardless.
 
 ## Privacy
 
@@ -171,6 +309,7 @@ The app makes no network requests on its own. The only outbound traffic is:
   query. Nothing about you, your profiles, or your ratings is sent.
 - **JustWatch**, when you tap a *where to watch* link — a normal link you chose
   to follow.
+- **OMDb**, when you ask for critic scores — it sends only a title and year.
 - **Google Fonts**, to load the two typefaces. Cached after first load; the app
   falls back to system fonts offline.
 
