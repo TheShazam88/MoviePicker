@@ -83,8 +83,15 @@ gets handed around.
 
 ## What's in the catalog
 
-**5,344 titles**, nearly all from 2000 onwards, from Belgium, France, the UK,
-Japan, South Korea and the US. Around 1,800 are comedies.
+**7,284 titles**, nearly all from 2000 onwards, from Belgium, France, the UK,
+Japan, South Korea and the US. Around 2,300 are comedies, and **4,781 carry a
+streaming tag**: Netflix 4,228, Disney+ 436, Prime Video 117.
+
+A note on those tags. They mark titles **produced or distributed by** each
+platform, which is durable — a Netflix original stays on Netflix. They are not
+live availability: no free source for that exists, and licensed catalogues
+rotate monthly, so anything hardcoded would be wrong within weeks. Use the
+"where to watch" link on any title for what is actually streaming today.
 
 Selection balances two things. A **quality** path takes well-reviewed titles,
 with a lower bar for smaller industries so they are not buried under Hollywood,
@@ -149,9 +156,9 @@ launch and offline:
 
 | Figure | Whose opinion | Coverage |
 |---|---|---|
-| **IMDb** | the audience | all 5,344 titles |
-| **TOMATO** — Rotten Tomatoes Tomatometer | film critics | 4,243 titles |
-| **META** — Metacritic Metascore | film critics | 3,648 titles |
+| **IMDb** | the audience | all 7,284 titles |
+| **TOMATO** — Rotten Tomatoes Tomatometer | film critics | 4,244 titles |
+| **META** — Metacritic Metascore | film critics | 3,649 titles |
 
 IMDb figures come from IMDb's official public dataset. The Tomatometer and
 Metascore come from Wikidata, filtered by scoring method so the Tomatometer is
@@ -176,7 +183,7 @@ a good built-in rating.
 
 Notes worth knowing:
 
-- The free tier allows **1,000 lookups a day**, and the catalog is 5,344 titles.
+- The free tier allows **1,000 lookups a day**, and the catalog is 7,284 titles.
   You almost certainly do not need a full pass — nearly everything is built in.
 - Scores are stored on the device and reused. Nothing is re-fetched, including
   titles that came back with no data.
@@ -206,7 +213,7 @@ You can see the current reading on the Watched tab under **Critic alignment**.
 
 ## Keeping the catalog current
 
-5,344 titles are built in. Three ways to add more, all under **You**:
+7,284 titles are built in. Three ways to add more, all under **You**:
 
 **1. Update from TMDB (easiest).** Get a free API key at
 themoviedb.org → Settings → API, paste it in once, and tap **Update catalog
@@ -260,7 +267,7 @@ When I send you a new `app.js` (or you change anything else), the update flow is
 cp /path/to/new/app.js app.js
 
 # bump the cache version so phones fetch the new files
-# sw.js line 5:  const CACHE = "mnp-v13";  ->  "mnp-v14"
+# sw.js line 5:  const CACHE = "mnp-v17";  ->  "mnp-v18"
 
 git add -A
 git commit -m "Update Movie Night"
